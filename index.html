@@ -6,131 +6,148 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#030C04">
 <title>EKOLO — L'intelligence au service de ta réussite</title>
-<meta name="description" content="EKOLO — Professeur Éli, ton assistant IA éducatif. CEP, BEPC, Baccalauréat. Gratuit. Partout.">
+<meta name="description" content="EKOLO — Professeur Éli, ton assistant IA éducatif personnel. CEP, BEPC, Baccalauréat. Gratuit pour tous les élèves du Gabon.">
+<meta name="author" content="EKOLO">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="EKOLO — L'intelligence au service de ta réussite">
+<meta property="og:description" content="Professeur Éli, ton assistant IA éducatif. CEP · BEPC · BAC. Gratuit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ekolo.ga">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════════
-   EKOLO v5 · ABA-ABA Stecy Arsène © 2026
-   Architecture : Performance · Sécurité · Beauté
-═══════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════
+   EKOLO — Version Finale Production
+   Design : High-Tech · Élégant · Futuriste · Forêt Lumineuse
+   © 2026 EKOLO — Tous droits réservés
+═══════════════════════════════════════════════════════════════ */
 :root{
-  --v0:#030C04;--v1:#071408;--v2:#0D2410;--v3:#1B5E20;--v4:#2E7D32;--v5:#43A047;
+  --v0:#030C04;--v1:#071408;--v2:#0D2410;--v3:#1B5E20;--v4:#2E7D32;--v5:#43A047;--v6:#81C784;
   --or1:#FFA000;--or2:#F9A825;--or3:#FFD54F;
-  --w:#fff;--t1:rgba(255,255,255,.85);--t2:rgba(255,255,255,.55);--t3:rgba(255,255,255,.3);
+  --w:#fff;--t1:rgba(255,255,255,.86);--t2:rgba(255,255,255,.56);--t3:rgba(255,255,255,.32);
   --t4:rgba(255,255,255,.1);--t5:rgba(255,255,255,.05);
   --fd:'Syne',sans-serif;--fb:'DM Sans',sans-serif;
   --r8:8px;--r12:12px;--r16:16px;--r20:20px;--r24:24px;--r99:999px;
+  --shadow-gold:0 4px 20px rgba(249,168,37,.28);
+  --shadow-grn:0 4px 20px rgba(46,125,50,.32);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-body{font-family:var(--fb);background:var(--v0);color:var(--t1);overflow-x:hidden;cursor:none;}
+body{font-family:var(--fb);background:#030C04;color:rgba(255,255,255,.86);overflow-x:hidden;cursor:none;}
 @media(max-width:768px){body{cursor:auto;}}
 
-.cur,.cur-r{pointer-events:none;position:fixed;top:0;left:0;z-index:9999;transform:translate(-50%,-50%);}
-.cur{width:10px;height:10px;background:var(–or2);border-radius:50%;mix-blend-mode:difference;transition:width .15s,height .15s;}
-.cur-r{z-index:9998;width:32px;height:32px;border:1.5px solid rgba(249,168,37,.42);border-radius:50%;transition:transform .3s ease;}
+/* ── CURSOR ─────────────────────────────────────── */
+.cur,.cur-r{pointer-events:none;position:fixed;top:0;left:0;z-index:9999;transform:translate(-50%,-50%);will-change:transform;}
+.cur{width:10px;height:10px;background:var(–or2);border-radius:50%;mix-blend-mode:difference;transition:width .14s,height .14s;}
+.cur-r{z-index:9998;width:32px;height:32px;border:1.5px solid rgba(249,168,37,.4);border-radius:50%;transition:left .3s ease,top .3s ease,width .14s,height .14s;}
 @media(max-width:768px){.cur,.cur-r{display:none;}}
 
+/* ── ANIMATIONS ─────────────────────────────────── */
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes floatS{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(2deg)}}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(76,175,80,.5)}50%{box-shadow:0 0 0 9px rgba(76,175,80,0)}}
-@keyframes glow{0%,100%{box-shadow:0 0 24px rgba(249,168,37,.22)}50%{box-shadow:0 0 52px rgba(249,168,37,.56)}}
-@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes orbe{0%,100%{transform:translate(0,0)}33%{transform:translate(26px,-16px)}66%{transform:translate(-11px,20px)}}
+@keyframes floatS{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-15px) rotate(2deg)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(76,175,80,.48)}50%{box-shadow:0 0 0 10px rgba(76,175,80,0)}}
+@keyframes glow{0%,100%{box-shadow:0 0 24px rgba(249,168,37,.22),0 4px 16px rgba(249,168,37,.18)}50%{box-shadow:0 0 56px rgba(249,168,37,.58),0 8px 28px rgba(249,168,37,.38)}}
+@keyframes glowGrn{0%,100%{box-shadow:0 0 22px rgba(27,94,32,.28)}50%{box-shadow:0 0 52px rgba(67,160,71,.58)}}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes orbe{0%,100%{transform:translate(0,0)}33%{transform:translate(26px,-16px)}66%{transform:translate(-12px,22px)}}
 @keyframes scan{0%{transform:translateY(-100%)}100%{transform:translateY(100vh)}}
 @keyframes tdot{0%,60%,100%{transform:translateY(0);opacity:.35}30%{transform:translateY(-5px);opacity:1}}
 @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-@keyframes pf{0%{transform:translateY(0) scale(1);opacity:.6}100%{transform:translateY(-70px) scale(.8);opacity:0}}
-@keyframes lockPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes pf{0%{transform:translateY(0) scale(1);opacity:.6}100%{transform:translateY(-72px) scale(.7);opacity:0}}
+@keyframes premGlow{0%,100%{box-shadow:0 0 12px rgba(249,168,37,.2),inset 0 0 12px rgba(249,168,37,.04)}50%{box-shadow:0 0 30px rgba(249,168,37,.5),inset 0 0 20px rgba(249,168,37,.08)}}
+@keyframes gradMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
-.aos{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.aos{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease;}
 .aos.on{opacity:1;transform:none;}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
 
-/* BUTTONS */
-.btn{font-family:var(–fb);font-weight:700;border:none;cursor:pointer;border-radius:var(–r99);transition:all .2s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;-webkit-tap-highlight-color:transparent;}
+/* ── BUTTONS ────────────────────────────────────── */
+.btn{font-family:var(–fb);font-weight:700;border:none;cursor:pointer;border-radius:var(–r99);transition:all .22s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;-webkit-tap-highlight-color:transparent;}
 .btn-sm{padding:8px 18px;font-size:12px;}
-.btn-md{padding:12px 24px;font-size:14px;}
-.btn-lg{padding:14px 34px;font-size:15px;}
-.btn-gold{background:linear-gradient(135deg,var(–or2),var(–or1));color:var(–v3);box-shadow:0 4px 16px rgba(249,168,37,.26);}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(249,168,37,.46);}
+.btn-md{padding:12px 26px;font-size:14px;}
+.btn-lg{padding:15px 36px;font-size:15px;}
+.btn-gold{background:linear-gradient(135deg,var(–or2),var(–or1));color:var(–v3);box-shadow:var(–shadow-gold);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(249,168,37,.48);}
 .btn-out{background:transparent;color:var(–t1);border:1px solid rgba(255,255,255,.2);}
-.btn-out:hover{background:rgba(255,255,255,.06);}
-.btn-grn{background:linear-gradient(135deg,var(–v4),var(–v5));color:var(–w);box-shadow:0 4px 16px rgba(46,125,50,.28);}
-.btn-grn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(46,125,50,.48);}
-.btn-red{background:linear-gradient(135deg,#C62828,#E53935);color:var(–w);}
+.btn-out:hover{background:rgba(255,255,255,.065);border-color:rgba(255,255,255,.38);}
+.btn-grn{background:linear-gradient(135deg,var(–v4),var(–v5));color:var(–w);box-shadow:var(–shadow-grn);}
+.btn-grn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(46,125,50,.52);}
+.btn-prem{background:linear-gradient(135deg,rgba(249,168,37,.12),rgba(249,168,37,.06));color:var(–or2);border:1px solid rgba(249,168,37,.3);animation:premGlow 2.5s infinite;}
+.btn-prem:hover{background:rgba(249,168,37,.18);border-color:rgba(249,168,37,.55);}
 
-/* NAVBAR */
-.nav{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;transition:background .3s;}
-.nav.sc{background:rgba(3,12,4,.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);}
+/* ── NAVBAR ─────────────────────────────────────── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;transition:background .35s,border-color .35s;}
+.nav.sc{background:rgba(3,12,4,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.07);}
 .nav-logo{display:flex;align-items:center;gap:11px;text-decoration:none;cursor:pointer;}
 .nav-logo-name{font-family:var(–fd);font-size:20px;font-weight:800;letter-spacing:3px;color:var(–w);}
 .nav-links{display:flex;gap:28px;}
 .nl{color:var(–t2);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s;cursor:pointer;position:relative;}
-.nl::after{content:’’;position:absolute;bottom:-4px;left:0;right:0;height:1.5px;background:var(–or2);transform:scaleX(0);transition:transform .2s;}
+.nl::after{content:’’;position:absolute;bottom:-4px;left:0;right:0;height:1.5px;background:var(–or2);transform:scaleX(0);transition:transform .2s;transform-origin:left;}
 .nl:hover{color:var(–w);}.nl:hover::after{transform:scaleX(1);}
 .nav-acts{display:flex;gap:9px;}
 
-/* MOBILE NAV DRAWER */
-.mob-nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;}
-.mob-nav-toggle span{display:block;width:24px;height:2px;background:var(–w);border-radius:2px;transition:all .3s;}
-.mob-drawer{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(3,12,4,.98);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.08);z-index:499;padding:20px 24px;flex-direction:column;gap:4px;}
+/* Mobile nav */
+.mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;-webkit-tap-highlight-color:transparent;}
+.mob-toggle span{display:block;width:24px;height:2px;background:var(–w);border-radius:2px;transition:all .3s;}
+.mob-drawer{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(3,12,4,.98);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.08);z-index:499;padding:18px 22px;flex-direction:column;gap:2px;overflow:hidden;}
 .mob-drawer.open{display:flex;}
-.mob-nl{color:var(–t2);font-size:14px;font-weight:600;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer;transition:color .2s;display:flex;align-items:center;justify-content:space-between;}
+.mob-nl{color:var(–t2);font-size:14px;font-weight:600;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer;transition:color .18s;display:flex;justify-content:space-between;align-items:center;-webkit-tap-highlight-color:transparent;}
+.mob-nl:last-of-type{border-bottom:none;}
 .mob-nl:hover,.mob-nl:active{color:var(–or2);}
-.mob-nl:last-child{border-bottom:none;}
+.mob-nl.gold{color:var(–or2);}
 @media(max-width:900px){
 .nav{padding:0 20px;}
 .nav-links,.nav-acts{display:none;}
-.mob-nav-toggle{display:flex;}
+.mob-toggle{display:flex;}
 }
 
-/* HERO */
-.hero{min-height:100vh;padding:110px 48px 72px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;position:relative;overflow:hidden;background:var(–v0);}
+/* ── HERO ────────────────────────────────────────── */
+.hero{min-height:100vh;padding:110px 48px 72px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;position:relative;overflow:hidden;background:#030C04;}
 .hbg{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
 .orbe{position:absolute;border-radius:50%;animation:orbe ease-in-out infinite;will-change:transform;}
-.o1{width:640px;height:640px;background:radial-gradient(circle,rgba(27,94,32,.25) 0%,transparent 65%);bottom:-170px;left:-170px;animation-duration:12s;}
-.o2{width:460px;height:460px;background:radial-gradient(circle,rgba(249,168,37,.08) 0%,transparent 60%);top:-80px;right:-80px;animation-duration:15s;animation-delay:-5s;}
-.o3{width:260px;height:260px;background:radial-gradient(circle,rgba(67,160,71,.13) 0%,transparent 60%);top:42%;right:28%;animation-duration:9s;animation-delay:-3s;}
-.hgd{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;}
-.hscan{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(249,168,37,.25),transparent);animation:scan 8s linear infinite;}
+.o1{width:640px;height:640px;background:radial-gradient(circle,rgba(27,94,32,.18) 0%,transparent 65%);bottom:-170px;left:-170px;animation-duration:12s;}
+.o2{width:460px;height:460px;background:radial-gradient(circle,rgba(249,168,37,.05) 0%,transparent 60%);top:-80px;right:-80px;animation-duration:15s;animation-delay:-5s;}
+.o3{width:260px;height:260px;background:radial-gradient(circle,rgba(67,160,71,.09) 0%,transparent 60%);top:42%;right:28%;animation-duration:9s;animation-delay:-3s;}
+.hgd{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.038) 1px,transparent 1px);background-size:44px 44px;}
+.hscan{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(249,168,37,.28),transparent);animation:scan 8s linear infinite;}
 .hpt{position:absolute;border-radius:50%;background:var(–or2);pointer-events:none;animation:pf ease-in-out infinite;}
 .hl,.hr{position:relative;z-index:2;}
 .hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:var(–r99);padding:5px 15px;font-size:11px;font-weight:600;color:var(–t2);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px;animation:up .6s ease both;}
-.hbdot{width:6px;height:6px;background:#4CAF50;border-radius:50%;animation:pulse 2s infinite;}
-.ht1{font-family:var(–fd);font-size:58px;font-weight:800;line-height:1.06;letter-spacing:-2px;color:var(–w);animation:up .6s .1s ease both;margin-bottom:7px;}
-.ht2{font-family:var(–fd);font-size:58px;font-weight:800;line-height:1.06;letter-spacing:-2px;background:linear-gradient(90deg,var(–or2),var(–or3),var(–or2));background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:up .6s .15s ease both;display:block;margin-bottom:7px;}
+.hbdot{width:6px;height:6px;background:#4CAF50;border-radius:50%;animation:pulse 2s infinite;flex-shrink:0;}
+.ht1{font-family:var(–fd);font-size:58px;font-weight:800;line-height:1.05;letter-spacing:-2px;color:var(–w);animation:up .6s .08s ease both;margin-bottom:7px;}
+.ht2{font-family:var(–fd);font-size:58px;font-weight:800;line-height:1.05;letter-spacing:-2px;background:linear-gradient(90deg,var(–or2),var(–or3),var(–or2));background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:up .6s .14s ease both,gradMove 4s ease infinite;display:block;margin-bottom:7px;}
 .ht3{font-family:var(–fd);font-size:25px;font-weight:600;color:rgba(255,255,255,.56);margin-bottom:20px;animation:up .6s .2s ease both;}
-.hd{font-size:15px;color:var(–t2);line-height:1.85;max-width:460px;margin-bottom:36px;animation:up .6s .25s ease both;}
+.hd{font-size:15px;color:var(–t2);line-height:1.85;max-width:460px;margin-bottom:36px;animation:up .6s .26s ease both;}
 .hd strong{color:var(–or2);}
-.hacts{display:flex;gap:12px;flex-wrap:wrap;animation:up .6s .3s ease both;margin-bottom:46px;}
-.hlevels{display:flex;gap:8px;flex-wrap:wrap;animation:up .6s .35s ease both;}
-.hlv{display:flex;align-items:center;gap:6px;background:var(–t5);border:1px solid var(–t4);border-radius:var(–r99);padding:6px 14px;font-size:12px;font-weight:600;color:var(–t2);transition:all .2s;cursor:pointer;}
-.hlv:hover{background:rgba(249,168,37,.08);border-color:rgba(249,168,37,.26);color:var(–or2);}
+.hacts{display:flex;gap:12px;flex-wrap:wrap;animation:up .6s .32s ease both;margin-bottom:44px;}
+.hlevels{display:flex;gap:8px;flex-wrap:wrap;animation:up .6s .38s ease both;}
+.hlv{display:flex;align-items:center;gap:6px;background:var(–t5);border:1px solid var(–t4);border-radius:var(–r99);padding:6px 14px;font-size:12px;font-weight:600;color:var(–t2);transition:all .22s;cursor:pointer;}
+.hlv:hover{background:rgba(249,168,37,.09);border-color:rgba(249,168,37,.28);color:var(–or2);}
 .ldot{width:5px;height:5px;border-radius:50%;flex-shrink:0;}
 
-/* ÉLI CARD */
-.ecard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;box-shadow:0 44px 88px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.08);animation:up .8s .2s ease both,float 5s 1s ease-in-out infinite;backdrop-filter:blur(6px);}
-.ech{background:linear-gradient(135deg,rgba(27,94,32,.78),rgba(46,125,50,.58));padding:16px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.07);}
+/* Eli Card */
+.ecard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;box-shadow:0 44px 90px rgba(0,0,0,.58),inset 0 1px 0 rgba(255,255,255,.09);animation:up .8s .18s ease both,float 5s 1s ease-in-out infinite;backdrop-filter:blur(8px);}
+.ech{background:linear-gradient(135deg,rgba(27,94,32,.8),rgba(46,125,50,.6));padding:16px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.08);}
 .eav-w{position:relative;flex-shrink:0;}
-.eav{width:48px;height:48px;background:linear-gradient(135deg,var(–v3),var(–v5));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 6px 20px rgba(27,94,32,.55);border:2px solid rgba(255,255,255,.12);position:relative;z-index:1;}
-.eavr{position:absolute;inset:-4px;border-radius:18px;border:1px solid rgba(67,160,71,.36);animation:spin 8s linear infinite;border-top-color:var(–v5);}
+.eav{width:48px;height:48px;background:linear-gradient(135deg,var(–v3),var(–v5));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid rgba(255,255,255,.13);position:relative;z-index:1;}
+.eavr{position:absolute;inset:-4px;border-radius:18px;border:1px solid rgba(67,160,71,.38);animation:spin 8s linear infinite;border-top-color:var(–v5);}
 .ename{font-family:var(–fd);font-size:14px;font-weight:700;color:var(–w);}
-.estat{display:flex;align-items:center;gap:5px;font-size:11px;color:#81C784;margin-top:2px;}
+.estat{display:flex;align-items:center;gap:5px;font-size:11px;color:var(–v6);margin-top:2px;}
 .esdot{width:6px;height:6px;background:#4CAF50;border-radius:50%;animation:pulse 2s infinite;}
-.efbadge{margin-left:auto;background:rgba(249,168,37,.13);border:1px solid rgba(249,168,37,.26);border-radius:var(–r99);padding:4px 11px;font-size:11px;font-weight:700;color:var(–or2);}
+.efbadge{margin-left:auto;background:rgba(249,168,37,.13);border:1px solid rgba(249,168,37,.27);border-radius:var(–r99);padding:4px 11px;font-size:11px;font-weight:700;color:var(–or2);}
 .emsgs{padding:17px 19px;display:flex;flex-direction:column;gap:10px;min-height:200px;}
-.mb{max-width:88%;padding:11px 14px;border-radius:4px 16px 16px 16px;font-size:13px;line-height:1.6;animation:up .36s ease both;}
-.me{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);color:var(–t1);align-self:flex-start;}
-.mu{background:linear-gradient(135deg,var(–v3),var(–v4));color:var(–w);border-radius:16px 4px 16px 16px;align-self:flex-end;box-shadow:0 3px 12px rgba(27,94,32,.44);}
-.mtyping{display:flex;gap:5px;align-items:center;padding:12px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);border-radius:4px 16px 16px 16px;width:fit-content;align-self:flex-start;}
+.mb{max-width:88%;padding:11px 14px;border-radius:4px 16px 16px 16px;font-size:13px;line-height:1.6;animation:up .38s ease both;}
+.me{background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.07);color:var(–t1);align-self:flex-start;}
+.mu{background:linear-gradient(135deg,var(–v3),var(–v4));color:var(–w);border-radius:16px 4px 16px 16px;align-self:flex-end;}
+.mtyping{display:flex;gap:5px;align-items:center;padding:12px 16px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.07);border-radius:4px 16px 16px 16px;width:fit-content;align-self:flex-start;}
 .td{width:7px;height:7px;background:var(–v5);border-radius:50%;animation:tdot 1.2s ease-in-out infinite;}
 .td:nth-child(2){animation-delay:.15s}.td:nth-child(3){animation-delay:.3s}
 .einput{margin:0 19px 19px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:10px 13px;display:flex;align-items:center;gap:9px;}
 .eit{flex:1;font-size:12px;color:var(–t3);}
-.emic{width:32px;height:32px;background:var(–or2);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;box-shadow:0 3px 10px rgba(249,168,37,.36);transition:transform .18s;flex-shrink:0;}
+.emic{width:32px;height:32px;background:var(–or2);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;transition:transform .18s;flex-shrink:0;}
 .emic:hover{transform:scale(1.1);}
 .efb{position:absolute;background:var(–w);border-radius:14px;padding:10px 14px;box-shadow:0 10px 28px rgba(0,0,0,.16);border:1px solid #E8F5E9;animation:floatS 4s ease-in-out infinite;}
 .efbt{top:-16px;right:-16px;animation-delay:-2s;}
@@ -138,87 +155,89 @@ body{font-family:var(--fb);background:var(--v0);color:var(--t1);overflow-x:hidde
 .fbs{font-size:13px;margin-bottom:2px;}
 .fbt{font-family:var(–fd);font-size:11px;font-weight:700;color:var(–v3);}
 
-/* SECTION ELI */
-.sec-eli{padding:88px 48px;background:linear-gradient(180deg,var(–v0) 0%,var(–v2) 50%,var(–v0) 100%);position:relative;overflow:hidden;}
-.sec-eli-bg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 76% 56% at 50% 50%,rgba(27,94,32,.16) 0%,transparent 65%);}
-.sec-eli-in{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
-.sec-ex{padding:88px 48px;background:var(–v0);}
-.sec-feat{padding:88px 48px;background:var(–v1);position:relative;}
-.sec-feat::before{content:’’;position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);}
-.sec-cta{padding:108px 48px;background:linear-gradient(135deg,var(–v2) 0%,var(–v3) 50%,var(–v2) 100%);text-align:center;position:relative;overflow:hidden;}
-.sec-cta::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 66% 76% at 50% 50%,rgba(249,168,37,.065) 0%,transparent 65%);}
+/* ── SECTION HELPERS ───────────────────────────── */
+.sec-eli{padding:90px 48px;background:linear-gradient(180deg,var(–v0) 0%,var(–v2) 50%,var(–v0) 100%);position:relative;overflow:hidden;}
+.sec-eli-bg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 78% 58% at 50% 50%,rgba(27,94,32,.17) 0%,transparent 65%);}
+.sec-eli-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center;}
+.sec-ex{padding:90px 48px;background:#030C04;}
+.sec-prem{padding:90px 48px;background:#071408;position:relative;overflow:hidden;}
+.sec-feat{padding:90px 48px;background:#071408;position:relative;}
+.sec-feat::before{content:’’;position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.09),transparent);}
+.sec-cta{padding:110px 48px;background:linear-gradient(135deg,var(–v2) 0%,var(–v3) 50%,var(–v2) 100%);text-align:center;position:relative;overflow:hidden;}
+.sec-cta::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 66% 78% at 50% 50%,rgba(249,168,37,.07) 0%,transparent 65%);}
 
-.shdr{text-align:center;margin-bottom:56px;}
-.slabel{display:inline-flex;align-items:center;gap:7px;background:rgba(249,168,37,.08);border:1px solid rgba(249,168,37,.18);border-radius:var(–r99);padding:5px 15px;font-size:11px;font-weight:700;color:var(–or2);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;}
-.sttl{font-family:var(–fd);font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(–w);margin-bottom:12px;}
+.shdr{text-align:center;margin-bottom:58px;}
+.slabel{display:inline-flex;align-items:center;gap:7px;background:rgba(249,168,37,.08);border:1px solid rgba(249,168,37,.18);border-radius:var(–r99);padding:5px 16px;font-size:11px;font-weight:700;color:var(–or2);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;}
+.sttl{font-family:var(–fd);font-size:42px;font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(–w);margin-bottom:13px;}
 .sttl span{background:linear-gradient(90deg,var(–or2),var(–or3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.ssub{font-size:15px;color:var(–t3);line-height:1.7;max-width:500px;margin:0 auto;}
-
+.ssub{font-size:15px;color:var(–t3);line-height:1.7;max-width:510px;margin:0 auto;}
 .slbl2{font-size:11px;font-weight:700;color:var(–or2);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:7px;}
 .slbl2::before{content:’’;width:20px;height:1.5px;background:var(–or2);}
 .stitle{font-family:var(–fd);font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(–w);margin-bottom:16px;}
 .stitle span{color:var(–or2);}
 .sdesc{font-size:15px;color:var(–t2);line-height:1.85;margin-bottom:26px;}
 .traits{display:flex;flex-direction:column;gap:11px;}
-.trait{display:flex;align-items:flex-start;gap:12px;background:var(–t5);border:1px solid var(–t4);border-radius:var(–r16);padding:12px 16px;transition:all .2s;}
-.trait:hover{background:rgba(249,168,37,.05);border-color:rgba(249,168,37,.17);transform:translateX(4px);}
-.ticon{width:34px;height:34px;flex-shrink:0;background:rgba(249,168,37,.08);border:1px solid rgba(249,168,37,.17);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.trait{display:flex;align-items:flex-start;gap:12px;background:var(–t5);border:1px solid var(–t4);border-radius:var(–r16);padding:12px 16px;transition:all .22s;}
+.trait:hover{background:rgba(249,168,37,.055);border-color:rgba(249,168,37,.18);transform:translateX(4px);}
+.ticon{width:34px;height:34px;flex-shrink:0;background:rgba(249,168,37,.09);border:1px solid rgba(249,168,37,.18);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;}
 .ttit{font-family:var(–fd);font-size:13px;font-weight:700;color:var(–w);margin-bottom:2px;}
 .tdsc{font-size:12px;color:var(–t3);line-height:1.5;}
+.edemo{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:24px;overflow:hidden;box-shadow:0 26px 72px rgba(0,0,0,.46);}
 .pcard{background:linear-gradient(135deg,rgba(249,168,37,.07),rgba(255,165,0,.035));border:1px solid rgba(249,168,37,.2);border-radius:var(–r16);padding:18px 20px;margin-top:16px;}
 .pct{font-family:var(–fd);font-size:14px;font-weight:800;color:var(–or2);margin-bottom:6px;}
 .pcd{font-size:12px;color:var(–t3);line-height:1.6;margin-bottom:11px;}
 .pcfs{display:flex;flex-direction:column;gap:5px;margin-bottom:11px;}
 .pcf{font-size:12px;color:var(–t2);display:flex;align-items:center;gap:6px;}
 .pcf::before{content:‘✦’;color:var(–or2);font-size:9px;}
-.edemo{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:24px;overflow:hidden;box-shadow:0 24px 68px rgba(0,0,0,.44);}
 
-/* EXAMENS */
-.exgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1080px;margin:0 auto;}
-.excard{border-radius:20px;padding:24px;cursor:pointer;transition:all .25s;position:relative;overflow:hidden;}
-.excard::before{content:’’;position:absolute;inset:0;border-radius:20px;opacity:0;transition:opacity .25s;background:linear-gradient(135deg,rgba(249,168,37,.045),transparent);}
+/* ── SECTION PREMIUM (nouvelle) ───────────────── */
+.prem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto;}
+.prem-card{background:#0D1A0B;border:1px solid rgba(249,168,37,.22);border-radius:20px;padding:26px;position:relative;overflow:hidden;transition:all .28s;}
+.prem-card::before{content:’’;position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,var(–or2),transparent);opacity:.6;}
+.prem-card:hover{border-color:rgba(249,168,37,.42);transform:translateY(-4px);box-shadow:0 20px 56px rgba(249,168,37,.1);}
+.prem-card-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(249,168,37,.1);border:1px solid rgba(249,168,37,.24);border-radius:var(–r99);padding:3px 11px;font-size:10px;font-weight:700;color:var(–or2);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;}
+.prem-card-icon{font-size:32px;margin-bottom:12px;display:block;}
+.prem-card-title{font-family:var(–fd);font-size:15px;font-weight:700;color:var(–w);margin-bottom:8px;}
+.prem-card-desc{font-size:13px;color:var(–t3);line-height:1.7;}
+.prem-cta-wrap{text-align:center;margin-top:44px;}
+
+/* ── EXAMENS ────────────────────────────────────── */
+.exgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto;}
+.excard{border-radius:20px;padding:24px;cursor:pointer;transition:all .26s;position:relative;overflow:hidden;}
+.excard::before{content:’’;position:absolute;inset:0;border-radius:20px;opacity:0;transition:opacity .26s;background:linear-gradient(135deg,rgba(249,168,37,.045),transparent);}
 .excard:hover{transform:translateY(-5px);}.excard:hover::before{opacity:1;}
 .ec-cep{background:linear-gradient(145deg,#2D1A00,#3C2200);border:1px solid rgba(230,81,0,.2);}
 .ec-bepc{background:linear-gradient(145deg,var(–v2),#0C2E12);border:1px solid rgba(27,94,32,.36);}
 .ec-bac{background:linear-gradient(145deg,#0A1C0B,#11200E);border:1px solid rgba(67,160,71,.2);}
-.ec-cep:hover{box-shadow:0 16px 50px rgba(230,81,0,.16);border-color:rgba(230,81,0,.42);}
-.ec-bepc:hover{box-shadow:0 16px 50px rgba(27,94,32,.2);border-color:rgba(27,94,32,.5);}
-.ec-bac:hover{box-shadow:0 16px 50px rgba(249,168,37,.12);border-color:rgba(249,168,37,.34);}
+.ec-cep:hover{box-shadow:0 18px 52px rgba(230,81,0,.17);border-color:rgba(230,81,0,.42);}
+.ec-bepc:hover{box-shadow:0 18px 52px rgba(27,94,32,.22);border-color:rgba(27,94,32,.52);}
+.ec-bac:hover{box-shadow:0 18px 52px rgba(249,168,37,.13);border-color:rgba(249,168,37,.36);}
 .ecpill{display:inline-block;border-radius:var(–r99);padding:3px 11px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;cursor:pointer;}
 .eccode{font-family:var(–fd);font-size:38px;font-weight:800;line-height:1;margin-bottom:5px;}
 .ecname{font-size:12px;font-weight:600;color:var(–t2);margin-bottom:5px;}
 .ecdesc{font-size:12px;color:var(–t3);line-height:1.5;margin-bottom:16px;}
 .ecyrs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:15px;}
-.ecyr{border-radius:var(–r99);padding:3px 9px;font-size:10px;font-weight:700;cursor:pointer;}
+.ecyr{border-radius:var(–r99);padding:3px 9px;font-size:10px;font-weight:700;transition:all .16s;}
 .ecmats{border-top:1px solid rgba(255,255,255,.07);padding-top:12px;}
 .ecmat{display:flex;align-items:center;gap:7px;padding:5px 0;font-size:12px;color:var(–t3);border-bottom:1px solid rgba(255,255,255,.04);}
 .ecmat:last-child{border-bottom:none;}
 .ecmd{width:4px;height:4px;border-radius:50%;flex-shrink:0;}
-.ecbtn{display:flex;align-items:center;justify-content:center;gap:5px;width:100%;margin-top:15px;background:transparent;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:9px;font-size:12px;font-weight:700;cursor:pointer;transition:all .16s;font-family:var(–fb);color:var(–t2);}
-.ecbtn:hover{background:rgba(255,255,255,.05);color:var(–w);}
+.ecbtn{display:flex;align-items:center;justify-content:center;width:100%;margin-top:15px;background:transparent;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:9px;font-size:12px;font-weight:700;cursor:pointer;transition:all .16s;font-family:var(–fb);color:var(–t2);}
+.ecbtn:hover{background:rgba(255,255,255,.055);color:var(–w);}
 
-/* FEATURES */
-.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1080px;margin:0 auto;}
-.fc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:26px;transition:all .25s;position:relative;overflow:hidden;}
-.fc:hover{background:rgba(255,255,255,.05);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.36);}
+/* ── FEATURES ───────────────────────────────────── */
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:0 auto;}
+.fc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.065);border-radius:20px;padding:26px;transition:all .26s;position:relative;overflow:hidden;}
+.fc:hover{background:rgba(255,255,255,.055);transform:translateY(-4px);box-shadow:0 22px 54px rgba(0,0,0,.38);}
 .fiw{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px;}
 .ftit{font-family:var(–fd);font-size:15px;font-weight:700;color:var(–w);margin-bottom:8px;}
 .fdsc{font-size:13px;color:var(–t3);line-height:1.75;}
-
-/* PREMIUM LOCK */
-.prem-lock{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:20px;background:rgba(3,12,4,.82);backdrop-filter:blur(4px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:all .2s;z-index:2;}
-.prem-lock:hover{background:rgba(3,12,4,.75);}
-.prem-lock-icon{font-size:28px;animation:lockPulse 2s ease-in-out infinite;}
-.prem-lock-txt{font-family:var(–fd);font-size:12px;font-weight:700;color:var(–or2);text-align:center;padding:0 12px;}
-.prem-lock-btn{background:rgba(249,168,37,.15);border:1px solid rgba(249,168,37,.35);border-radius:var(–r99);padding:5px 14px;font-size:11px;font-weight:700;color:var(–or2);font-family:var(–fb);}
-
-/* PLATFORMS */
-.plbar{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:var(–r16);padding:18px 28px;max-width:1080px;margin:32px auto 0;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.plbar{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.065);border-radius:var(–r16);padding:18px 28px;max-width:1100px;margin:32px auto 0;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
 .plbar-txt{font-size:14px;color:var(–t2);font-weight:500;flex:1;}
 .plbar-txt strong{color:var(–w);}
 .plpill{display:flex;align-items:center;gap:6px;background:var(–t5);border:1px solid var(–t4);border-radius:var(–r99);padding:6px 14px;font-size:12px;font-weight:600;color:var(–t2);}
 
-/* CTA */
+/* ── CTA ────────────────────────────────────────── */
 .ctain{position:relative;z-index:1;}
 .ctat{font-family:var(–fd);font-size:48px;font-weight:800;line-height:1.1;letter-spacing:-1.5px;color:var(–w);margin-bottom:8px;}
 .ctasub{font-family:var(–fd);font-size:26px;font-weight:700;color:var(–or2);margin-bottom:17px;}
@@ -226,27 +245,27 @@ body{font-family:var(--fb);background:var(--v0);color:var(--t1);overflow-x:hidde
 .ctapills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px;}
 .ctapill{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:var(–r99);padding:6px 14px;font-size:12px;color:rgba(255,255,255,.7);}
 
-/* FOOTER */
-.foot{background:var(–v0);padding:58px 48px 28px;border-top:1px solid rgba(255,255,255,.06);}
+/* ── FOOTER ─────────────────────────────────────── */
+.foot{background:#030C04;padding:60px 48px 30px;border-top:1px solid rgba(255,255,255,.065);}
 .fgr{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px;}
 .fbn{font-family:var(–fd);font-size:18px;font-weight:800;letter-spacing:2.5px;color:var(–w);}
 .ftag{font-size:12px;color:var(–t3);margin-top:9px;line-height:1.7;max-width:220px;}
 .fct{margin-top:13px;font-size:12px;color:var(–t3);line-height:1.8;}
 .fsocs{display:flex;gap:7px;margin-top:15px;flex-wrap:wrap;}
-.fsoc{width:34px;height:34px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:9px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .16s;text-decoration:none;overflow:hidden;flex-shrink:0;}
-.fsoc:hover{background:rgba(249,168,37,.08);border-color:rgba(249,168,37,.26);}
+.fsoc{width:34px;height:34px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:9px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .18s;text-decoration:none;overflow:hidden;flex-shrink:0;}
+.fsoc:hover{background:rgba(249,168,37,.09);border-color:rgba(249,168,37,.28);}
 .fct2{font-size:11px;font-weight:700;color:var(–t3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:15px;}
-.fl{display:block;font-size:13px;color:var(–t3);text-decoration:none;margin-bottom:9px;transition:color .16s;cursor:pointer;}
+.fl{display:block;font-size:13px;color:var(–t3);text-decoration:none;margin-bottom:9px;transition:color .18s;cursor:pointer;}
 .fl:hover{color:var(–or2);}
-.fbot{border-top:1px solid rgba(255,255,255,.06);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.fbot{border-top:1px solid rgba(255,255,255,.065);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
 .fcp{font-size:12px;color:rgba(255,255,255,.2);}
 .fmade{font-size:11px;color:rgba(255,255,255,.16);font-style:italic;}
 
-/* OVERLAYS */
+/* ── OVERLAYS ───────────────────────────────────── */
 .po{display:none;position:fixed;inset:0;z-index:800;background:var(–v0);overflow-y:auto;-webkit-overflow-scrolling:touch;}
 .po.on{display:block;}
-.pi{max-width:820px;margin:0 auto;padding:70px 28px;}
-.pbk{display:inline-flex;align-items:center;gap:8px;color:var(–t2);cursor:pointer;font-size:13px;font-weight:600;margin-bottom:34px;background:none;border:none;font-family:var(–fb);transition:color .16s;}
+.pi{max-width:820px;margin:0 auto;padding:70px 28px 80px;}
+.pbk{display:inline-flex;align-items:center;gap:8px;color:var(–t2);cursor:pointer;font-size:13px;font-weight:600;margin-bottom:34px;background:none;border:none;font-family:var(–fb);transition:color .18s;}
 .pbk:hover{color:var(–or2);}
 .ptitle{font-family:var(–fd);font-size:38px;font-weight:800;color:var(–w);margin-bottom:8px;}
 .psub{font-size:15px;color:var(–or2);margin-bottom:30px;font-weight:500;}
@@ -254,10 +273,13 @@ body{font-family:var(--fb);background:var(--v0);color:var(--t1);overflow-x:hidde
 .ps-title{font-family:var(–fd);font-size:18px;font-weight:700;color:var(–w);margin-bottom:10px;}
 .pt{font-size:14px;color:var(–t2);line-height:1.85;margin-bottom:14px;}
 .pt a{color:var(–or2);}
+.pt strong{color:var(–w);}
+
+/* FORMS */
 .fg{margin-bottom:17px;}
 .fl2{display:block;font-size:13px;font-weight:600;color:var(–t2);margin-bottom:6px;}
-.fi{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11);border-radius:var(–r12);padding:12px 14px;font-size:14px;color:var(–w);font-family:var(–fb);outline:none;transition:border-color .16s;}
-.fi:focus{border-color:rgba(249,168,37,.45);}
+.fi{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11);border-radius:var(–r12);padding:12px 14px;font-size:14px;color:var(–w);font-family:var(–fb);outline:none;transition:border-color .18s;}
+.fi:focus{border-color:rgba(249,168,37,.46);}
 .fi::placeholder{color:var(–t3);}
 textarea.fi{resize:vertical;min-height:110px;}
 .fcard{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(–r20);padding:30px;}
@@ -267,8 +289,8 @@ textarea.fi{resize:vertical;min-height:110px;}
 .icard{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(–r16);padding:18px 21px;margin-bottom:14px;}
 .ict{font-family:var(–fd);font-size:14px;font-weight:700;color:var(–w);margin-bottom:4px;}
 .icd{font-size:13px;color:var(–t3);line-height:1.6;}
-.cmet{display:flex;align-items:center;gap:13px;padding:14px 18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(–r16);margin-bottom:10px;transition:all .16s;}
-.cmet:hover{background:rgba(255,255,255,.05);border-color:rgba(249,168,37,.17);}
+.cmet{display:flex;align-items:center;gap:13px;padding:14px 18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(–r16);margin-bottom:10px;transition:all .18s;}
+.cmet:hover{background:rgba(255,255,255,.055);border-color:rgba(249,168,37,.18);}
 .cico{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
 .clbl{font-size:12px;color:var(–t3);}
 .cval{font-size:14px;font-weight:600;color:var(–w);}
@@ -280,145 +302,135 @@ textarea.fi{resize:vertical;min-height:110px;}
 .sct{font-family:var(–fd);font-size:14px;font-weight:700;color:var(–w);margin-bottom:3px;}
 .scd{font-size:12px;color:var(–t3);}
 .ayrs{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px;}
-.ayrbtn{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(–r99);padding:4px 11px;font-size:11px;font-weight:700;color:var(–t2);cursor:pointer;transition:all .16s;}
-.ayrbtn:hover{background:rgba(249,168,37,.13);border-color:rgba(249,168,37,.36);color:var(–or2);}
+.ayrbtn{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(–r99);padding:4px 11px;font-size:11px;font-weight:700;color:var(–t2);cursor:pointer;transition:all .18s;}
+.ayrbtn:hover{background:rgba(249,168,37,.13);border-color:rgba(249,168,37,.38);color:var(–or2);}
 .csoon{background:rgba(249,168,37,.065);border:1px solid rgba(249,168,37,.17);border-radius:var(–r16);padding:14px 18px;text-align:center;font-size:13px;color:var(–or2);margin-top:16px;}
 
-/* PREMIUM */
+/* Alerte offline */
+.offline-alert{background:rgba(249,168,37,.08);border:2px solid rgba(249,168,37,.3);border-radius:var(–r16);padding:16px 20px;margin-bottom:20px;display:flex;gap:12px;align-items:flex-start;}
+.offline-alert-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.offline-alert-title{font-family:var(–fd);font-size:13px;font-weight:800;color:var(–or2);margin-bottom:4px;}
+.offline-alert-desc{font-size:12px;color:var(–t2);line-height:1.6;}
+
+/* PREMIUM PAGE */
 .age-gate-wrap{display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px 0;}
-.age-notice{background:rgba(249,168,37,.07);border:1px solid rgba(249,168,37,.18);border-radius:var(–r16);padding:15px 18px;font-size:13px;color:var(–or2);margin-bottom:24px;max-width:470px;}
+.age-notice{background:rgba(249,168,37,.07);border:1px solid rgba(249,168,37,.18);border-radius:var(–r16);padding:15px 18px;font-size:13px;color:var(–or2);margin-bottom:24px;max-width:480px;}
 .parent-form,.code-step,.prem-form{display:none;}
 .parent-form.on,.code-step.on,.prem-form.on{display:block;}
 .code-input{width:180px;text-align:center;font-size:26px;font-weight:800;letter-spacing:8px;font-family:var(–fd);}
-.adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:18px;}
+.adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:20px;}
 .adv-item{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:var(–r12);padding:13px;display:flex;align-items:flex-start;gap:9px;}
 .adv-icon{font-size:19px;flex-shrink:0;}
 .adv-t{font-family:var(–fd);font-size:12px;font-weight:700;color:var(–w);margin-bottom:2px;}
 .adv-d{font-size:11px;color:var(–t3);}
-.price-tabs{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap;}
+.price-tabs{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap;}
 .ptab{flex:1;min-width:140px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.1);border-radius:var(–r16);padding:16px;text-align:center;cursor:pointer;transition:all .2s;}
-.ptab.active{border-color:var(–or2);background:rgba(249,168,37,.08);}
+.ptab.active{border-color:var(–or2);background:rgba(249,168,37,.09);}
 .ptab-name{font-family:var(–fd);font-size:13px;font-weight:700;color:var(–t2);margin-bottom:5px;}
 .ptab.active .ptab-name{color:var(–or2);}
 .ptab-price{font-family:var(–fd);font-size:22px;font-weight:800;color:var(–w);}
 .ptab-period{font-size:11px;color:var(–t3);margin-top:2px;}
 
 /* PAIEMENT SOUS-PAGES */
-.pay-methods-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px;}
-.pay-method-card{background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.1);border-radius:var(–r16);padding:20px;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;}
-.pay-method-card:hover{background:rgba(255,255,255,.07);border-color:rgba(249,168,37,.36);transform:translateY(-2px);}
-.pay-method-logo{font-size:32px;}
-.pay-method-name{font-family:var(–fd);font-size:14px;font-weight:700;color:var(–w);}
-.pay-method-desc{font-size:11px;color:var(–t3);}
 .pay-subpage{display:none;position:fixed;inset:0;z-index:850;background:var(–v0);overflow-y:auto;-webkit-overflow-scrolling:touch;}
 .pay-subpage.on{display:block;}
-.pay-sp-top{background:rgba(0,0,0,.5);backdrop-filter:blur(18px);padding:14px 22px;display:flex;align-items:center;gap:14px;border-bottom:1px solid rgba(255,255,255,.07);position:sticky;top:0;z-index:10;}
-.pay-sp-ssl{display:flex;align-items:center;gap:6px;background:rgba(67,160,71,.09);border:1px solid rgba(67,160,71,.22);border-radius:var(–r99);padding:4px 12px;font-size:11px;font-weight:700;color:#81C784;margin-left:auto;}
-.pay-sp-body{max-width:580px;margin:0 auto;padding:32px 22px;}
-/* Offre selector en sous-page */
+.pay-sp-top{background:rgba(0,0,0,.52);backdrop-filter:blur(18px);padding:14px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid rgba(255,255,255,.07);position:sticky;top:0;z-index:10;}
+.pay-sp-ssl{display:flex;align-items:center;gap:6px;background:rgba(67,160,71,.09);border:1px solid rgba(67,160,71,.22);border-radius:var(–r99);padding:4px 12px;font-size:11px;font-weight:700;color:var(–v6);margin-left:auto;}
+.pay-sp-body{max-width:580px;margin:0 auto;padding:32px 22px 60px;}
 .pay-offer-tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
 .pot{flex:1;min-width:100px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.1);border-radius:var(–r12);padding:12px 8px;text-align:center;cursor:pointer;transition:all .18s;}
-.pot.sel{border-color:var(–or2);background:rgba(249,168,37,.08);}
+.pot.sel{border-color:var(–or2);background:rgba(249,168,37,.09);}
 .pot-name{font-size:11px;font-weight:700;color:var(–t2);margin-bottom:3px;}
 .pot.sel .pot-name{color:var(–or2);}
 .pot-price{font-family:var(–fd);font-size:16px;font-weight:800;color:var(–w);}
-.mobile-money-steps{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(–r16);padding:18px 20px;margin-bottom:18px;}
+.mm-steps{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(–r16);padding:18px 20px;margin-bottom:18px;}
 .mm-step{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05);}
 .mm-step:last-child{border-bottom:none;}
-.mm-step-num{width:28px;height:28px;background:var(–v3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(–fd);font-size:13px;font-weight:800;color:var(–w);flex-shrink:0;}
-.mm-step-txt{font-size:13px;color:var(–t2);line-height:1.6;}
-.mm-step-txt strong{color:var(–or2);}
-.paypal-box{background:rgba(0,70,160,.08);border:1px solid rgba(0,70,160,.25);border-radius:var(–r16);padding:20px;text-align:center;margin-bottom:18px;}
-.bank-section{margin-bottom:18px;}
-.bank-section-title{font-family:var(–fd);font-size:14px;font-weight:700;color:var(–w);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.mm-num{width:28px;height:28px;background:var(–v3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(–fd);font-size:12px;font-weight:800;color:var(–w);flex-shrink:0;}
+.mm-txt{font-size:13px;color:var(–t2);line-height:1.6;}
+.mm-txt strong{color:var(–or2);}
+.bene-box{background:rgba(249,168,37,.08);border:1px solid rgba(249,168,37,.24);border-radius:var(–r16);padding:16px 20px;margin-bottom:16px;text-align:center;}
+.bene-num{font-family:var(–fd);font-size:22px;font-weight:800;color:var(–or2);}
+.bene-name{font-size:13px;color:var(–t2);margin-top:4px;}
+.pay-logo-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+.pay-logo-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(–r12);padding:10px 16px;display:flex;align-items:center;gap:8px;}
 
-/* DASHBOARD */
-.edash-hero{background:linear-gradient(135deg,rgba(27,94,32,.55),rgba(46,125,50,.38));border-radius:var(–r20);padding:24px;margin-bottom:24px;display:flex;align-items:center;gap:18px;position:relative;overflow:hidden;}
-.edash-hero::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 68% 78% at 70% 50%,rgba(249,168,37,.06) 0%,transparent 65%);}
-.edash-av{width:64px;height:64px;background:linear-gradient(135deg,var(–v3),var(–v5));border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 8px 22px rgba(27,94,32,.55);flex-shrink:0;position:relative;z-index:1;}
+/* PAY CONFIRM */
+.pay-confirm-page{display:none;position:fixed;inset:0;z-index:860;background:var(–v0);overflow-y:auto;}
+.pay-confirm-page.on{display:block;}
+
+/* DASHBOARD ÉLI */
+.edash-hero{background:linear-gradient(135deg,rgba(27,94,32,.56),rgba(46,125,50,.38));border-radius:var(–r20);padding:26px;margin-bottom:24px;display:flex;align-items:center;gap:20px;position:relative;overflow:hidden;}
+.edash-hero::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 70% 50%,rgba(249,168,37,.065) 0%,transparent 65%);}
+.edash-av{width:64px;height:64px;background:linear-gradient(135deg,var(–v3),var(–v5));border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:30px;flex-shrink:0;position:relative;z-index:1;}
 .edash-info{position:relative;z-index:1;flex:1;}
-.edash-name{font-family:var(–fd);font-size:20px;font-weight:800;color:var(–w);margin-bottom:3px;}
-.edash-stat{display:flex;align-items:center;gap:6px;font-size:12px;color:#81C784;margin-bottom:7px;}
+.edash-name{font-family:var(–fd);font-size:21px;font-weight:800;color:var(–w);margin-bottom:3px;}
+.edash-stat{display:flex;align-items:center;gap:6px;font-size:12px;color:var(–v6);margin-bottom:7px;}
 .edash-desc{font-size:13px;color:var(–t2);line-height:1.6;}
 .vid-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(–r16);overflow:hidden;margin-bottom:22px;}
 .vid-top{background:linear-gradient(135deg,var(–v2),#0D2A10);padding:16px;display:flex;align-items:center;gap:13px;}
 .vid-av{width:44px;height:44px;background:linear-gradient(135deg,var(–v3),var(–v5));border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
 .vid-level{font-family:var(–fd);font-size:14px;font-weight:700;color:var(–w);}
-.vid-lvl-badge{display:inline-block;border-radius:var(–r99);padding:2px 10px;font-size:10px;font-weight:700;margin-top:2px;}
 .vid-screen{background:#080808;border-top:1px solid rgba(255,255,255,.055);min-height:180px;display:flex;flex-direction:column;}
 .vid-bar{background:rgba(255,255,255,.04);padding:8px 14px;display:flex;align-items:center;gap:7px;border-bottom:1px solid rgba(255,255,255,.04);}
 .vid-dot{width:7px;height:7px;border-radius:50%;}
 .vid-msgs{flex:1;padding:13px 15px;display:flex;flex-direction:column;gap:8px;}
-.vid-eli{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.055);border-radius:3px 13px 13px 13px;padding:9px 12px;font-size:12px;color:var(–t1);line-height:1.5;max-width:88%;align-self:flex-start;}
+.vid-eli{background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.055);border-radius:3px 13px 13px 13px;padding:9px 12px;font-size:12px;color:var(–t1);line-height:1.5;max-width:88%;align-self:flex-start;}
 .vid-usr{background:linear-gradient(135deg,var(–v3),var(–v4));border-radius:13px 3px 13px 13px;padding:9px 12px;font-size:12px;color:var(–w);max-width:78%;align-self:flex-end;}
 .vid-narr{padding:11px 15px;background:rgba(249,168,37,.055);border-top:1px solid rgba(249,168,37,.11);font-size:11px;color:var(–or2);font-style:italic;}
 .edfeat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;}
-.edfeat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:var(–r16);padding:17px;transition:all .2s;cursor:pointer;position:relative;overflow:hidden;}
-.edfeat:hover{background:rgba(255,255,255,.05);border-color:rgba(249,168,37,.17);transform:translateY(-2px);}
+.edfeat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.065);border-radius:var(–r16);padding:17px;transition:all .22s;cursor:pointer;}
+.edfeat:hover{background:rgba(255,255,255,.055);border-color:rgba(249,168,37,.18);transform:translateY(-2px);}
 .edfeat-icon{font-size:24px;margin-bottom:9px;}
 .edfeat-title{font-family:var(–fd);font-size:13px;font-weight:700;color:var(–w);margin-bottom:4px;}
 .edfeat-desc{font-size:12px;color:var(–t3);line-height:1.5;margin-bottom:11px;}
-
-/* Photo Eli Premium */
-.photo-upload-zone{border:2px dashed rgba(249,168,37,.3);border-radius:var(–r16);padding:32px;text-align:center;background:rgba(249,168,37,.04);cursor:pointer;transition:all .2s;margin-bottom:16px;}
-.photo-upload-zone:hover{border-color:rgba(249,168,37,.55);background:rgba(249,168,37,.07);}
-.photo-upload-zone input{display:none;}
+.edfeat-prem{display:inline-flex;align-items:center;gap:5px;background:rgba(249,168,37,.1);border:1px solid rgba(249,168,37,.2);border-radius:var(–r99);padding:3px 10px;font-size:10px;font-weight:700;color:var(–or2);margin-bottom:10px;}
 
 /* CHAT FULL */
 .chat-full{display:none;position:fixed;inset:0;z-index:900;background:var(–v0);flex-direction:column;}
 .chat-full.on{display:flex;}
-.chat-topbar{background:rgba(0,0,0,.48);backdrop-filter:blur(16px);padding:12px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.07);flex-shrink:0;}
+.chat-topbar{background:rgba(0,0,0,.5);backdrop-filter:blur(18px);padding:12px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.07);flex-shrink:0;}
 .chat-back{color:var(–or2);font-size:14px;cursor:pointer;background:none;border:none;font-family:var(–fb);font-weight:600;}
 .chat-msgs{flex:1;padding:18px;display:flex;flex-direction:column;gap:11px;overflow-y:auto;background:linear-gradient(180deg,var(–v0),var(–v1));-webkit-overflow-scrolling:touch;}
-.chat-inp{padding:12px 18px;background:rgba(0,0,0,.44);border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:9px;flex-shrink:0;}
+.chat-inp{padding:12px 18px;background:rgba(0,0,0,.46);border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:9px;flex-shrink:0;}
 .chat-inp-f{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:var(–r12);padding:10px 13px;font-size:13px;color:var(–w);font-family:var(–fb);outline:none;}
-.chat-inp-f:focus{border-color:rgba(249,168,37,.4);}
+.chat-inp-f:focus{border-color:rgba(249,168,37,.42);}
 .chat-inp-f::placeholder{color:var(–t3);}
 .chat-send{width:36px;height:36px;background:var(–or2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;cursor:pointer;border:none;flex-shrink:0;}
-.chat-mic2{width:36px;height:36px;background:rgba(249,168,37,.13);border:1px solid rgba(249,168,37,.26);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;cursor:pointer;flex-shrink:0;}
+.chat-mic2{width:36px;height:36px;background:rgba(249,168,37,.13);border:1px solid rgba(249,168,37,.27);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;cursor:pointer;flex-shrink:0;}
 
-/* CONFID */
+/* CONFIDENTIALITÉ */
 .conf-consent{background:rgba(67,160,71,.07);border:1px solid rgba(67,160,71,.2);border-radius:var(–r16);padding:16px 20px;margin-top:20px;display:flex;align-items:flex-start;gap:13px;}
 .conf-cb{width:20px;height:20px;accent-color:var(–v5);flex-shrink:0;margin-top:2px;cursor:pointer;}
 .conf-cb-lbl{font-size:13px;color:var(–t2);line-height:1.6;}
 .conf-section{display:none;margin-top:16px;}
 .conf-section.on{display:block;}
 
-/* PREMIUM GATE MODAL */
-.prem-gate-modal{display:none;position:fixed;inset:0;z-index:1000;background:rgba(3,12,4,.88);backdrop-filter:blur(12px);align-items:center;justify-content:center;}
-.prem-gate-modal.on{display:flex;}
-.prem-gate-box{background:linear-gradient(135deg,#0D2410,#071408);border:1px solid rgba(249,168,37,.22);border-radius:var(–r24);padding:36px;max-width:440px;width:90%;text-align:center;box-shadow:0 32px 80px rgba(0,0,0,.6);}
-.pgate-icon{font-size:52px;margin-bottom:16px;}
-.pgate-title{font-family:var(–fd);font-size:22px;font-weight:800;color:var(–w);margin-bottom:8px;}
-.pgate-desc{font-size:13px;color:var(–t2);line-height:1.7;margin-bottom:22px;}
-.pgate-feat{background:rgba(249,168,37,.07);border:1px solid rgba(249,168,37,.15);border-radius:var(–r12);padding:12px 16px;margin-bottom:20px;font-size:13px;color:var(–or2);font-weight:600;}
-
 /* RESPONSIVE */
-@media(max-width:900px){
+@media(max-width:1000px){
 .hero{grid-template-columns:1fr;padding:92px 24px 56px;}
 .hr{max-width:440px;margin:0 auto;}
 .ht1,.ht2{font-size:44px;}
 .sec-eli-in{grid-template-columns:1fr;}
-.exgrid{grid-template-columns:1fr;}
+.exgrid,.prem-grid{grid-template-columns:1fr;}
 .fgrid{grid-template-columns:1fr 1fr;}
 .fgr{grid-template-columns:1fr 1fr;}
 .adv-grid{grid-template-columns:1fr;}
 .edfeat-grid{grid-template-columns:1fr;}
-.pay-methods-grid{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:640px){
-.hero{padding:84px 16px 48px;}
+.hero{padding:86px 16px 48px;}
 .ht1,.ht2{font-size:34px;}.ht3{font-size:18px;}
 .sttl{font-size:28px;}.ctat{font-size:32px;}
 .fgrid{grid-template-columns:1fr;}
 .fgr{grid-template-columns:1fr;}
-.sec-ex,.sec-feat,.sec-eli,.sec-cta{padding:60px 16px;}
+.sec-ex,.sec-feat,.sec-eli,.sec-cta,.sec-prem{padding:60px 16px;}
 .foot{padding:44px 16px 22px;}
 .plbar{flex-direction:column;align-items:flex-start;}
-.pi{padding:56px 16px;}
+.pi{padding:56px 16px 60px;}
 .price-tabs{flex-direction:column;}
-.pay-methods-grid{grid-template-columns:1fr;}
-.adv-grid{grid-template-columns:1fr;}
+.pay-offer-tabs{flex-wrap:wrap;}
+.prem-grid{grid-template-columns:1fr;}
 }
 </style>
 
@@ -428,23 +440,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 <div class="cur" id="CUR"></div>
 <div class="cur-r" id="CURR"></div>
 
-<!-- PREMIUM GATE MODAL -->
-
-<div class="prem-gate-modal" id="premGate" onclick="if(event.target===this)closePremGate()">
-  <div class="prem-gate-box">
-    <div class="pgate-icon">🔒</div>
-    <div class="pgate-title">Fonctionnalité Premium</div>
-    <div class="pgate-feat" id="premGateFeatName">Mini Quiz</div>
-    <div class="pgate-desc">Cette fonctionnalité est réservée aux membres Premium. Passe à la version Premium pour débloquer <strong id="premGateFeatTxt">le Mini Quiz</strong> et toutes les fonctionnalités avancées d'EKOLO.</div>
-    <div style="display:flex;gap:10px;justify-content:center">
-      <button class="btn btn-gold btn-md" onclick="closePremGate();openPO('prem')">✦ Passer Premium</button>
-      <button class="btn btn-out btn-sm" onclick="closePremGate()">Fermer</button>
-    </div>
-    <div style="margin-top:16px;font-size:12px;color:var(--t3)">À partir de 5 000 FCFA / mois</div>
-  </div>
-</div>
-
-<!-- CHAT PLEIN ÉCRAN -->
+<!-- ══════════ CHAT PLEIN ÉCRAN ══════════ -->
 
 <div class="chat-full" id="chatFull">
   <div class="chat-topbar">
@@ -466,42 +462,60 @@ textarea.fi{resize:vertical;min-height:110px;}
   </div>
 </div>
 
-<!-- ═══════════════════════════
-     SOUS-PAGES PAIEMENT
-═══════════════════════════ -->
+<!-- ══════════ PAGE PAIEMENT CONFIRMATION ══════════ -->
+
+<div class="pay-confirm-page" id="payConfirmPage">
+  <div style="max-width:520px;margin:0 auto;padding:60px 22px;text-align:center">
+    <div style="font-size:64px;margin-bottom:20px">🎉</div>
+    <h1 style="font-family:var(--fd);font-size:30px;font-weight:800;color:var(--w);margin-bottom:8px">Paiement confirmé !</h1>
+    <p style="font-size:16px;color:var(--or2);font-weight:600;margin-bottom:18px">Bienvenue dans EKOLO Exclusif ✦</p>
+    <div style="background:rgba(67,160,71,.07);border:1px solid rgba(67,160,71,.18);border-radius:var(--r16);padding:18px;margin-bottom:22px;font-size:14px;color:var(--v6)">
+      Ton abonnement sera activé dans les <strong style="color:var(--w)">5 minutes</strong> après vérification. Tu recevras une confirmation par WhatsApp.
+    </div>
+    <div id="confirmOfferTxt" style="font-family:var(--fd);font-size:18px;font-weight:800;color:var(--or2);margin-bottom:24px"></div>
+    <button class="btn btn-gold btn-md" onclick="document.getElementById('payConfirmPage').classList.remove('on');openPO('eli')" style="margin:0 auto">🧑‍🏫 Commencer avec Éli →</button>
+    <div style="margin-top:14px"><button class="btn btn-out btn-sm" onclick="document.getElementById('payConfirmPage').classList.remove('on');document.body.style.overflow=''">Retour à l'accueil</button></div>
+  </div>
+</div>
+
+<!-- ══════════ SOUS-PAGES PAIEMENT ══════════ -->
 
 <!-- PAYPAL -->
 
 <div class="pay-subpage" id="pay-paypal">
   <div class="pay-sp-top">
     <button class="chat-back" onclick="closePaySub('paypal')">← Retour</button>
-    <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w)">Paiement PayPal</div>
-    <div class="pay-sp-ssl">🔒 Sécurisé SSL</div>
+    <svg width="60" height="20" viewBox="0 0 100 32"><text x="0" y="24" font-family="Arial" font-weight="bold" font-size="22" fill="#003087">Pay</text><text x="38" y="24" font-family="Arial" font-weight="bold" font-size="22" fill="#009cde">Pal</text></svg>
+    <div class="pay-sp-ssl">🔒 SSL Sécurisé</div>
   </div>
   <div class="pay-sp-body">
-    <div class="paypal-box">
-      <div style="font-size:40px;margin-bottom:10px">🅿️</div>
-      <div style="font-family:var(--fd);font-size:18px;font-weight:800;color:#0070BA;margin-bottom:6px">PayPal</div>
-      <div style="font-size:13px;color:var(--t2);margin-bottom:16px">Paiement international sécurisé</div>
-      <div style="background:rgba(0,112,186,.1);border:1px solid rgba(0,112,186,.25);border-radius:var(--r12);padding:14px;margin-bottom:14px">
-        <div style="font-size:12px;color:var(--t3);margin-bottom:4px">Adresse PayPal bénéficiaire</div>
-        <div style="font-family:var(--fd);font-size:16px;font-weight:700;color:#0070BA">contact@ekolo.ga</div>
+    <div class="offline-alert">
+      <div class="offline-alert-icon">⚠️</div>
+      <div><div class="offline-alert-title">IMPORTANT — Connexion internet requise</div>
+      <div class="offline-alert-desc">Le paiement nécessite une connexion internet active. Si tu es en mode hors-ligne, connecte-toi d'abord à internet pour activer ton abonnement Exclusif.</div></div>
+    </div>
+    <div style="background:rgba(0,112,186,.08);border:1px solid rgba(0,112,186,.22);border-radius:var(--r16);padding:20px;text-align:center;margin-bottom:20px">
+      <svg width="90" height="30" viewBox="0 0 100 32"><text x="0" y="24" font-family="Arial" font-weight="bold" font-size="22" fill="#003087">Pay</text><text x="38" y="24" font-family="Arial" font-weight="bold" font-size="22" fill="#009cde">Pal</text></svg>
+      <div style="font-size:13px;color:var(--t2);margin-top:10px;margin-bottom:12px">Paiement international sécurisé</div>
+      <div style="background:rgba(0,112,186,.12);border:1px solid rgba(0,112,186,.22);border-radius:var(--r12);padding:12px">
+        <div style="font-size:11px;color:var(--t3);margin-bottom:3px">Adresse PayPal bénéficiaire</div>
+        <div style="font-family:var(--fd);font-size:15px;font-weight:700;color:#42A5F5">ekolocontact@gmail.com</div>
       </div>
     </div>
-    <div style="font-family:var(--fd);font-size:15px;font-weight:700;color:var(--w);margin-bottom:12px">Choisis ton offre</div>
+    <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:11px">Choisis ton offre</div>
     <div class="pay-offer-tabs" id="ppOffers">
-      <div class="pot" onclick="selectPayOffer('pp',this,'5 000 FCFA · Mensuel')"><div class="pot-name">Mensuel</div><div class="pot-price">5 000 FCFA</div></div>
-      <div class="pot" onclick="selectPayOffer('pp',this,'15 000 FCFA · Trimestriel')"><div class="pot-name">Trimestriel</div><div class="pot-price">15 000 FCFA</div></div>
-      <div class="pot sel" onclick="selectPayOffer('pp',this,'40 000 FCFA · Annuel')"><div class="pot-name">📚 Annuel</div><div class="pot-price">40 000 FCFA</div></div>
+      <div class="pot" onclick="selPot('pp',this,'Mensuel — 5 000 FCFA')"><div class="pot-name">Mensuel</div><div class="pot-price">5 000 FCFA</div></div>
+      <div class="pot" onclick="selPot('pp',this,'Trimestriel — 15 000 FCFA')"><div class="pot-name">Trimestriel</div><div class="pot-price">15 000 FCFA</div></div>
+      <div class="pot sel" onclick="selPot('pp',this,'Annuel Scolaire — 40 000 FCFA')"><div class="pot-name">📚 Annuel</div><div class="pot-price">40 000 FCFA</div></div>
     </div>
     <div class="fcard">
-      <div class="fg"><label class="fl2">Ton e-mail PayPal</label><input class="fi" type="email" placeholder="ton.email@paypal.com"></div>
-      <div class="fg"><label class="fl2">Ton nom complet</label><input class="fi" type="text" placeholder="Prénom et nom"></div>
+      <div class="fg"><label class="fl2">Ton adresse e-mail PayPal</label><input class="fi" type="email" placeholder="ton.email@paypal.com"></div>
+      <div class="fg"><label class="fl2">Nom complet</label><input class="fi" type="text" placeholder="Prénom et nom"></div>
       <div class="fg"><label class="fl2">Ton e-mail EKOLO (pour l'activation)</label><input class="fi" type="email" placeholder="ton@email.com"></div>
-      <div style="background:rgba(0,112,186,.07);border:1px solid rgba(0,112,186,.18);border-radius:var(--r12);padding:12px;margin-bottom:16px;font-size:12px;color:rgba(150,200,255,.8);display:flex;gap:7px">
-        <span>ℹ️</span> Effectue le paiement vers <strong>contact@ekolo.ga</strong> sur PayPal, puis valide ici pour activer ton abonnement.
+      <div style="background:rgba(0,112,186,.07);border:1px solid rgba(0,112,186,.16);border-radius:var(--r12);padding:12px;margin-bottom:16px;font-size:12px;color:rgba(150,200,255,.8)">
+        ℹ️ Effectue le virement vers <strong>ekolocontact@gmail.com</strong> sur PayPal, puis clique sur "Valider" pour activer ton abonnement (5 min).
       </div>
-      <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;animation:glow 2s infinite" onclick="confirmPaySub('paypal')">✅ Valider mon paiement PayPal</button>
+      <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;animation:glow 2s infinite" onclick="confirmPay('PayPal')">✅ Valider mon paiement PayPal</button>
     </div>
   </div>
 </div>
@@ -515,37 +529,47 @@ textarea.fi{resize:vertical;min-height:110px;}
     <div class="pay-sp-ssl">🔒 Sécurisé</div>
   </div>
   <div class="pay-sp-body">
-    <div style="background:linear-gradient(135deg,rgba(229,57,53,.12),rgba(229,57,53,.06));border:1px solid rgba(229,57,53,.25);border-radius:var(--r16);padding:20px;text-align:center;margin-bottom:20px;">
-      <div style="font-size:36px;margin-bottom:8px">📱</div>
-      <div style="font-family:var(--fd);font-size:17px;font-weight:800;color:#EF5350;margin-bottom:6px">Airtel Money · Gabon</div>
-      <div style="background:rgba(229,57,53,.1);border:1px solid rgba(229,57,53,.2);border-radius:var(--r12);padding:12px;margin:10px 0">
-        <div style="font-size:11px;color:var(--t3);margin-bottom:4px">Numéro bénéficiaire EKOLO</div>
-        <div style="font-family:var(--fd);font-size:20px;font-weight:800;color:#EF5350">+241 07 73 74 043</div>
+    <div class="offline-alert">
+      <div class="offline-alert-icon">⚠️</div>
+      <div><div class="offline-alert-title">IMPORTANT — Connexion internet requise</div>
+      <div class="offline-alert-desc">Le paiement Mobile Money nécessite une connexion réseau. Connecte-toi à internet ou utilise le réseau mobile pour effectuer le transfert et activer ton abonnement.</div></div>
+    </div>
+    <!-- Logo Airtel Money Gabon -->
+    <div style="background:linear-gradient(135deg,rgba(229,57,53,.12),rgba(229,57,53,.05));border:1px solid rgba(229,57,53,.24);border-radius:var(--r16);padding:20px;text-align:center;margin-bottom:20px">
+      <div style="display:inline-flex;align-items:center;gap:12px;background:#E53935;border-radius:10px;padding:10px 20px">
+        <span style="font-size:24px;color:#fff;font-weight:900;font-family:var(--fd)">Airtel</span>
+        <span style="font-size:11px;color:rgba(255,255,255,.8);font-weight:700;letter-spacing:1px">MONEY</span>
+      </div>
+      <div style="font-size:11px;color:var(--t3);margin-top:10px;margin-bottom:14px">Mobile Money · Gabon</div>
+      <div class="bene-box">
+        <div style="font-size:11px;color:var(--t3);margin-bottom:4px">Numéro bénéficiaire</div>
+        <div class="bene-num">+241 07 73 74 043</div>
+        <div class="bene-name">Bénéficiaire : <strong style="color:var(--or2)">Stecy Arsène</strong></div>
       </div>
     </div>
-    <div style="font-family:var(--fd);font-size:15px;font-weight:700;color:var(--w);margin-bottom:12px">Choisis ton offre</div>
+    <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:11px">Choisis ton offre</div>
     <div class="pay-offer-tabs" id="amOffers">
-      <div class="pot" onclick="selectPayOffer('am',this,'5 000 FCFA · Mensuel')"><div class="pot-name">Mensuel</div><div class="pot-price">5 000 FCFA</div></div>
-      <div class="pot" onclick="selectPayOffer('am',this,'15 000 FCFA · Trimestriel')"><div class="pot-name">Trimestriel</div><div class="pot-price">15 000 FCFA</div></div>
-      <div class="pot sel" onclick="selectPayOffer('am',this,'40 000 FCFA · Annuel')"><div class="pot-name">📚 Annuel</div><div class="pot-price">40 000 FCFA</div></div>
+      <div class="pot" onclick="selPot('am',this,'Mensuel — 5 000 FCFA')"><div class="pot-name">Mensuel</div><div class="pot-price">5 000 FCFA</div></div>
+      <div class="pot" onclick="selPot('am',this,'Trimestriel — 15 000 FCFA')"><div class="pot-name">Trimestriel</div><div class="pot-price">15 000 FCFA</div></div>
+      <div class="pot sel" onclick="selPot('am',this,'Annuel Scolaire — 40 000 FCFA')"><div class="pot-name">📚 Annuel</div><div class="pot-price">40 000 FCFA</div></div>
     </div>
-    <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:12px">Comment effectuer le virement</div>
-    <div class="mobile-money-steps">
-      <div class="mm-step"><div class="mm-step-num">1</div><div class="mm-step-txt">Compose le <strong>*150#</strong> sur ton téléphone Airtel ou ouvre l'application <strong>Airtel Money</strong></div></div>
-      <div class="mm-step"><div class="mm-step-num">2</div><div class="mm-step-txt">Sélectionne <strong>« Transfert d'argent »</strong> puis <strong>« Envoi »</strong></div></div>
-      <div class="mm-step"><div class="mm-step-num">3</div><div class="mm-step-txt">Entre le numéro bénéficiaire : <strong>+241 07 73 74 043</strong></div></div>
-      <div class="mm-step"><div class="mm-step-num">4</div><div class="mm-step-txt">Entre le montant correspondant à ton offre choisie</div></div>
-      <div class="mm-step"><div class="mm-step-num">5</div><div class="mm-step-txt">Dans le motif, écris : <strong>EKOLO + ton e-mail</strong> (ex : EKOLO jean@email.com)</div></div>
-      <div class="mm-step"><div class="mm-step-num">6</div><div class="mm-step-txt">Confirme avec ton code PIN et remplis le formulaire ci-dessous</div></div>
+    <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:11px">Comment effectuer le transfert</div>
+    <div class="mm-steps">
+      <div class="mm-step"><div class="mm-num">1</div><div class="mm-txt">Compose le <strong>*150#</strong> sur ton téléphone Airtel ou ouvre l'app <strong>Airtel Money</strong></div></div>
+      <div class="mm-step"><div class="mm-num">2</div><div class="mm-txt">Sélectionne <strong>« Transfert d'argent »</strong> → <strong>« Envoi »</strong></div></div>
+      <div class="mm-step"><div class="mm-num">3</div><div class="mm-txt">Numéro bénéficiaire : <strong>+241 07 73 74 043</strong> (Stecy Arsène)</div></div>
+      <div class="mm-step"><div class="mm-num">4</div><div class="mm-txt">Entre le montant correspondant à ton offre choisie ci-dessus</div></div>
+      <div class="mm-step"><div class="mm-num">5</div><div class="mm-txt">Dans le motif, écris : <strong>EKOLO + ton e-mail</strong></div></div>
+      <div class="mm-step"><div class="mm-num">6</div><div class="mm-txt">Confirme avec ton PIN → remplis le formulaire ci-dessous</div></div>
     </div>
     <div class="fcard">
       <div class="fg"><label class="fl2">Ton numéro Airtel Money</label><input class="fi" type="tel" placeholder="+241 0X XX XX XX"></div>
       <div class="fg"><label class="fl2">Ton e-mail EKOLO</label><input class="fi" type="email" placeholder="ton@email.com"></div>
-      <div class="fg"><label class="fl2">Référence de la transaction (facultatif)</label><input class="fi" type="text" placeholder="Numéro reçu par SMS"></div>
-      <div style="background:rgba(229,57,53,.07);border:1px solid rgba(229,57,53,.17);border-radius:var(--r12);padding:12px;margin-bottom:16px;font-size:12px;color:rgba(255,150,150,.8)">
-        🔒 Après validation, ton abonnement sera activé sous 2h maximum.
+      <div class="fg"><label class="fl2">Référence de transaction (reçu SMS)</label><input class="fi" type="text" placeholder="Ex : TXN123456789"></div>
+      <div style="background:rgba(229,57,53,.07);border:1px solid rgba(229,57,53,.15);border-radius:var(--r12);padding:12px;margin-bottom:16px;font-size:12px;color:rgba(255,150,150,.85)">
+        🔒 Abonnement activé dans les <strong>5 minutes</strong> après vérification. Confirmation par WhatsApp.
       </div>
-      <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;animation:glow 2s infinite" onclick="confirmPaySub('airtel')">✅ Confirmer mon paiement Airtel</button>
+      <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;animation:glow 2s infinite" onclick="confirmPay('Airtel Money')">✅ Confirmer mon paiement Airtel</button>
     </div>
   </div>
 </div>
@@ -559,36 +583,46 @@ textarea.fi{resize:vertical;min-height:110px;}
     <div class="pay-sp-ssl">🔒 Sécurisé</div>
   </div>
   <div class="pay-sp-body">
-    <div style="background:linear-gradient(135deg,rgba(21,101,192,.12),rgba(21,101,192,.06));border:1px solid rgba(21,101,192,.25);border-radius:var(--r16);padding:20px;text-align:center;margin-bottom:20px;">
-      <div style="font-size:36px;margin-bottom:8px">📲</div>
-      <div style="font-family:var(--fd);font-size:17px;font-weight:800;color:#42A5F5;margin-bottom:6px">Moov Money · Gabon</div>
-      <div style="background:rgba(21,101,192,.1);border:1px solid rgba(21,101,192,.2);border-radius:var(--r12);padding:12px;margin:10px 0">
-        <div style="font-size:11px;color:var(--t3);margin-bottom:4px">Numéro bénéficiaire EKOLO</div>
-        <div style="font-family:var(--fd);font-size:20px;font-weight:800;color:#42A5F5">+241 07 73 74 043</div>
+    <div class="offline-alert">
+      <div class="offline-alert-icon">⚠️</div>
+      <div><div class="offline-alert-title">IMPORTANT — Connexion internet requise</div>
+      <div class="offline-alert-desc">Le paiement Mobile Money nécessite une connexion réseau active. Assure-toi d'avoir du réseau avant d'effectuer le transfert.</div></div>
+    </div>
+    <!-- Logo Moov Money Gabon -->
+    <div style="background:linear-gradient(135deg,rgba(21,101,192,.12),rgba(21,101,192,.05));border:1px solid rgba(21,101,192,.24);border-radius:var(--r16);padding:20px;text-align:center;margin-bottom:20px">
+      <div style="display:inline-flex;align-items:center;gap:12px;background:#1565C0;border-radius:10px;padding:10px 20px">
+        <span style="font-size:24px;color:#fff;font-weight:900;font-family:var(--fd)">Moov</span>
+        <span style="font-size:11px;color:rgba(255,255,255,.8);font-weight:700;letter-spacing:1px">MONEY</span>
+      </div>
+      <div style="font-size:11px;color:var(--t3);margin-top:10px;margin-bottom:14px">Mobile Money · Gabon</div>
+      <div class="bene-box">
+        <div style="font-size:11px;color:var(--t3);margin-bottom:4px">Numéro bénéficiaire</div>
+        <div class="bene-num">+241 06 63 87 544</div>
+        <div class="bene-name">Bénéficiaire : <strong style="color:var(--or2)">Stecy Arsène</strong></div>
       </div>
     </div>
-    <div style="font-family:var(--fd);font-size:15px;font-weight:700;color:var(--w);margin-bottom:12px">Choisis ton offre</div>
+    <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:11px">Choisis ton offre</div>
     <div class="pay-offer-tabs" id="mmOffers">
-      <div class="pot" onclick="selectPayOffer('mm',this,'5 000 FCFA · Mensuel')"><div class="pot-name">Mensuel</div><div class="pot-price">5 000 FCFA</div></div>
-      <div class="pot" onclick="selectPayOffer('mm',this,'15 000 FCFA · Trimestriel')"><div class="pot-name">Trimestriel</div><div class="pot-price">15 000 FCFA</div></div>
-      <div class="pot sel" onclick="selectPayOffer('mm',this,'40 000 FCFA · Annuel')"><div class="pot-name">📚 Annuel</div><div class="pot-price">40 000 FCFA</div></div>
+      <div class="pot" onclick="selPot('mm',this,'Mensuel — 5 000 FCFA')"><div class="pot-name">Mensuel</div><div class="pot-price">5 000 FCFA</div></div>
+      <div class="pot" onclick="selPot('mm',this,'Trimestriel — 15 000 FCFA')"><div class="pot-name">Trimestriel</div><div class="pot-price">15 000 FCFA</div></div>
+      <div class="pot sel" onclick="selPot('mm',this,'Annuel Scolaire — 40 000 FCFA')"><div class="pot-name">📚 Annuel</div><div class="pot-price">40 000 FCFA</div></div>
     </div>
-    <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:12px">Comment effectuer le virement</div>
-    <div class="mobile-money-steps">
-      <div class="mm-step"><div class="mm-step-num">1</div><div class="mm-step-txt">Compose le <strong>*555#</strong> sur ton téléphone Moov ou ouvre l'application <strong>Moov Money</strong></div></div>
-      <div class="mm-step"><div class="mm-step-num">2</div><div class="mm-step-txt">Sélectionne <strong>« Transfert »</strong> puis <strong>« Vers un numéro Moov »</strong></div></div>
-      <div class="mm-step"><div class="mm-step-num">3</div><div class="mm-step-txt">Entre le numéro bénéficiaire : <strong>+241 07 73 74 043</strong></div></div>
-      <div class="mm-step"><div class="mm-step-num">4</div><div class="mm-step-txt">Entre le montant et dans le motif écris : <strong>EKOLO + ton e-mail</strong></div></div>
-      <div class="mm-step"><div class="mm-step-num">5</div><div class="mm-step-txt">Confirme avec ton code PIN, puis valide ci-dessous</div></div>
+    <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:11px">Comment effectuer le transfert</div>
+    <div class="mm-steps">
+      <div class="mm-step"><div class="mm-num">1</div><div class="mm-txt">Compose le <strong>*555#</strong> sur ton téléphone Moov ou ouvre l'app <strong>Moov Money</strong></div></div>
+      <div class="mm-step"><div class="mm-num">2</div><div class="mm-txt">Sélectionne <strong>« Transfert »</strong> → <strong>« Vers un numéro Moov »</strong></div></div>
+      <div class="mm-step"><div class="mm-num">3</div><div class="mm-txt">Numéro bénéficiaire : <strong>+241 06 63 87 544</strong> (Stecy Arsène)</div></div>
+      <div class="mm-step"><div class="mm-num">4</div><div class="mm-txt">Entre le montant de ton offre, motif : <strong>EKOLO + ton e-mail</strong></div></div>
+      <div class="mm-step"><div class="mm-num">5</div><div class="mm-txt">Confirme avec ton PIN → remplis le formulaire ci-dessous</div></div>
     </div>
     <div class="fcard">
       <div class="fg"><label class="fl2">Ton numéro Moov Money</label><input class="fi" type="tel" placeholder="+241 0X XX XX XX"></div>
       <div class="fg"><label class="fl2">Ton e-mail EKOLO</label><input class="fi" type="email" placeholder="ton@email.com"></div>
-      <div class="fg"><label class="fl2">Référence de la transaction (facultatif)</label><input class="fi" type="text" placeholder="Numéro reçu par SMS"></div>
-      <div style="background:rgba(21,101,192,.07);border:1px solid rgba(21,101,192,.17);border-radius:var(--r12);padding:12px;margin-bottom:16px;font-size:12px;color:rgba(150,180,255,.8)">
-        🔒 Abonnement activé sous 2h après confirmation du paiement.
+      <div class="fg"><label class="fl2">Référence de transaction (reçu SMS)</label><input class="fi" type="text" placeholder="Ex : TXN123456789"></div>
+      <div style="background:rgba(21,101,192,.07);border:1px solid rgba(21,101,192,.16);border-radius:var(--r12);padding:12px;margin-bottom:16px;font-size:12px;color:rgba(150,180,255,.85)">
+        🔒 Abonnement activé dans les <strong>5 minutes</strong> après vérification. Confirmation par WhatsApp.
       </div>
-      <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;animation:glow 2s infinite" onclick="confirmPaySub('moov')">✅ Confirmer mon paiement Moov</button>
+      <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;animation:glow 2s infinite" onclick="confirmPay('Moov Money')">✅ Confirmer mon paiement Moov</button>
     </div>
   </div>
 </div>
@@ -602,59 +636,40 @@ textarea.fi{resize:vertical;min-height:110px;}
     <div class="pay-sp-ssl">🔒 AES-256</div>
   </div>
   <div class="pay-sp-body">
-    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:var(--r16);padding:20px;margin-bottom:20px;">
-      <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--or2);margin-bottom:14px;display:flex;align-items:center;gap:7px">🏦 Coordonnées bancaires EKOLO</div>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div><div style="font-size:11px;color:var(--t3);margin-bottom:3px">Banque</div><div style="font-size:14px;font-weight:600;color:var(--w)">BGFIBANK Gabon</div></div>
-        <div><div style="font-size:11px;color:var(--t3);margin-bottom:3px">Titulaire du compte</div><div style="font-size:14px;font-weight:600;color:var(--w)">ABA-ABA Stecy Arsène</div></div>
-        <div><div style="font-size:11px;color:var(--t3);margin-bottom:3px">Référence à indiquer</div><div style="font-family:var(--fd);font-size:14px;font-weight:800;color:var(--or2)">EKOLO + ton e-mail</div></div>
-      </div>
-      <div style="background:rgba(249,168,37,.07);border:1px solid rgba(249,168,37,.17);border-radius:var(--r12);padding:12px;margin-top:14px;font-size:12px;color:var(--or2)">
-        ⚠️ Les coordonnées bancaires complètes (IBAN, RIB) seront communiquées par e-mail après validation du formulaire ci-dessous.
-      </div>
+    <div class="offline-alert">
+      <div class="offline-alert-icon">⚠️</div>
+      <div><div class="offline-alert-title">IMPORTANT — Connexion internet requise</div>
+      <div class="offline-alert-desc">Pour envoyer tes informations et activer ton abonnement, une connexion internet est indispensable. Les coordonnées bancaires complètes te seront envoyées par e-mail après validation du formulaire.</div></div>
     </div>
-    <div style="font-family:var(--fd);font-size:15px;font-weight:700;color:var(--w);margin-bottom:12px">Choisis ton offre</div>
+    <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:11px">Choisis ton offre</div>
     <div class="pay-offer-tabs" id="vrOffers">
-      <div class="pot" onclick="selectPayOffer('vr',this,'5 000 FCFA · Mensuel')"><div class="pot-name">Mensuel</div><div class="pot-price">5 000 FCFA</div></div>
-      <div class="pot" onclick="selectPayOffer('vr',this,'15 000 FCFA · Trimestriel')"><div class="pot-name">Trimestriel</div><div class="pot-price">15 000 FCFA</div></div>
-      <div class="pot sel" onclick="selectPayOffer('vr',this,'40 000 FCFA · Annuel')"><div class="pot-name">📚 Annuel</div><div class="pot-price">40 000 FCFA</div></div>
+      <div class="pot" onclick="selPot('vr',this,'Mensuel — 5 000 FCFA')"><div class="pot-name">Mensuel</div><div class="pot-price">5 000 FCFA</div></div>
+      <div class="pot" onclick="selPot('vr',this,'Trimestriel — 15 000 FCFA')"><div class="pot-name">Trimestriel</div><div class="pot-price">15 000 FCFA</div></div>
+      <div class="pot sel" onclick="selPot('vr',this,'Annuel Scolaire — 40 000 FCFA')"><div class="pot-name">📚 Annuel</div><div class="pot-price">40 000 FCFA</div></div>
     </div>
     <div class="fcard">
-      <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:15px">Tes coordonnées</div>
+      <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:15px">🏦 Tes informations bancaires pour le virement</div>
+      <div style="background:rgba(249,168,37,.06);border:1px solid rgba(249,168,37,.15);border-radius:var(--r12);padding:13px;margin-bottom:16px;font-size:12px;color:var(--or2)">
+        📋 Remplis tes informations ci-dessous. Les coordonnées bancaires complètes de réception (IBAN, RIB) te seront envoyées par e-mail dans les 5 minutes.
+      </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:13px">
-        <div class="fg"><label class="fl2">Prénom</label><input class="fi" type="text" placeholder="Ton prénom"></div>
-        <div class="fg"><label class="fl2">Nom</label><input class="fi" type="text" placeholder="Ton nom"></div>
+        <div class="fg"><label class="fl2">Ton prénom</label><input class="fi" type="text" placeholder="Ton prénom"></div>
+        <div class="fg"><label class="fl2">Ton nom</label><input class="fi" type="text" placeholder="Ton nom de famille"></div>
       </div>
-      <div class="fg"><label class="fl2">E-mail</label><input class="fi" type="email" placeholder="ton@email.com"></div>
-      <div class="fg"><label class="fl2">Numéro de téléphone / WhatsApp</label><input class="fi" type="tel" placeholder="+241 XX XX XX XX"></div>
-      <div style="background:rgba(67,160,71,.07);border:1px solid rgba(67,160,71,.15);border-radius:var(--r12);padding:12px;margin-bottom:16px;font-size:12px;color:#81C784;display:flex;gap:7px">
-        <span>🔒</span> Tes coordonnées sont chiffrées AES-256. Les coordonnées bancaires complètes te seront envoyées par e-mail dans les 2h.
+      <div class="fg"><label class="fl2">Ton e-mail</label><input class="fi" type="email" placeholder="ton@email.com"></div>
+      <div class="fg"><label class="fl2">Ton numéro WhatsApp</label><input class="fi" type="tel" placeholder="+241 XX XX XX XX"></div>
+      <div class="fg"><label class="fl2">Ta banque (facultatif)</label><input class="fi" type="text" placeholder="Ex : BGFIBANK, UGB, Orabank..."></div>
+      <div style="background:rgba(67,160,71,.065);border:1px solid rgba(67,160,71,.15);border-radius:var(--r12);padding:12px;margin-bottom:16px;font-size:12px;color:var(--v6);display:flex;gap:7px">
+        <span>🔒</span> Tes données sont chiffrées AES-256. Coordonnées bancaires envoyées sous 5 minutes.
       </div>
-      <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;animation:glow 2s infinite" onclick="confirmPaySub('virement')">✅ Recevoir les coordonnées bancaires</button>
+      <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;animation:glow 2s infinite" onclick="confirmPay('Virement bancaire')">✅ Recevoir les coordonnées bancaires</button>
     </div>
   </div>
 </div>
 
-<!-- ══ CONFIRMATION PAIEMENT ══ -->
-
-<div class="po" id="po-payconfirm">
-<div class="pi" style="text-align:center;padding-top:120px">
-  <div style="font-size:72px;margin-bottom:20px">🎉</div>
-  <h1 style="font-family:var(--fd);font-size:32px;font-weight:800;color:var(--w);margin-bottom:10px">Paiement confirmé !</h1>
-  <p style="font-size:16px;color:var(--or2);font-weight:600;margin-bottom:20px">Bienvenue dans la Version Premium EKOLO ✦</p>
-  <p style="font-size:14px;color:var(--t2);line-height:1.8;max-width:420px;margin:0 auto 36px">
-    Ton abonnement sera activé sous 2h après vérification du paiement. Professeur Éli se souviendra de toi à chaque session !
-  </p>
-  <div style="background:rgba(67,160,71,.07);border:1px solid rgba(67,160,71,.18);border-radius:var(--r16);padding:16px 20px;max-width:380px;margin:0 auto 30px">
-    <div style="font-size:12px;color:var(--t3);margin-bottom:8px">Offre souscrite</div>
-    <div id="payConfirmOffer" style="font-family:var(--fd);font-size:18px;font-weight:800;color:var(--or2)">Annuel — 40 000 FCFA</div>
-  </div>
-  <button class="btn btn-gold btn-lg" onclick="closePO('payconfirm');openPO('eli')" style="margin:0 auto">🧑‍🏫 Commencer avec Éli →</button>
-  <div style="margin-top:12px"><button class="btn btn-out btn-sm" onclick="closePO('payconfirm')">Retour à l'accueil</button></div>
-</div>
-</div>
-
-<!-- ══ OVERLAYS ══ -->
+<!-- ══════════════════════════════════════════════
+     OVERLAYS PAGES
+══════════════════════════════════════════════ -->
 
 <!-- CONNEXION -->
 
@@ -671,8 +686,8 @@ textarea.fi{resize:vertical;min-height:110px;}
     <div class="fdiv2">ou</div>
     <div style="text-align:center;font-size:13px;color:var(--t3)">Pas encore de compte ? <a style="color:var(--or2);font-weight:700;cursor:pointer" onclick="closePO('cnx');openPO('ins')">S'inscrire gratuitement</a></div>
   </div>
-  <div style="background:rgba(67,160,71,.07);border:1px solid rgba(67,160,71,.15);border-radius:var(--r16);padding:14px 18px;margin-top:14px;font-size:13px;color:#81C784;display:flex;gap:9px">
-    <span>🔒</span><div>Données chiffrées AES-256. Aucune information partagée avec des tiers.</div>
+  <div style="background:rgba(67,160,71,.065);border:1px solid rgba(67,160,71,.15);border-radius:var(--r16);padding:14px 18px;margin-top:14px;font-size:13px;color:var(--v6);display:flex;gap:9px">
+    <span>🔒</span> Données chiffrées AES-256. Aucune information partagée avec des tiers.
   </div>
 </div>
 </div>
@@ -706,34 +721,27 @@ textarea.fi{resize:vertical;min-height:110px;}
 </div>
 </div>
 
-<!-- À PROPOS -->
+<!-- À PROPOS — sans mention porteur -->
 
 <div class="po" id="po-ap">
 <div class="pi">
   <button class="pbk" onclick="closePO('ap')">← Retour</button>
   <h1 class="ptitle">À propos</h1>
   <p class="psub">Pourquoi EKOLO existe</p>
-  <div class="pt">EKOLO est né d'un constat simple et douloureux : dans notre système éducatif, tous les élèves ne partent pas avec les mêmes chances. L'élève d'une grande ville bénéficie d'un accompagnement que l'élève de province, seul face à ses manuels, n'a jamais eu.</div>
-  <div class="pt">EKOLO est la réponse à cette injustice. Une plateforme éducative propulsée par l'IA, entièrement gratuite, conçue pour donner à chaque élève accès à un professeur patient, disponible 24h/24.</div>
+  <div class="pt">EKOLO est né d'un constat simple et douloureux : dans notre système éducatif, tous les élèves ne partent pas avec les mêmes chances. L'élève d'une grande ville bénéficie d'un accompagnement que l'élève de province n'a jamais eu. EKOLO est la réponse à cette injustice.</div>
+  <div class="pt">Une plateforme éducative propulsée par l'IA, entièrement gratuite, conçue pour donner à chaque élève — où qu'il se trouve — accès à un professeur personnel patient, disponible 24h/24.</div>
   <div class="pdiv"></div>
   <div class="ps-title">Notre mission</div>
-  <div class="pt">Démocratiser l'accès à une éducation de qualité. Réduire les inégalités. Offrir à chaque jeune les mêmes outils pour réussir son CEP, son BEPC ou son Baccalauréat.</div>
+  <div class="pt">Démocratiser l'accès à une éducation de qualité. Réduire les inégalités entre les élèves. Offrir à chaque jeune les mêmes outils pour réussir son CEP, son BEPC ou son Baccalauréat.</div>
   <div class="pdiv"></div>
   <div class="ps-title">Professeur Éli</div>
-  <div class="pt">Éli n'est pas un simple chatbot. C'est un professeur IA conçu pour s'adapter à chaque élève — méthode socratique, toujours en "tu", encourageant, jamais condescendant.</div>
+  <div class="pt">Éli n'est pas un simple chatbot. C'est un professeur IA conçu pour s'adapter à chaque élève — son niveau, son rythme, ses lacunes. Il utilise la méthode socratique : il guide sans donner la réponse directement, pour que tu comprennes vraiment. Il parle en "tu", encourage et ne juge jamais.</div>
   <div class="pdiv"></div>
   <div class="ps-title">L'ambition</div>
-  <div class="pt">EKOLO ambitionne de devenir la référence éducative IA de l'Afrique francophone et de figurer dans le Top 5 mondial des plateformes éducatives.</div>
+  <div class="pt">EKOLO ambitionne de devenir la référence éducative IA de l'Afrique francophone et de figurer dans le Top 5 mondial des plateformes éducatives. Ce qui commence ici a vocation à grandir bien au-delà des frontières du Gabon.</div>
   <div class="pdiv"></div>
-  <div class="ps-title">Le porteur du projet</div>
-  <div style="background:rgba(249,168,37,.055);border:1px solid rgba(249,168,37,.13);border-radius:var(--r20);padding:20px;display:flex;align-items:center;gap:16px">
-    <div style="width:52px;height:52px;background:linear-gradient(135deg,var(--v3),var(--v5));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">👨‍💼</div>
-    <div>
-      <div style="font-family:var(--fd);font-size:16px;font-weight:800;color:var(--or2)">ABA-ABA Stecy Arsène</div>
-      <div style="font-size:12px;color:var(--t3);margin-top:3px">Porteur et fondateur du projet EKOLO</div>
-      <div style="font-size:12px;color:var(--t3);margin-top:2px">contact@ekolo.ga · +241 07 73 74 043</div>
-    </div>
-  </div>
+  <div class="ps-title">Contact</div>
+  <div class="pt">Pour nous contacter : <a href="mailto:ekolocontact@gmail.com">ekolocontact@gmail.com</a> · +241 07 73 74 043 · Libreville, Gabon</div>
 </div>
 </div>
 
@@ -745,7 +753,7 @@ textarea.fi{resize:vertical;min-height:110px;}
   <h1 class="ptitle">Contact</h1>
   <p class="psub">On est là pour toi.</p>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px">
-    <div class="cmet"><div class="cico" style="background:rgba(249,168,37,.08)">📧</div><div><div class="clbl">E-mail</div><div class="cval">contact@ekolo.ga</div></div></div>
+    <div class="cmet"><div class="cico" style="background:rgba(249,168,37,.08)">📧</div><div><div class="clbl">E-mail</div><div class="cval">ekolocontact@gmail.com</div></div></div>
     <div class="cmet"><div class="cico" style="background:rgba(67,160,71,.08)">📱</div><div><div class="clbl">WhatsApp</div><div class="cval">+241 07 73 74 043</div></div></div>
     <div class="cmet"><div class="cico" style="background:rgba(255,255,255,.04)">📍</div><div><div class="clbl">Adresse</div><div class="cval">Libreville, Gabon</div></div></div>
     <div class="cmet"><div class="cico" style="background:rgba(255,255,255,.04)">🕐</div><div><div class="clbl">Disponibilité</div><div class="cval">Lun–Ven, 8h–18h</div></div></div>
@@ -778,44 +786,126 @@ textarea.fi{resize:vertical;min-height:110px;}
   <h1 class="ptitle">Mentions légales</h1>
   <p class="psub">Informations légales obligatoires</p>
   <div class="ps-title">Éditeur du site</div>
-  <div class="icard"><div class="ict">EKOLO</div><div class="icd">Porteur : ABA-ABA Stecy Arsène · Libreville, Gabon<br>E-mail : contact@ekolo.ga · Tél. : +241 07 73 74 043</div></div>
+  <div class="icard"><div class="ict">EKOLO</div><div class="icd">E-mail : ekolocontact@gmail.com · Tél. : +241 07 73 74 043 · Libreville, Gabon</div></div>
   <div class="pdiv"></div>
   <div class="ps-title">Hébergement</div>
   <div class="pt">Le site EKOLO est hébergé sur la plateforme Vercel (Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA).</div>
   <div class="pdiv"></div>
   <div class="ps-title">Propriété intellectuelle</div>
-  <div class="pt">L'ensemble des contenus (textes, logos, design, code) est la propriété exclusive d'ABA-ABA Stecy Arsène. Toute reproduction sans autorisation est strictement interdite.</div>
+  <div class="pt">L'ensemble des contenus présents sur EKOLO (textes, logos, design, code source) est protégé par les lois applicables. Toute reproduction sans autorisation préalable est strictement interdite.</div>
+  <div class="pdiv"></div>
+  <div class="ps-title">Limitation de responsabilité</div>
+  <div class="pt">Les contenus pédagogiques sont proposés à titre indicatif et ne sauraient se substituer à un enseignement officiel. EKOLO ne peut être tenu responsable des décisions prises sur la base des informations fournies.</div>
   <div class="pdiv"></div>
   <div class="ps-title">Droit applicable</div>
   <div class="pt">Ces mentions légales sont soumises au droit gabonais. En cas de litige, les tribunaux compétents de Libreville seront seuls habilités.</div>
 </div>
 </div>
 
-<!-- CONFIDENTIALITÉ -->
+<!-- CONFIDENTIALITÉ — version ultra-complète -->
 
 <div class="po" id="po-conf">
 <div class="pi">
   <button class="pbk" onclick="closePO('conf')">← Retour</button>
-  <h1 class="ptitle">Confidentialité</h1>
-  <p class="psub">Protection de tes données personnelles</p>
-  <div style="background:rgba(67,160,71,.065);border:1px solid rgba(67,160,71,.16);border-radius:var(--r16);padding:14px 18px;margin-bottom:22px;display:flex;gap:9px">
-    <span style="font-size:19px">🔒</span>
-    <div><div style="font-family:var(--fd);font-size:13px;font-weight:700;color:#81C784;margin-bottom:5px">Sécurité AES-256</div>
-    <span style="font-size:13px;color:var(--t2)">Données chiffrées, serveurs sécurisés, jamais vendues ni partagées.</span></div>
+  <h1 class="ptitle">Politique de Confidentialité</h1>
+  <p class="psub">Protection complète de vos données personnelles</p>
+
+  <div style="background:rgba(67,160,71,.065);border:1px solid rgba(67,160,71,.16);border-radius:var(--r16);padding:16px 20px;margin-bottom:24px;display:flex;gap:10px">
+    <span style="font-size:20px">🔒</span>
+    <div><div style="font-family:var(--fd);font-size:13px;font-weight:700;color:var(--v6);margin-bottom:5px">Chiffrement AES-256 · Sécurité maximale</div>
+    <span style="font-size:13px;color:var(--t2)">Toutes les données personnelles EKOLO sont chiffrées selon le standard AES-256, stockées sur des serveurs sécurisés et ne sont jamais vendues, partagées ou monétisées auprès de tiers.</span></div>
   </div>
-  <div class="ps-title">Résumé</div>
-  <div class="pt">En version non connectée, aucune donnée n'est collectée. Avec un compte : prénom, nom, e-mail, niveau scolaire uniquement.</div>
+
+  <div class="ps-title">1. Identification du responsable de traitement</div>
+  <div class="pt">La plateforme EKOLO est exploitée et maintenue par son équipe fondatrice, domiciliée à Libreville, République Gabonaise. Pour toute question relative à la protection de vos données personnelles, vous pouvez nous contacter à l'adresse suivante : <a href="mailto:ekolocontact@gmail.com">ekolocontact@gmail.com</a> ou par téléphone au +241 07 73 74 043.</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">2. Nature des données collectées</div>
+  <div class="pt"><strong>En version non connectée (anonyme) :</strong> EKOLO ne collecte strictement aucune donnée personnelle. Vous pouvez utiliser l'intégralité des fonctionnalités gratuites sans créer de compte et sans laisser de trace nominative.</div>
+  <div class="pt"><strong>Lors de la création d'un compte :</strong> Prénom, nom de famille, adresse e-mail, niveau scolaire (CM2, 3ème, Terminale ou autre). Ces informations sont strictement nécessaires à la personnalisation de l'expérience éducative avec Professeur Éli.</div>
+  <div class="pt"><strong>En Version Premium :</strong> Les informations ci-dessus, auxquelles s'ajoute votre numéro de téléphone WhatsApp pour les notifications liées à votre abonnement et les confirmations de paiement. Les données de paiement (numéro de carte bancaire, coordonnées bancaires) ne sont jamais stockées sur les serveurs EKOLO. Elles sont traitées exclusivement par nos partenaires de paiement certifiés (PayPal, Airtel Money, Moov Money) selon les standards PCI-DSS.</div>
+  <div class="pt"><strong>Historique des sessions avec Professeur Éli :</strong> Pour les utilisateurs Premium, l'historique de vos conversations avec Éli est sauvegardé afin de permettre la continuité de l'apprentissage. Ces données vous appartiennent intégralement et peuvent être supprimées à votre demande.</div>
+  <div class="pt"><strong>Photos de devoirs (Premium) :</strong> Les images téléchargées pour l'analyse par Éli sont traitées immédiatement et supprimées de nos serveurs sous 48 heures maximum, sauf si vous choisissez de les conserver dans votre historique.</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">3. Finalités du traitement des données</div>
+  <div class="pt">EKOLO traite vos données personnelles exclusivement pour les finalités suivantes :</div>
+  <div class="pt">• <strong>Fourniture du service :</strong> Permettre l'accès à la plateforme et à Professeur Éli, personnaliser l'expérience pédagogique selon votre niveau scolaire.<br>
+  • <strong>Sauvegarde de la progression :</strong> Conserver votre historique d'apprentissage pour que Professeur Éli puisse reprendre là où vous en étiez.<br>
+  • <strong>Gestion des abonnements :</strong> Traiter les paiements, activer et gérer votre abonnement Premium.<br>
+  • <strong>Communications de service :</strong> Vous envoyer des notifications liées à votre plan de révision ou à votre abonnement (uniquement avec votre consentement explicite).<br>
+  • <strong>Amélioration du service :</strong> Analyser de manière anonyme et agrégée les usages de la plateforme pour améliorer son contenu pédagogique.<br>
+  • <strong>Obligations légales :</strong> Respecter les obligations légales et réglementaires applicables en République Gabonaise.</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">4. Base légale du traitement</div>
+  <div class="pt">Le traitement de vos données repose sur les bases légales suivantes : (a) votre consentement explicite lors de la création de votre compte, (b) l'exécution du contrat d'abonnement pour les utilisateurs Premium, (c) notre intérêt légitime à améliorer nos services pédagogiques, (d) le respect d'obligations légales.</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">5. Durée de conservation des données</div>
+  <div class="pt">Vos données personnelles sont conservées pendant toute la durée de votre utilisation active de la plateforme EKOLO, augmentée d'une période de 90 jours suivant la clôture ou la désactivation de votre compte. Passé ce délai, vos données sont définitivement et irréversiblement supprimées de l'ensemble de nos systèmes. Les données de paiement ne sont jamais conservées au-delà de la transaction.</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">6. Protection des données des mineurs</div>
+  <div class="pt">EKOLO est principalement destiné à des élèves mineurs. Nous accordons une importance particulière à la protection de leurs données. Nous appliquons une politique de collecte strictement minimale. Pour les utilisateurs de moins de 15 ans, nous recommandons formellement l'accord préalable d'un parent ou tuteur légal. Pour accéder à la Version Premium, une vérification d'âge est obligatoire : les utilisateurs de moins de 16 ans doivent obtenir la validation explicite d'un parent via un code de confirmation envoyé par WhatsApp. Nous ne collectons jamais sciemment des données personnelles d'enfants de moins de 13 ans sans le consentement parental.</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">7. Sécurité technique des données</div>
+  <div class="pt">EKOLO met en œuvre les mesures de sécurité techniques et organisationnelles suivantes :<br>
+  • <strong>Chiffrement AES-256</strong> de toutes les données au repos sur nos serveurs<br>
+  • <strong>Protocole HTTPS / TLS 1.3</strong> pour la sécurisation de toutes les communications entre votre appareil et nos serveurs<br>
+  • <strong>Authentification JWT</strong> avec tokens signés cryptographiquement et expiration automatique<br>
+  • <strong>Row Level Security (RLS)</strong> sur notre base de données PostgreSQL : chaque utilisateur ne peut accéder qu'à ses propres données, même en cas de requête malformée<br>
+  • <strong>Contrôle d'accès</strong> strict aux infrastructures serveur, limité aux membres autorisés de l'équipe technique<br>
+  • <strong>Absence totale de cookies publicitaires</strong> ou de traceurs comportementaux tiers<br>
+  • <strong>Audits de sécurité</strong> réguliers et mise à jour continue des dépendances logicielles<br>
+  • <strong>Certification PCI-DSS</strong> de nos partenaires de paiement pour le traitement des données bancaires</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">8. Partage et transfert des données</div>
+  <div class="pt">EKOLO ne vend, ne loue et ne cède jamais vos données personnelles à des tiers à des fins commerciales. Les seuls tiers autorisés à traiter certaines de vos données sont : (a) nos partenaires de paiement (PayPal, Airtel Money, Moov Money) pour le traitement exclusif des transactions d'abonnement ; (b) notre prestataire d'hébergement Vercel pour l'infrastructure technique, dans le cadre de leurs politiques de confidentialité respectives. Ces partenaires sont contractuellement tenus au respect de la confidentialité et à la sécurité de vos données.</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">9. Vos droits sur vos données</div>
+  <div class="pt">Conformément aux lois applicables en matière de protection des données personnelles, vous disposez des droits suivants que vous pouvez exercer à tout moment :<br>
+  • <strong>Droit d'accès :</strong> Obtenir une copie complète de toutes les données personnelles que nous détenons à votre sujet<br>
+  • <strong>Droit de rectification :</strong> Corriger toute information inexacte ou incomplète vous concernant<br>
+  • <strong>Droit à l'effacement :</strong> Demander la suppression définitive de l'ensemble de vos données personnelles<br>
+  • <strong>Droit à la portabilité :</strong> Récupérer vos données dans un format structuré et lisible par machine<br>
+  • <strong>Droit d'opposition :</strong> Vous opposer au traitement de vos données pour des motifs légitimes<br>
+  • <strong>Droit à la limitation :</strong> Demander la suspension temporaire du traitement de vos données<br>
+  Pour exercer l'un de ces droits, contactez-nous à : <a href="mailto:ekolocontact@gmail.com">ekolocontact@gmail.com</a>. Nous nous engageons à répondre à votre demande dans un délai maximum de 30 jours.</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">10. Cookies et traceurs</div>
+  <div class="pt">EKOLO n'utilise que des cookies fonctionnels strictement nécessaires au bon fonctionnement technique de la plateforme, notamment pour votre authentification et la mémorisation de vos préférences de navigation. Aucun cookie publicitaire, de profilage ou de suivi comportemental tiers n'est déposé sur votre appareil. Vous pouvez à tout moment configurer votre navigateur pour refuser l'ensemble des cookies, ce qui n'affectera pas votre capacité à utiliser la version gratuite d'EKOLO.</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">11. Mode offline et données locales</div>
+  <div class="pt">EKOLO peut fonctionner partiellement hors connexion (mode offline). Dans ce mode, certaines données de session peuvent être temporairement stockées localement sur votre appareil (cache navigateur) pour permettre la continuité de l'expérience. Ces données locales ne sont jamais transmises à des tiers et sont supprimées automatiquement lors de la prochaine synchronisation ou à la déconnexion. <strong>Attention :</strong> l'activation d'un abonnement Premium et le paiement nécessitent impérativement une connexion internet active.</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">12. Modifications de la présente politique</div>
+  <div class="pt">EKOLO se réserve le droit de modifier la présente politique de confidentialité à tout moment pour l'adapter aux évolutions légales, réglementaires ou techniques. En cas de modification substantielle affectant vos droits, vous serez notifié(e) par e-mail au moins 14 jours avant l'entrée en vigueur des nouvelles dispositions. La version applicable est toujours celle publiée sur la plateforme, datée et versionnée.</div>
+
+  <div class="pdiv"></div>
+  <div class="ps-title">13. Contact et réclamations</div>
+  <div class="pt">Pour toute question, demande d'exercice de droits ou réclamation relative à la protection de vos données personnelles :<br>✉️ <a href="mailto:ekolocontact@gmail.com">ekolocontact@gmail.com</a><br>📱 +241 07 73 74 043<br>📍 Libreville, République Gabonaise</div>
+
+  <div style="background:rgba(249,168,37,.065);border:1px solid rgba(249,168,37,.15);border-radius:var(--r16);padding:14px 18px;margin-top:20px;font-size:12px;color:var(--or2)">
+    Dernière mise à jour : Avril 2026 — Version 2.0 · EKOLO
+  </div>
+
+  <!-- Consentement interactif -->
+
   <div class="conf-consent">
-    <input type="checkbox" class="conf-cb" id="confCb" onchange="toggleConfDetail()">
-    <label for="confCb" class="conf-cb-lbl">Je souhaite accéder aux détails complets de notre politique de confidentialité.</label>
+    <input type="checkbox" class="conf-cb" id="confCb" onchange="toggleConf()">
+    <label for="confCb" class="conf-cb-lbl">J'ai lu et j'accepte la politique de confidentialité complète d'EKOLO. Je comprends comment mes données sont collectées, utilisées et protégées.</label>
   </div>
-  <div class="conf-section" id="confDetail">
-    <div class="pdiv"></div>
-    <div class="ps-title">Données collectées</div>
-    <div class="pt">Version gratuite : prénom, nom, e-mail, niveau. Premium : via partenaires de paiement sécurisé PCI-DSS — jamais stockées directement chez EKOLO.</div>
-    <div class="pdiv"></div>
-    <div class="ps-title">Tes droits</div>
-    <div class="pt">Accès, rectification, suppression sur demande à <a href="mailto:contact@ekolo.ga">contact@ekolo.ga</a></div>
+  <div class="conf-section" id="confAccepted">
+    <div style="background:rgba(67,160,71,.08);border:1px solid rgba(67,160,71,.2);border-radius:var(--r12);padding:12px 16px;font-size:13px;color:var(--v6);display:flex;gap:8px">
+      <span>✅</span> Merci ! Ton consentement a bien été enregistré. Tes données sont protégées chez EKOLO.
+    </div>
   </div>
 </div>
 </div>
@@ -829,17 +919,18 @@ textarea.fi{resize:vertical;min-height:110px;}
     <div style="background:rgba(230,81,0,.16);border:1px solid rgba(230,81,0,.26);border-radius:var(--r99);padding:3px 11px;font-size:10px;font-weight:700;color:#FF8A65;display:inline-block;margin-bottom:10px;text-transform:uppercase;cursor:pointer" onclick="closePO('cep');openPO('cm2')">CM2 →</div>
     <div class="epcode" style="color:#FF8A65">CEP</div>
     <div class="epfull">Certificat d'Études Primaires</div>
-    <div class="epdesc">Premier examen officiel de fin de cycle primaire. Organisé par la DGEC.</div>
+    <div class="epdesc">Premier examen officiel de fin de cycle primaire. Organisé par la DGEC du Ministère de l'Éducation Nationale du Gabon.</div>
   </div>
-  <div class="ps-title" style="margin-bottom:13px">Matières</div>
-  <div class="scard"><div class="sct">📝 Français — Dictée — Rédaction</div></div>
-  <div class="scard"><div class="sct">🔢 Mathématiques — Calcul</div></div>
-  <div class="scard"><div class="sct">🌍 Histoire-Géographie-Civisme</div></div>
-  <div class="scard"><div class="sct">🔬 Sciences et Technologie</div></div>
+  <div class="ps-title" style="margin-bottom:13px">Matières au programme</div>
+  <div class="scard"><div class="sct">📝 Français — Dictée — Rédaction</div><div class="scd">Compréhension, orthographe, grammaire, conjugaison, expression écrite.</div></div>
+  <div class="scard"><div class="sct">🔢 Mathématiques — Calcul</div><div class="scd">Opérations, fractions, mesures, géométrie, problèmes.</div></div>
+  <div class="scard"><div class="sct">🌍 Histoire-Géographie-Civisme</div><div class="scd">Histoire nationale, géographie physique et humaine, éducation civique.</div></div>
+  <div class="scard"><div class="sct">🔬 Sciences et Technologie</div><div class="scd">Sciences de la vie, physique, hygiène, environnement.</div></div>
   <div class="pdiv"></div>
+  <div class="ps-title" style="margin-bottom:12px">Sujets disponibles</div>
   <div class="ayrs"><span class="ayrbtn">2024</span><span class="ayrbtn">2023</span><span class="ayrbtn">2022</span><span class="ayrbtn">2021</span><span class="ayrbtn">2017</span><span class="ayrbtn">2016</span><span class="ayrbtn">2015</span></div>
-  <div class="csoon">📥 PDF en cours d'intégration. Prof. Éli t'explique déjà chaque chapitre.</div>
-  <div style="margin-top:16px;text-align:center"><button class="btn btn-gold btn-md" onclick="openChat()">🧑‍🏫 Demander à Éli</button></div>
+  <div class="csoon">📥 Les PDF des sujets sont en cours d'intégration. Professeur Éli t'explique déjà chaque chapitre.</div>
+  <div style="margin-top:16px;text-align:center"><button class="btn btn-gold btn-md" onclick="openChat()">🧑‍🏫 Demander à Éli d'expliquer</button></div>
 </div>
 </div>
 
@@ -850,12 +941,12 @@ textarea.fi{resize:vertical;min-height:110px;}
     <div style="background:rgba(27,94,32,.26);border:1px solid rgba(67,160,71,.26);border-radius:var(--r99);padding:3px 11px;font-size:10px;font-weight:700;color:#81C784;display:inline-block;margin-bottom:10px;text-transform:uppercase;cursor:pointer" onclick="closePO('bepc');openPO('3eme')">3ème →</div>
     <div class="epcode" style="color:#81C784">BEPC</div>
     <div class="epfull">Brevet d'Études du Premier Cycle</div>
-    <div class="epdesc">Examen de fin de collège, conditionne l'accès au lycée.</div>
+    <div class="epdesc">Examen de fin de collège. Son obtention conditionne l'accès aux classes de seconde.</div>
   </div>
-  <div class="scard"><div class="sct">📝 Français</div></div>
-  <div class="scard"><div class="sct">🔢 Mathématiques</div></div>
-  <div class="scard"><div class="sct">⚗️ Physique-Chimie</div></div>
-  <div class="scard"><div class="sct">🌿 SVT</div></div>
+  <div class="scard"><div class="sct">📝 Français</div><div class="scd">Compréhension, questions de langue, expression écrite.</div></div>
+  <div class="scard"><div class="sct">🔢 Mathématiques</div><div class="scd">Algèbre, géométrie, statistiques, équations.</div></div>
+  <div class="scard"><div class="sct">⚗️ Physique-Chimie</div><div class="scd">Mécanique, électricité, optique, chimie.</div></div>
+  <div class="scard"><div class="sct">🌿 SVT</div><div class="scd">Biologie, géologie, écologie, corps humain.</div></div>
   <div class="scard"><div class="sct">🌍 Histoire-Géographie-Civisme</div></div>
   <div class="scard"><div class="sct">🗣️ Anglais (LV1)</div></div>
   <div class="pdiv"></div>
@@ -872,9 +963,9 @@ textarea.fi{resize:vertical;min-height:110px;}
     <div style="background:rgba(249,168,37,.1);border:1px solid rgba(249,168,37,.21);border-radius:var(--r99);padding:3px 11px;font-size:10px;font-weight:700;color:var(--or2);display:inline-block;margin-bottom:10px;text-transform:uppercase;cursor:pointer" onclick="closePO('bac');openPO('term')">Terminale →</div>
     <div class="epcode" style="color:var(--or2)">BAC</div>
     <div class="epfull">Baccalauréat Général et Technique</div>
-    <div class="epdesc">Toutes séries. Ouvre l'accès aux études supérieures.</div>
+    <div class="epdesc">Premier diplôme de l'enseignement supérieur. Toutes séries. Ouvre l'accès aux études supérieures.</div>
   </div>
-  <div class="scard"><div class="sct" style="color:var(--or2)">A1 · A2 · B · C · D · E · F · G · Techniques</div></div>
+  <div class="scard"><div class="sct" style="color:var(--or2)">A1 · A2 · B · C · D · E · Séries Techniques</div><div class="scd">Maths, Philo, Physique, SVT, Français, Anglais selon série.</div></div>
   <div class="pdiv"></div>
   <div class="ayrs"><span class="ayrbtn">2024</span><span class="ayrbtn">2023</span><span class="ayrbtn">2022</span><span class="ayrbtn">2021</span><span class="ayrbtn">2020</span><span class="ayrbtn">2017</span><span class="ayrbtn">2016</span><span class="ayrbtn">2015</span><span class="ayrbtn">2012</span></div>
   <div class="csoon">📥 PDF en cours d'intégration.</div>
@@ -894,7 +985,7 @@ textarea.fi{resize:vertical;min-height:110px;}
     <div class="icard" style="cursor:pointer" onclick="closePO('ann');openPO('bepc')"><div class="ict" style="color:#81C784">BEPC</div><div class="icd">6 sessions · 2015→2024</div></div>
     <div class="icard" style="cursor:pointer" onclick="closePO('ann');openPO('bac')"><div class="ict" style="color:var(--or2)">BAC</div><div class="icd">9 sessions · 2012→2024</div></div>
   </div>
-  <div class="csoon" style="margin-top:20px">📥 Intégration complète en cours.</div>
+  <div class="csoon" style="margin-top:20px">📥 Intégration complète des PDF en cours.</div>
 </div>
 </div>
 
@@ -904,10 +995,10 @@ textarea.fi{resize:vertical;min-height:110px;}
 <div class="pi">
   <button class="pbk" onclick="closePO('cm2')">← Retour</button>
   <h1 class="ptitle">CM2</h1><p class="psub">Préparation au CEP</p>
-  <div class="pt">La classe de CM2 conclut le cycle primaire avec l'examen du CEP. Prof. Éli t'accompagne dans toutes les matières.</div>
+  <div class="pt">La classe de CM2 conclut le cycle primaire avec l'examen du CEP. Prof. Éli t'accompagne dans toutes les matières pour arriver le jour J en pleine confiance.</div>
   <div style="text-align:center;margin:20px 0"><button class="btn btn-gold btn-md" onclick="closePO('cm2');openPO('cep')">Voir les sujets CEP →</button></div>
   <div class="traits">
-    <div class="trait"><div class="ticon">🔢</div><div><div class="ttit">Maths et Calcul</div><div class="tdsc">Fractions, géométrie, problèmes — avec des exemples du quotidien.</div></div></div>
+    <div class="trait"><div class="ticon">🔢</div><div><div class="ttit">Maths et Calcul</div><div class="tdsc">Fractions, géométrie — avec des exemples du quotidien.</div></div></div>
     <div class="trait"><div class="ticon">📝</div><div><div class="ttit">Français et Dictée</div><div class="tdsc">Conjugaison, orthographe — Éli corrige sans jamais décourager.</div></div></div>
     <div class="trait"><div class="ticon">🌍</div><div><div class="ttit">Histoire-Géo</div><div class="tdsc">Éli raconte l'histoire comme une vraie histoire captivante.</div></div></div>
   </div>
@@ -922,7 +1013,7 @@ textarea.fi{resize:vertical;min-height:110px;}
   <div class="pt">La 3ème ouvre la porte au lycée. Éli t'accompagne dans toutes les matières, à ton rythme.</div>
   <div style="text-align:center;margin:20px 0"><button class="btn btn-gold btn-md" onclick="closePO('3eme');openPO('bepc')">Voir les sujets BEPC →</button></div>
   <div class="traits">
-    <div class="trait"><div class="ticon">🔢</div><div><div class="ttit">Mathématiques</div><div class="tdsc">Algèbre, géométrie, équations — étape par étape.</div></div></div>
+    <div class="trait"><div class="ticon">🔢</div><div><div class="ttit">Mathématiques</div><div class="tdsc">Algèbre, géométrie — étape par étape.</div></div></div>
     <div class="trait"><div class="ticon">⚗️</div><div><div class="ttit">Physique-Chimie</div><div class="tdsc">Formules et lois avec des expériences mentales simples.</div></div></div>
     <div class="trait"><div class="ticon">🌿</div><div><div class="ttit">SVT</div><div class="tdsc">Comprendre vraiment, pas juste mémoriser.</div></div></div>
   </div>
@@ -960,7 +1051,7 @@ textarea.fi{resize:vertical;min-height:110px;}
     <button class="btn btn-gold btn-md" onclick="openChat()" style="flex-shrink:0">🎤 Parler à Éli</button>
   </div>
 
-  <!-- Vidéo démo unique positionnée avant les fonctionnalités -->
+  <!-- Vidéo démo unique -->
 
   <div style="margin-bottom:22px">
     <div style="font-family:var(--fd);font-size:17px;font-weight:700;color:var(--w);margin-bottom:14px">🎬 Vois Éli en action</div>
@@ -968,29 +1059,24 @@ textarea.fi{resize:vertical;min-height:110px;}
       <div class="vid-top">
         <div class="vid-av">🧑‍🏫</div>
         <div>
-          <div class="vid-level">Démonstration Professeur Éli</div>
-          <div class="vid-lvl-badge" style="background:rgba(249,168,37,.1);color:var(--or2);border:1px solid rgba(249,168,37,.22)">CEP · BEPC · BAC</div>
+          <div class="vid-level">Démonstration · Méthode Socratique</div>
+          <div style="display:inline-block;border-radius:var(--r99);padding:2px 10px;font-size:10px;font-weight:700;margin-top:2px;background:rgba(249,168,37,.1);color:var(--or2);border:1px solid rgba(249,168,37,.22)">CEP · BEPC · BAC</div>
         </div>
         <button class="btn btn-sm btn-gold" style="margin-left:auto" onclick="openChat()">💬 Essayer</button>
       </div>
       <div class="vid-screen">
-        <div class="vid-bar">
-          <div class="vid-dot" style="background:#FF5F57"></div><div class="vid-dot" style="background:#FEBC2E"></div><div class="vid-dot" style="background:#28C840"></div>
-          <span style="margin-left:8px;font-size:11px;color:rgba(255,255,255,.3)">Professeur Éli — Méthode Socratique</span>
-        </div>
+        <div class="vid-bar"><div class="vid-dot" style="background:#FF5F57"></div><div class="vid-dot" style="background:#FEBC2E"></div><div class="vid-dot" style="background:#28C840"></div><span style="margin-left:8px;font-size:11px;color:rgba(255,255,255,.32)">Professeur Éli — Live</span></div>
         <div class="vid-msgs">
-          <div class="vid-eli">Bonjour ! Je suis le Professeur Éli 👋 Que veux-tu qu'on travaille aujourd'hui ?</div>
-          <div class="vid-usr">Les fractions au CEP, j'comprends pas</div>
-          <div class="vid-eli">Pas de panique 😊 Si tu coupes une orange en 4 parts égales et tu en prends 2, ça fait quelle fraction selon toi ?</div>
+          <div class="vid-eli">Bonjour ! Je suis Professeur Éli 👋 Que veux-tu travailler aujourd'hui ?</div>
+          <div class="vid-usr">Les fractions au CEP, je comprends pas</div>
+          <div class="vid-eli">Pas de panique 😊 Si tu coupes une orange en 4 parts égales et tu en prends 2, quelle fraction ça fait selon toi ?</div>
           <div class="vid-usr">Deux quarts ?</div>
-          <div class="vid-eli">Excellent ! 2/4 c'est exact 🎉 Et tu sais quoi ? 2/4 c'est pareil que 1/2. Comment tu l'expliquerais à un ami ?</div>
+          <div class="vid-eli">Exactement ! 2/4 🎉 Et tu sais quoi ? 2/4 c'est pareil que 1/2. Comment tu l'expliquerais à un ami ?</div>
         </div>
         <div class="vid-narr">Éli guide pas à pas. Tu comprends vraiment — tu ne mémorises pas juste.</div>
       </div>
     </div>
   </div>
-
-  <!-- Fonctionnalités -->
 
   <div style="font-family:var(--fd);font-size:17px;font-weight:700;color:var(--w);margin-bottom:14px">Ce qu'Éli peut faire pour toi</div>
   <div class="edfeat-grid">
@@ -1007,73 +1093,49 @@ textarea.fi{resize:vertical;min-height:110px;}
       <div class="edfeat-desc">Pose n'importe quelle question à Éli. Il est là 24h/24, sans jamais juger.</div>
       <button class="btn btn-sm btn-grn" style="width:100%;justify-content:center">Essayer →</button>
     </div>
-    <!-- PREMIUM LOCKED -->
-    <div class="edfeat" style="position:relative">
+    <!-- PREMIUM — sans cadenas, avec badge élégant -->
+    <div class="edfeat" onclick="openPO('prem')">
       <div class="edfeat-icon">📚</div>
       <div class="edfeat-title">Explications de cours</div>
       <div class="edfeat-desc">Éli t'explique n'importe quelle notion à ton niveau, avec des exemples concrets.</div>
-      <div class="prem-lock" onclick="showPremGate('Explications de cours','les explications de cours personnalisées')">
-        <div class="prem-lock-icon">🔒</div>
-        <div class="prem-lock-txt">Fonctionnalité Premium</div>
-        <div class="prem-lock-btn">Débloquer →</div>
-      </div>
+      <div class="edfeat-prem">✦ Exclusif</div>
+      <button class="btn btn-sm btn-prem" style="width:100%;justify-content:center" onclick="event.stopPropagation();openPO('prem')">✦ Premium →</button>
     </div>
-    <div class="edfeat" style="position:relative">
+    <div class="edfeat" onclick="openPO('prem')">
       <div class="edfeat-icon">🧩</div>
       <div class="edfeat-title">Mini Quiz</div>
       <div class="edfeat-desc">Quiz basés sur les anciens sujets. Éli analyse tes réponses et cible tes lacunes.</div>
-      <div class="prem-lock" onclick="showPremGate('Mini Quiz','le Mini Quiz et l\'analyse de tes lacunes')">
-        <div class="prem-lock-icon">🔒</div>
-        <div class="prem-lock-txt">Fonctionnalité Premium</div>
-        <div class="prem-lock-btn">Débloquer →</div>
-      </div>
+      <div class="edfeat-prem">✦ Exclusif</div>
+      <button class="btn btn-sm btn-prem" style="width:100%;justify-content:center" onclick="event.stopPropagation();openPO('prem')">✦ Premium →</button>
     </div>
-    <div class="edfeat" style="position:relative">
+    <div class="edfeat" onclick="openPO('prem')">
       <div class="edfeat-icon">🗺️</div>
       <div class="edfeat-title">Plan de révision</div>
       <div class="edfeat-desc">Éli crée ton programme personnalisé selon tes lacunes et la date de l'examen.</div>
-      <div class="prem-lock" onclick="showPremGate('Plan de révision','le Plan de révision personnalisé')">
-        <div class="prem-lock-icon">🔒</div>
-        <div class="prem-lock-txt">Fonctionnalité Premium</div>
-        <div class="prem-lock-btn">Débloquer →</div>
-      </div>
+      <div class="edfeat-prem">✦ Exclusif</div>
+      <button class="btn btn-sm btn-prem" style="width:100%;justify-content:center" onclick="event.stopPropagation();openPO('prem')">✦ Premium →</button>
     </div>
-    <!-- PHOTO ANALYSE PREMIUM -->
-    <div class="edfeat" style="position:relative">
+    <div class="edfeat" onclick="openPO('prem')">
       <div class="edfeat-icon">📸</div>
       <div class="edfeat-title">Analyse photo par Éli</div>
-      <div class="edfeat-desc">Prends une photo de ton devoir ou cours. Éli l'analyse et t'explique pas à pas. (CM2, 3ème, Terminale uniquement)</div>
-      <div class="prem-lock" onclick="showPremGate('Analyse photo par Éli','l\'analyse de photos de devoirs par Éli')">
-        <div class="prem-lock-icon">📸🔒</div>
-        <div class="prem-lock-txt">Premium exclusif · CM2 · 3ème · Terminale</div>
-        <div class="prem-lock-btn">Débloquer →</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Aperçu photo analysis (Premium only page) -->
-
-  <div style="background:linear-gradient(135deg,rgba(249,168,37,.07),rgba(255,165,0,.03));border:1px solid rgba(249,168,37,.2);border-radius:var(--r16);padding:20px;margin-bottom:20px">
-    <div style="font-family:var(--fd);font-size:14px;font-weight:800;color:var(--or2);margin-bottom:8px;display:flex;align-items:center;gap:8px">📸 Analyse photo — Fonctionnalité exclusive Premium</div>
-    <div style="font-size:13px;color:var(--t2);line-height:1.6;margin-bottom:14px">Prends en photo ton devoir, ton cours ou une question d'examen. Éli analyse l'image et t'explique tout, étape par étape — disponible uniquement pour les élèves de CM2, 3ème et Terminale.</div>
-    <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r12);padding:10px 14px;font-size:12px;color:var(--t2);display:flex;align-items:center;gap:6px">📷 Photo de devoir</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r12);padding:10px 14px;font-size:12px;color:var(--t2);display:flex;align-items:center;gap:6px">📖 Photo de cours</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r12);padding:10px 14px;font-size:12px;color:var(--t2);display:flex;align-items:center;gap:6px">📋 Sujet d'examen</div>
+      <div class="edfeat-desc">Prends une photo de ton devoir. Éli l'analyse et t'explique tout. CM2 · 3ème · Terminale.</div>
+      <div class="edfeat-prem">✦ Exclusif</div>
+      <button class="btn btn-sm btn-prem" style="width:100%;justify-content:center" onclick="event.stopPropagation();openPO('prem')">✦ Premium →</button>
     </div>
   </div>
 </div>
 </div>
 
-<!-- PREMIUM -->
+<!-- PREMIUM PAGE -->
 
 <div class="po" id="po-prem">
 <div class="pi">
   <button class="pbk" onclick="resetPrem();closePO('prem')">← Retour</button>
-  <div id="ageGate" class="age-gate-wrap">
-    <div style="font-size:48px;margin-bottom:16px">🔐</div>
-    <h1 style="font-family:var(--fd);font-size:26px;font-weight:800;color:var(--w);margin-bottom:8px">Version Premium</h1>
-    <div class="age-notice">Pour accéder à la Version Premium, vous devez avoir au moins 16 ans. Si vous avez moins de 16 ans, l'accord d'un parent ou tuteur légal est obligatoire.</div>
+
+  <div id="ageGate" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:10px 0">
+    <div style="font-size:48px;margin-bottom:16px">✦</div>
+    <h1 style="font-family:var(--fd);font-size:26px;font-weight:800;color:var(--w);margin-bottom:8px">✦ Premium</h1>
+    <div class="age-notice">Pour accéder à EKOLO Exclusif, vous devez avoir au moins 16 ans. Si vous avez moins de 16 ans, l'accord d'un parent ou tuteur légal est obligatoire.</div>
     <div style="display:flex;gap:11px;flex-wrap:wrap;justify-content:center">
       <button class="btn btn-gold btn-md" onclick="showPremForm()">✅ J'ai 16 ans ou plus — Continuer</button>
       <button class="btn btn-out btn-md" onclick="showParentForm()">👨‍👧 J'ai moins de 16 ans</button>
@@ -1099,77 +1161,89 @@ textarea.fi{resize:vertical;min-height:110px;}
   <div id="codeStep" class="code-step">
     <div style="text-align:center;padding:16px 0">
       <div style="font-size:42px;margin-bottom:14px">📱</div>
-      <h2 style="font-family:var(--fd);font-size:20px;font-weight:800;color:var(--w);margin-bottom:9px">Code WhatsApp</h2>
+      <h2 style="font-family:var(--fd);font-size:20px;font-weight:800;color:var(--w);margin-bottom:9px">Code WhatsApp envoyé</h2>
+      <p style="font-size:14px;color:var(--t2);margin-bottom:20px;max-width:360px;margin-left:auto;margin-right:auto">Le parent a reçu un code à 6 chiffres. Entrez-le ci-dessous pour valider l'accord.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
         <input class="fi code-input" type="text" placeholder="••••••" maxlength="6">
-        <button class="btn btn-gold btn-md" onclick="showPremForm()">✅ Valider</button>
+        <button class="btn btn-gold btn-md" onclick="showPremForm()">✅ Valider le code</button>
       </div>
     </div>
   </div>
 
   <div id="premForm" class="prem-form">
-    <h2 style="font-family:var(--fd);font-size:24px;font-weight:800;color:var(--w);margin-bottom:5px">✦ Version Premium</h2>
-    <p style="font-size:14px;color:var(--t2);margin-bottom:18px">Débloque toutes les fonctionnalités avancées.</p>
+    <h2 style="font-family:var(--fd);font-size:24px;font-weight:800;color:var(--w);margin-bottom:5px">✦ Exclusif</h2>
+    <p style="font-size:14px;color:var(--t2);margin-bottom:18px">Débloque toutes les fonctionnalités avancées d'EKOLO.</p>
     <div class="adv-grid">
       <div class="adv-item"><div class="adv-icon">🧠</div><div><div class="adv-t">Mémoire d'Éli</div><div class="adv-d">Reprend là où vous en étiez</div></div></div>
       <div class="adv-item"><div class="adv-icon">📸</div><div><div class="adv-t">Analyse photo</div><div class="adv-d">Éli analyse tes devoirs en photo</div></div></div>
-      <div class="adv-item"><div class="adv-icon">🧩</div><div><div class="adv-t">Mini Quiz</div><div class="adv-d">Quiz + analyse des lacunes</div></div></div>
-      <div class="adv-item"><div class="adv-icon">🗺️</div><div><div class="adv-t">Plan de révision</div><div class="adv-d">Programme personnalisé</div></div></div>
+      <div class="adv-item"><div class="adv-icon">🧩</div><div><div class="adv-t">Mini Quiz</div><div class="adv-d">Analyse des lacunes</div></div></div>
+      <div class="adv-item"><div class="adv-icon">🗺️</div><div><div class="adv-t">Plan de révision</div><div class="adv-d">Programme sur mesure</div></div></div>
       <div class="adv-item"><div class="adv-icon">📚</div><div><div class="adv-t">Explications de cours</div><div class="adv-d">Approfondies et personnalisées</div></div></div>
       <div class="adv-item"><div class="adv-icon">📊</div><div><div class="adv-t">Suivi de progression</div><div class="adv-d">Tableau de bord complet</div></div></div>
     </div>
-    <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:12px">Choisis ton offre</div>
-    <div class="price-tabs" id="priceTabs">
-      <div class="ptab" onclick="selectOffer(this,'Mensuel — 5 000 FCFA')">
-        <div class="ptab-name">Mensuel</div><div class="ptab-price">5 000 FCFA</div><div class="ptab-period">sans engagement</div>
-      </div>
-      <div class="ptab" onclick="selectOffer(this,'Trimestriel — 15 000 FCFA')">
-        <div class="ptab-name">Trimestriel</div><div class="ptab-price">15 000 FCFA</div><div class="ptab-period">économise 13%</div>
-      </div>
-      <div class="ptab active" onclick="selectOffer(this,'Annuel Scolaire — 40 000 FCFA / 9 mois')">
-        <div class="ptab-name">📚 Annuel scolaire</div><div class="ptab-price">40 000 FCFA</div><div class="ptab-period">9 mois · recommandé</div>
-      </div>
-    </div>
-    <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin:16px 0 12px">Moyen de paiement</div>
-    <div class="pay-methods-grid">
-      <div class="pay-method-card" onclick="openPaySub('paypal')">
-        <div class="pay-method-logo">🅿️</div>
-        <div class="pay-method-name">PayPal</div>
-        <div class="pay-method-desc">Paiement international</div>
-      </div>
-      <div class="pay-method-card" onclick="openPaySub('airtel')">
-        <div class="pay-method-logo" style="background:#E53935;border-radius:8px;width:44px;height:32px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#fff">AM</div>
-        <div class="pay-method-name">Airtel Money</div>
-        <div class="pay-method-desc">*150# · Gabon</div>
-      </div>
-      <div class="pay-method-card" onclick="openPaySub('moov')">
-        <div class="pay-method-logo" style="background:#1565C0;border-radius:8px;width:44px;height:32px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#fff">MM</div>
-        <div class="pay-method-name">Moov Money</div>
-        <div class="pay-method-desc">*555# · Gabon</div>
-      </div>
-      <div class="pay-method-card" onclick="openPaySub('virement')">
-        <div class="pay-method-logo">🏦</div>
-        <div class="pay-method-name">Virement bancaire</div>
-        <div class="pay-method-desc">BGFIBANK Gabon</div>
-      </div>
-    </div>
-    <div style="background:rgba(67,160,71,.07);border:1px solid rgba(67,160,71,.15);border-radius:var(--r12);padding:12px;font-size:12px;color:#81C784;display:flex;gap:7px">
-      <span>🔒</span> Paiement sécurisé AES-256. Données bancaires jamais stockées.
-    </div>
+
+```
+<!-- Alerte offline avant paiement -->
+<div class="offline-alert">
+  <div class="offline-alert-icon">⚠️</div>
+  <div><div class="offline-alert-title">IMPORTANT — Connexion internet requise pour le paiement</div>
+  <div class="offline-alert-desc">Le paiement et l'activation de ton abonnement Exclusif nécessitent une connexion internet active. Si tu es en mode hors-ligne, connecte-toi d'abord à internet. L'activation se fait dans les <strong>5 minutes</strong> après confirmation du paiement.</div></div>
+</div>
+
+<div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin-bottom:12px">Choisis ton offre</div>
+<div class="price-tabs" id="priceTabs">
+  <div class="ptab" onclick="selOffer(this,'Mensuel — 5 000 FCFA')">
+    <div class="ptab-name">Mensuel</div><div class="ptab-price">5 000 FCFA</div><div class="ptab-period">sans engagement</div>
+  </div>
+  <div class="ptab" onclick="selOffer(this,'Trimestriel — 15 000 FCFA')">
+    <div class="ptab-name">Trimestriel</div><div class="ptab-price">15 000 FCFA</div><div class="ptab-period">économise 13%</div>
+  </div>
+  <div class="ptab active" onclick="selOffer(this,'Annuel Scolaire — 40 000 FCFA / 9 mois')">
+    <div class="ptab-name">📚 Annuel scolaire</div><div class="ptab-price">40 000 FCFA</div><div class="ptab-period">9 mois · recommandé</div>
+  </div>
+</div>
+
+<div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w);margin:16px 0 12px">Moyen de paiement</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+  <div style="background:rgba(0,112,186,.07);border:2px solid rgba(0,112,186,.2);border-radius:var(--r16);padding:16px;text-align:center;cursor:pointer;transition:all .2s" onclick="openPaySub('paypal')" onmouseover="this.style.borderColor='rgba(0,112,186,.5)'" onmouseout="this.style.borderColor='rgba(0,112,186,.2)'">
+    <svg width="70" height="22" viewBox="0 0 100 32" style="display:block;margin:0 auto 6px"><text x="0" y="24" font-family="Arial" font-weight="bold" font-size="22" fill="#003087">Pay</text><text x="38" y="24" font-family="Arial" font-weight="bold" font-size="22" fill="#009cde">Pal</text></svg>
+    <div style="font-size:11px;color:var(--t3)">International</div>
+  </div>
+  <div style="background:rgba(229,57,53,.07);border:2px solid rgba(229,57,53,.2);border-radius:var(--r16);padding:16px;text-align:center;cursor:pointer;transition:all .2s" onclick="openPaySub('airtel')" onmouseover="this.style.borderColor='rgba(229,57,53,.5)'" onmouseout="this.style.borderColor='rgba(229,57,53,.2)'">
+    <div style="background:#E53935;border-radius:8px;padding:4px 12px;display:inline-block;margin-bottom:6px"><span style="font-size:14px;color:#fff;font-weight:900;font-family:var(--fd)">Airtel</span> <span style="font-size:9px;color:rgba(255,255,255,.8);font-weight:700;letter-spacing:1px">MONEY</span></div>
+    <div style="font-size:11px;color:var(--t3)">*150# · Gabon</div>
+  </div>
+  <div style="background:rgba(21,101,192,.07);border:2px solid rgba(21,101,192,.2);border-radius:var(--r16);padding:16px;text-align:center;cursor:pointer;transition:all .2s" onclick="openPaySub('moov')" onmouseover="this.style.borderColor='rgba(21,101,192,.5)'" onmouseout="this.style.borderColor='rgba(21,101,192,.2)'">
+    <div style="background:#1565C0;border-radius:8px;padding:4px 12px;display:inline-block;margin-bottom:6px"><span style="font-size:14px;color:#fff;font-weight:900;font-family:var(--fd)">Moov</span> <span style="font-size:9px;color:rgba(255,255,255,.8);font-weight:700;letter-spacing:1px">MONEY</span></div>
+    <div style="font-size:11px;color:var(--t3)">*555# · Gabon</div>
+  </div>
+  <div style="background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.1);border-radius:var(--r16);padding:16px;text-align:center;cursor:pointer;transition:all .2s" onclick="openPaySub('virement')" onmouseover="this.style.borderColor='rgba(255,255,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)'">
+    <div style="font-size:28px;margin-bottom:6px">🏦</div>
+    <div style="font-family:var(--fd);font-size:12px;font-weight:700;color:var(--w)">Virement</div>
+    <div style="font-size:11px;color:var(--t3)">Bancaire</div>
+  </div>
+</div>
+<div style="background:rgba(67,160,71,.065);border:1px solid rgba(67,160,71,.15);border-radius:var(--r12);padding:12px;font-size:12px;color:var(--v6);display:flex;gap:7px">
+  <span>🔒</span> Paiement sécurisé AES-256. Données bancaires jamais stockées. Activation en 5 minutes.
+</div>
+```
+
   </div>
 </div>
 </div>
 
-<!-- ════════════════ NAVBAR ════════════════ -->
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
 
 <nav class="nav" id="NAV">
-  <div class="nav-logo" onclick="navScrollTo('accueil')">
+  <div class="nav-logo" onclick="navTo('accueil')">
     <svg width="38" height="38" viewBox="0 0 200 200">
       <defs>
         <radialGradient id="n1" cx="38%" cy="32%" r="70%"><stop offset="0%" stop-color="#388E3C"/><stop offset="100%" stop-color="#1B5E20"/></radialGradient>
         <linearGradient id="n2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFE082"/><stop offset="100%" stop-color="#FFA000"/></linearGradient>
         <linearGradient id="n3" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#FFA000"/><stop offset="60%" stop-color="#FFD54F"/><stop offset="100%" stop-color="#FFFDE7"/></linearGradient>
-        <filter id="ns"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#00000052"/></filter>
+        <filter id="ns"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#00000055"/></filter>
         <filter id="ng"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
       </defs>
       <circle cx="100" cy="100" r="86" fill="url(#n1)" filter="url(#ns)"/>
@@ -1186,56 +1260,57 @@ textarea.fi{resize:vertical;min-height:110px;}
     <span class="nav-logo-name">EKOLO</span>
   </div>
   <div class="nav-links">
-    <span class="nl" onclick="navScrollTo('accueil')">Accueil</span>
-    <span class="nl" onclick="navScrollTo('eli')">Professeur Éli</span>
-    <span class="nl" onclick="navScrollTo('examens')">Examens</span>
-    <span class="nl" onclick="navScrollTo('fonctionnalites')">Fonctionnalités</span>
-    <span class="nl" style="color:var(--or2);font-weight:700" onclick="openPO('prem')">✦ Premium</span>
+    <span class="nl" onclick="navTo('accueil')">Accueil</span>
+    <span class="nl" onclick="navTo('eli')">Professeur Éli</span>
+    <span class="nl" onclick="navTo('examens')">Examens</span>
+    <span class="nl" onclick="navTo('fonctionnalites')">Fonctionnalités</span>
+    <span class="nl" onclick="navTo('premium-section')">✦ Premium</span>
   </div>
   <div class="nav-acts">
     <button class="btn btn-sm btn-out" onclick="openPO('cnx')">Connexion</button>
     <button class="btn btn-sm btn-gold" onclick="openPO('ins')">S'inscrire</button>
   </div>
-  <!-- Mobile toggle -->
-  <button class="mob-nav-toggle" id="mobToggle" onclick="toggleMobNav()">
-    <span id="mnt1"></span><span id="mnt2"></span><span id="mnt3"></span>
+  <button class="mob-toggle" id="mobToggle" onclick="toggleMob()">
+    <span id="ms1"></span><span id="ms2"></span><span id="ms3"></span>
   </button>
 </nav>
 
 <!-- MOBILE DRAWER -->
 
 <div class="mob-drawer" id="mobDrawer">
-  <div class="mob-nl" onclick="navScrollTo('accueil');closeMobNav()">Accueil <span>→</span></div>
-  <div class="mob-nl" onclick="navScrollTo('eli');closeMobNav()">Professeur Éli <span>→</span></div>
-  <div class="mob-nl" onclick="navScrollTo('examens');closeMobNav()">Examens <span>→</span></div>
-  <div class="mob-nl" onclick="navScrollTo('fonctionnalites');closeMobNav()">Fonctionnalités <span>→</span></div>
-  <div class="mob-nl" style="color:var(--or2)" onclick="openPO('prem');closeMobNav()">✦ Version Premium <span>→</span></div>
-  <div style="display:flex;gap:9px;padding-top:12px">
-    <button class="btn btn-out btn-sm" style="flex:1;justify-content:center" onclick="openPO('cnx');closeMobNav()">Connexion</button>
-    <button class="btn btn-gold btn-sm" style="flex:1;justify-content:center" onclick="openPO('ins');closeMobNav()">S'inscrire</button>
+  <div class="mob-nl" onclick="navTo('accueil');closeMob()">Accueil <span>›</span></div>
+  <div class="mob-nl" onclick="navTo('eli');closeMob()">Professeur Éli <span>›</span></div>
+  <div class="mob-nl" onclick="navTo('examens');closeMob()">Examens <span>›</span></div>
+  <div class="mob-nl" onclick="navTo('fonctionnalites');closeMob()">Fonctionnalités <span>›</span></div>
+  <div class="mob-nl gold" onclick="navTo('premium-section');closeMob()">✦ Premium <span>›</span></div>
+  <div style="display:flex;gap:9px;padding-top:14px">
+    <button class="btn btn-out btn-sm" style="flex:1;justify-content:center" onclick="openPO('cnx');closeMob()">Connexion</button>
+    <button class="btn btn-gold btn-sm" style="flex:1;justify-content:center" onclick="openPO('ins');closeMob()">S'inscrire</button>
   </div>
 </div>
 
-<!-- ════════════════ HERO ════════════════ -->
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
 
 <section class="hero" id="accueil">
   <div class="hbg">
     <div class="orbe o1"></div><div class="orbe o2"></div><div class="orbe o3"></div>
     <div class="hgd"></div><div class="hscan"></div>
     <div class="hpt" style="width:4px;height:4px;left:15%;top:30%;opacity:.5;animation-duration:6s"></div>
-    <div class="hpt" style="width:3px;height:3px;left:25%;top:60%;opacity:.4;animation-duration:8s;animation-delay:-2s"></div>
+    <div class="hpt" style="width:3px;height:3px;left:26%;top:62%;opacity:.4;animation-duration:8s;animation-delay:-2s"></div>
     <div class="hpt" style="width:5px;height:5px;left:70%;top:22%;opacity:.6;animation-duration:7s;animation-delay:-4s"></div>
   </div>
 
   <div class="hl">
-    <div class="hbadge"><div class="hbdot"></div>La plateforme éducative</div>
+    <div class="hbadge"><div class="hbdot"></div>Ta plateforme éducative</div>
     <h1 class="ht1">Apprends avec</h1>
     <span class="ht2">Professeur Éli,</span>
     <p class="ht3">ton professeur personnel</p>
     <p class="hd">Ton assistant IA toujours disponible — patient, motivant, à l'écoute. Il t'explique, te guide et te pousse à te dépasser. <strong>Gratuit pour tous les élèves.</strong></p>
     <div class="hacts">
       <button class="btn btn-md btn-gold" onclick="openPO('eli')">🎤 Parler à Éli maintenant</button>
-      <button class="btn btn-md btn-out" onclick="navScrollTo('examens')">Voir les examens →</button>
+      <button class="btn btn-md btn-out" onclick="navTo('examens')">Voir les examens →</button>
     </div>
     <div class="hlevels">
       <div class="hlv" onclick="openPO('cm2')"><div class="ldot" style="background:#E65100"></div>CEP — CM2</div>
@@ -1260,11 +1335,13 @@ textarea.fi{resize:vertical;min-height:110px;}
       </div>
     </div>
     <div class="efb efbt"><div class="fbs">⭐⭐⭐⭐⭐</div><div class="fbt">Éli disponible 24h/24</div></div>
-    <div class="efb efbb" style="background:var(--v3);border-color:rgba(67,160,71,.26)"><div style="font-size:16px;margin-bottom:2px">💚</div><div class="fbt" style="color:rgba(255,255,255,.86)">Sans inscription requise</div></div>
+    <div class="efb efbb" style="background:var(--v3);border-color:rgba(67,160,71,.28)"><div style="font-size:16px;margin-bottom:2px">💚</div><div class="fbt" style="color:rgba(255,255,255,.88)">Sans inscription requise</div></div>
   </div>
 </section>
 
-<!-- ════════════════ SECTION ÉLI ════════════════ -->
+<!-- ════════════════════════════════════════
+     SECTION ÉLI
+════════════════════════════════════════ -->
 
 <section class="sec-eli" id="eli">
   <div class="sec-eli-bg"></div>
@@ -1272,38 +1349,28 @@ textarea.fi{resize:vertical;min-height:110px;}
     <div class="aos">
       <div class="slbl2">Rencontre Professeur Éli</div>
       <h2 class="stitle">Il n'est pas un chatbot.<br>Il est <span>ton prof.</span></h2>
-      <p class="sdesc">Éli comprend comment tu apprends, s'adapte à ton niveau et ne te lâche pas tant que tu n'as pas compris. Il parle en "tu", encourage et ne te juge jamais.</p>
+      <p class="sdesc">Éli comprend comment tu apprends, s'adapte à ton niveau et ne te lâche pas tant que tu n'as pas compris. Il parle en "tu", encourage et ne juge jamais.</p>
       <div class="traits">
         <div class="trait aos d1"><div class="ticon">🎯</div><div><div class="ttit">Guide sans donner la réponse</div><div class="tdsc">Méthode socratique — tu trouves toi-même. Tu comprends vraiment.</div></div></div>
         <div class="trait aos d2"><div class="ticon">💬</div><div><div class="ttit">Parle ta langue, à ton rythme</div><div class="tdsc">En français, chaleureux, jamais pressé.</div></div></div>
         <div class="trait aos d3"><div class="ticon">🎤</div><div><div class="ttit">Répond à voix haute</div><div class="tdsc">Tu peux lui parler et l'écouter. Idéal sans clavier.</div></div></div>
         <div class="trait aos d4"><div class="ticon">🌙</div><div><div class="ttit">Disponible à 3h du matin</div><div class="tdsc">La veille d'un examen, Éli est là. Toujours.</div></div></div>
       </div>
-      <div class="pcard aos d5">
-        <div class="pct">✦ Passe à la Version Premium</div>
-        <div class="pcd">Éli se souviendra de toi, analysera tes photos de devoirs et créera ton plan de révision personnalisé.</div>
-        <div class="pcfs">
-          <div class="pcf">Mini Quiz · Plan de révision · Explications de cours</div>
-          <div class="pcf">📸 Analyse de photos de devoirs (CM2, 3ème, Terminale)</div>
-          <div class="pcf">À partir de 5 000 FCFA/mois</div>
-        </div>
-        <button class="btn btn-gold btn-sm" onclick="openPO('prem')">✦ Découvrir Premium</button>
-      </div>
-    </div>
 
 ```
+</div>
+
 <div class="aos d2">
   <div class="edemo">
     <div class="ech">
       <div class="eav-w"><div class="eav" style="width:44px;height:44px;font-size:20px">🧑‍🏫</div><div class="eavr"></div></div>
-      <div><div class="ename">Professeur Éli</div><div class="estat"><div class="esdot"></div>En direct</div></div>
-      <div style="margin-left:auto;font-size:11px;color:rgba(255,255,255,.36)">📋 Bac · D</div>
+      <div><div class="ename">Professeur Éli</div><div class="estat"><div class="esdot"></div>En direct · Bac D</div></div>
     </div>
     <div style="padding:16px 18px;display:flex;flex-direction:column;gap:9px">
       <div class="mb mu">J'ai du mal avec les fonctions dérivées...</div>
-      <div class="mb me">Pas de panique ! 😊 Qu'est-ce que tu comprends déjà ? On part de là.</div>
+      <div class="mb me">Pas de panique 😊 Qu'est-ce que tu comprends déjà ? On part de là.</div>
       <div class="mb mu">f'(x) c'est la pente, mais pas la règle du produit</div>
-      <div class="mb me">Super base ! 🎯 Règle : <strong style="color:var(--or2)">(u·v)' = u'v + uv'</strong> · Si f(x) = x² · sin(x), qu'est-ce que tu mettrais comme u et v ?</div>
+      <div class="mb me">Super ! <strong style="color:var(--or2)">(u·v)' = u'v + uv'</strong><br>Si f(x) = x² · sin(x), qu'est-ce que tu mettrais comme u et v ?</div>
       <div class="mtyping" id="demoT"><div class="td"></div><div class="td"></div><div class="td"></div></div>
     </div>
     <div class="einput" style="margin:0 18px 18px">
@@ -1317,13 +1384,15 @@ textarea.fi{resize:vertical;min-height:110px;}
   </div>
 </section>
 
-<!-- ════════════════ EXAMENS ════════════════ -->
+<!-- ════════════════════════════════════════
+     EXAMENS
+════════════════════════════════════════ -->
 
 <section class="sec-ex" id="examens">
   <div class="shdr aos">
     <div class="slabel">📋 Examens officiels</div>
     <h2 class="sttl">Prépare-toi avec<br><span>les vrais sujets</span></h2>
-    <p class="ssub">Sujets officiels + corrections pour les trois grands examens. Éli t'explique chaque exercice.</p>
+    <p class="ssub">Sujets officiels + corrections pour les trois grands examens du Gabon. Éli t'explique chaque exercice.</p>
     <div style="margin-top:16px"><button class="btn btn-out btn-sm" onclick="openPO('ann')">Voir la banque complète des annales →</button></div>
   </div>
 
@@ -1337,7 +1406,6 @@ textarea.fi{resize:vertical;min-height:110px;}
         <span class="ecyr" style="background:rgba(230,81,0,.13);color:#FF8A65;border:1px solid rgba(230,81,0,.26)">2024</span>
         <span class="ecyr" style="background:rgba(230,81,0,.13);color:#FF8A65;border:1px solid rgba(230,81,0,.26)">2023</span>
         <span class="ecyr" style="background:rgba(230,81,0,.13);color:#FF8A65;border:1px solid rgba(230,81,0,.26)">2022</span>
-        <span class="ecyr" style="background:rgba(230,81,0,.13);color:#FF8A65;border:1px solid rgba(230,81,0,.26)">2021</span>
       </div>
       <div class="ecmats">
         <div class="ecmat"><div class="ecmd" style="background:#FF8A65"></div>Français</div>
@@ -1358,7 +1426,6 @@ textarea.fi{resize:vertical;min-height:110px;}
     <span class="ecyr" style="background:rgba(27,94,32,.22);color:#81C784;border:1px solid rgba(67,160,71,.26)">2024</span>
     <span class="ecyr" style="background:rgba(27,94,32,.22);color:#81C784;border:1px solid rgba(67,160,71,.26)">2023</span>
     <span class="ecyr" style="background:rgba(27,94,32,.22);color:#81C784;border:1px solid rgba(67,160,71,.26)">2022</span>
-    <span class="ecyr" style="background:rgba(27,94,32,.22);color:#81C784;border:1px solid rgba(67,160,71,.26)">2021</span>
   </div>
   <div class="ecmats">
     <div class="ecmat"><div class="ecmd" style="background:#81C784"></div>Mathématiques</div>
@@ -1383,8 +1450,7 @@ textarea.fi{resize:vertical;min-height:110px;}
   <div class="ecmats">
     <div class="ecmat"><div class="ecmd" style="background:var(--or2)"></div>Séries A · B · C · D · E</div>
     <div class="ecmat"><div class="ecmd" style="background:var(--or2)"></div>Maths · Sciences · Philo</div>
-    <div class="ecmat"><div class="ecmd" style="background:var(--or2)"></div>Séries techniques</div>
-    <div class="ecmat"><div class="ecmd" style="background:var(--or2)"></div>Français · Anglais · SVT</div>
+    <div class="ecmat"><div class="ecmd" style="background:var(--or2)"></div>Séries Techniques</div>
   </div>
   <button class="ecbtn" style="color:var(--or2);border-color:rgba(249,168,37,.18)">Voir les sujets BAC →</button>
 </div>
@@ -1393,7 +1459,9 @@ textarea.fi{resize:vertical;min-height:110px;}
   </div>
 </section>
 
-<!-- ════════════════ FONCTIONNALITÉS ════════════════ -->
+<!-- ════════════════════════════════════════
+     FONCTIONNALITÉS
+════════════════════════════════════════ -->
 
 <section class="sec-feat" id="fonctionnalites">
   <div class="shdr aos">
@@ -1402,15 +1470,12 @@ textarea.fi{resize:vertical;min-height:110px;}
     <p class="ssub">Conçu pour s'adapter à ton rythme, ton niveau et tes objectifs.</p>
   </div>
 
-  <div class="fgrid" style="max-width:1080px;margin:0 auto">
+  <div class="fgrid" style="max-width:1100px;margin:0 auto">
     <div class="fc aos" style="position:relative">
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--or2),var(--or3));border-radius:20px 20px 0 0"></div>
       <div class="fiw" style="background:rgba(249,168,37,.08)">🧩</div>
       <div class="ftit">Mini Quiz</div>
-      <div class="fdsc">Quiz basés sur les anciens sujets. Éli analyse tes réponses et cible tes lacunes.</div>
-      <div class="prem-lock" onclick="showPremGate('Mini Quiz','le Mini Quiz')">
-        <div class="prem-lock-icon">🔒</div><div class="prem-lock-txt">Fonctionnalité Premium</div><div class="prem-lock-btn">Débloquer →</div>
-      </div>
+      <div class="fdsc">Quiz basés sur les anciens sujets. Éli analyse tes réponses et cible tes lacunes précisément.</div>
     </div>
     <div class="fc aos d1" style="position:relative">
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#43A047,#81C784);border-radius:20px 20px 0 0"></div>
@@ -1428,7 +1493,7 @@ textarea.fi{resize:vertical;min-height:110px;}
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#CE93D8,#AB47BC);border-radius:20px 20px 0 0"></div>
       <div class="fiw" style="background:rgba(206,147,216,.08)">📊</div>
       <div class="ftit">Suivi de progression</div>
-      <div class="fdsc">Scores, points faibles, lacunes — tout visualisé en un coup d'œil.</div>
+      <div class="fdsc">Scores, points faibles, lacunes — tout visualisé pour concentrer ton énergie.</div>
     </div>
     <div class="fc aos d2" style="position:relative">
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#EF5350,#E53935);border-radius:20px 20px 0 0"></div>
@@ -1437,13 +1502,10 @@ textarea.fi{resize:vertical;min-height:110px;}
       <div class="fdsc">Prof. Éli ne dort jamais. Révise quand tu veux, depuis ton téléphone, partout.</div>
     </div>
     <div class="fc aos d3" style="position:relative">
-      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--or2),var(--or3));border-radius:20px 20px 0 0"></div>
-      <div class="fiw" style="background:rgba(249,168,37,.08)">📸</div>
-      <div class="ftit">Analyse photo par Éli</div>
-      <div class="fdsc">Prends une photo de ton devoir. Éli l'analyse et t'explique tout. CM2 · 3ème · Terminale uniquement.</div>
-      <div class="prem-lock" onclick="showPremGate('Analyse photo','l\'analyse de photos par Éli')">
-        <div class="prem-lock-icon">📸🔒</div><div class="prem-lock-txt">Exclusivité Premium</div><div class="prem-lock-btn">Débloquer →</div>
-      </div>
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#66BB6A,#43A047);border-radius:20px 20px 0 0"></div>
+      <div class="fiw" style="background:rgba(102,187,106,.08)">📶</div>
+      <div class="ftit">Mode offline</div>
+      <div class="fdsc">Fonctionne même sans connexion — essentiel pour les zones rurales.</div>
     </div>
   </div>
 
@@ -1455,13 +1517,74 @@ textarea.fi{resize:vertical;min-height:110px;}
   </div>
 </section>
 
-<!-- ════════════════ CTA ════════════════ -->
+<!-- ════════════════════════════════════════
+     SECTION PREMIUM (nouvelle, sans cadenas)
+════════════════════════════════════════ -->
+
+<section class="sec-prem" id="premium-section">
+
+  <div style="max-width:1100px;margin:0 auto;position:relative;z-index:1">
+    <div class="shdr aos">
+      <div class="slabel" style="background:rgba(249,168,37,.1);border-color:rgba(249,168,37,.25)">✦ Exclusif</div>
+      <h2 class="sttl">Éli à son <span>plein potentiel</span></h2>
+      <p class="ssub">Des fonctionnalités avancées pour aller encore plus loin dans ta préparation.</p>
+    </div>
+
+```
+<div class="prem-grid">
+  <div class="prem-card aos d1">
+  <span class="prem-card-icon">📸</span>
+    <div class="prem-card-title">Analyse photo par Éli</div>
+    <div class="prem-card-desc">Prends en photo ton devoir ou ton cours. Éli analyse l'image et t'explique tout, étape par étape. Disponible pour CM2, 3ème et Terminale.</div>
+  </div>
+  <div class="prem-card aos d2">
+  <span class="prem-card-icon">🧠</span>
+    <div class="prem-card-title">Mémoire de Professeur Éli</div>
+    <div class="prem-card-desc">Éli se souvient de toi à chaque session. Il reprend exactement là où vous en étiez — tes lacunes, tes progrès, ton niveau. Jamais repartir de zéro.</div>
+  </div>
+  <div class="prem-card aos d3">
+  <span class="prem-card-icon">🗺️</span>
+    <div class="prem-card-title">Plan de révision personnalisé</div>
+    <div class="prem-card-desc">Éli crée ton programme de révision sur mesure, semaine par semaine, en fonction de tes lacunes identifiées et de la date de ton examen.</div>
+  </div>
+  <div class="prem-card aos d1">
+  <span class="prem-card-icon">🧩</span>
+    <div class="prem-card-title">Mini Quiz intelligent</div>
+    <div class="prem-card-desc">Des quiz basés sur les vrais sujets d'examens. Éli analyse tes réponses, identifie tes lacunes et ajuste ses explications en conséquence.</div>
+  </div>
+  <div class="prem-card aos d2">
+  <span class="prem-card-icon">📚</span>
+    <div class="prem-card-title">Explications de cours approfondies</div>
+    <div class="prem-card-desc">Éli t'explique chaque notion en profondeur, avec des exemples concrets, des analogies et des exercices d'application adaptés à ton niveau.</div>
+  </div>
+  <div class="prem-card aos d3">
+  <span class="prem-card-icon">📊</span>
+    <div class="prem-card-title">Tableau de bord de progression</div>
+    <div class="prem-card-desc">Visualise tes progrès, tes scores par matière et tes points faibles. Sais exactement où concentrer tes efforts pour maximiser tes chances à l'examen.</div>
+  </div>
+</div>
+
+<div class="prem-cta-wrap aos">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+    <div style="font-family:var(--fd);font-size:22px;font-weight:700;color:var(--w)">À partir de <span style="color:var(--or2)">5 000 FCFA/mois</span></div>
+    <div style="font-size:13px;color:var(--t3)">Mensuel · Trimestriel · Annuel Scolaire</div>
+    <button class="btn btn-lg btn-gold" onclick="openPO('prem')" style="animation:glow 2s infinite">✦ Découvrir le Premium</button>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CTA
+════════════════════════════════════════ -->
 
 <section class="sec-cta">
   <div class="ctain aos">
     <div style="display:flex;justify-content:center;margin-bottom:24px">
-      <svg width="72" height="72" viewBox="0 0 200 200" style="animation:glow 2s infinite,float 4s ease-in-out infinite">
-        <use href="#n1"/><circle cx="100" cy="100" r="86" fill="url(#n1)"/>
+      <svg width="70" height="70" viewBox="0 0 200 200" style="animation:glowGrn 2s infinite,float 4s ease-in-out infinite">
+        <circle cx="100" cy="100" r="86" fill="url(#n1)"/>
         <rect x="61" y="44" width="13" height="108" rx="6" fill="url(#n2)"/>
         <rect x="61" y="44" width="78" height="13" rx="6" fill="url(#n2)"/>
         <rect x="61" y="91" width="60" height="13" rx="6" fill="url(#n2)"/>
@@ -1487,35 +1610,27 @@ textarea.fi{resize:vertical;min-height:110px;}
   </div>
 </section>
 
-<!-- ════════════════ FOOTER ════════════════ -->
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
 
 <footer class="foot">
   <div class="fgr">
     <div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px">
         <svg width="34" height="34" viewBox="0 0 200 200">
-          <defs>
-            <radialGradient id="f1" cx="38%" cy="32%" r="70%"><stop offset="0%" stop-color="#388E3C"/><stop offset="100%" stop-color="#1B5E20"/></radialGradient>
-            <linearGradient id="f2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFE082"/><stop offset="100%" stop-color="#FFA000"/></linearGradient>
-            <linearGradient id="f3" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#FFA000"/><stop offset="60%" stop-color="#FFD54F"/><stop offset="100%" stop-color="#FFFDE7"/></linearGradient>
-            <filter id="fs2"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000045"/></filter>
-            <filter id="fg2"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          </defs>
-          <circle cx="100" cy="100" r="86" fill="url(#f1)" filter="url(#fs2)"/>
-          <rect x="61" y="44" width="13" height="108" rx="6" fill="url(#f2)"/>
-          <rect x="61" y="44" width="78" height="13" rx="6" fill="url(#f2)"/>
-          <rect x="61" y="91" width="60" height="13" rx="6" fill="url(#f2)"/>
-          <rect x="61" y="139" width="78" height="13" rx="6" fill="url(#f2)"/>
-          <path d="M147 44C145 34,141 24,147 12C150 5,156 1,156 1C156 1,167 10,164 24C162 32,156 38,156 44Z" fill="url(#f3)" filter="url(#fg2)"/>
-          <path d="M151 42C150 34,148 26,152 16C154 10,157 7,157 7C157 7,163 14,161 24C160 30,156 36,156 42Z" fill="white" opacity=".45"/>
-          <circle cx="82" cy="172" r="4.5" fill="url(#f2)" opacity=".9"/>
-          <circle cx="100" cy="176" r="5.5" fill="url(#f2)"/>
-          <circle cx="118" cy="172" r="4.5" fill="url(#f2)" opacity=".9"/>
+          <circle cx="100" cy="100" r="86" fill="url(#n1)"/>
+          <rect x="61" y="44" width="13" height="108" rx="6" fill="url(#n2)"/>
+          <rect x="61" y="44" width="78" height="13" rx="6" fill="url(#n2)"/>
+          <rect x="61" y="91" width="60" height="13" rx="6" fill="url(#n2)"/>
+          <rect x="61" y="139" width="78" height="13" rx="6" fill="url(#n2)"/>
+          <path d="M147 44C145 34,141 24,147 12C150 5,156 1,156 1C156 1,167 10,164 24C162 32,156 38,156 44Z" fill="url(#n3)"/>
+          <circle cx="100" cy="176" r="5.5" fill="url(#n2)"/>
         </svg>
         <div class="fbn">EKOLO</div>
       </div>
-      <div class="ftag">La plateforme éducative propulsée par l'IA. Prépare ton CEP, BEPC ou Bac avec Professeur Éli.</div>
-      <div class="fct">✉️ contact@ekolo.ga<br>📱 +241 07 73 74 043<br>📍 Libreville, Gabon</div>
+      <div class="ftag">La plateforme éducative propulsée par l'IA. Prépare ton CEP, BEPC ou Bac avec Professeur Éli — gratuit et disponible partout.</div>
+      <div class="fct">✉️ ekolocontact@gmail.com<br>📱 +241 07 73 74 043<br>📍 Libreville, Gabon</div>
       <div class="fsocs">
         <a class="fsoc" href="#" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="#0077B5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
         <a class="fsoc" href="#" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -1524,224 +1639,237 @@ textarea.fi{resize:vertical;min-height:110px;}
         <a class="fsoc" href="#" title="TikTok"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
       </div>
     </div>
-    <div>
-      <div class="fct2">Navigation</div>
-      <span class="fl" onclick="navScrollTo('accueil')">Accueil</span>
-      <span class="fl" onclick="navScrollTo('eli')">Professeur Éli</span>
-      <span class="fl" onclick="navScrollTo('examens')">Examens</span>
-      <span class="fl" onclick="navScrollTo('fonctionnalites')">Fonctionnalités</span>
-      <span class="fl" onclick="openPO('prem')" style="color:var(--or2);font-weight:700">✦ Version Premium</span>
-    </div>
-    <div>
-      <div class="fct2">Examens</div>
-      <span class="fl" onclick="openPO('cep')">CEP (CM2)</span>
-      <span class="fl" onclick="openPO('bepc')">BEPC (3ème)</span>
-      <span class="fl" onclick="openPO('bac')">Baccalauréat</span>
-      <span class="fl" onclick="openPO('ann')">Annales officielles</span>
-    </div>
-    <div>
-      <div class="fct2">Informations</div>
-      <span class="fl" onclick="openPO('ap')">À propos</span>
-      <span class="fl" onclick="openPO('ct')">Contact</span>
-      <span class="fl" onclick="openPO('ml')">Mentions légales</span>
-      <span class="fl" onclick="openPO('conf')">Confidentialité</span>
-    </div>
+
+```
+<div>
+  <div class="fct2">Navigation</div>
+  <!-- CORRECTION footer navigation : navTo pour mobile + desktop -->
+  <span class="fl" onclick="navTo('accueil')">Accueil</span>
+  <span class="fl" onclick="navTo('eli')">Professeur Éli</span>
+  <span class="fl" onclick="navTo('examens')">Examens</span>
+  <span class="fl" onclick="navTo('fonctionnalites')">Fonctionnalités</span>
+  <span class="fl" onclick="navTo('premium-section')" style="color:var(--or2);font-weight:700">✦ Premium</span>
+</div>
+
+<div>
+  <div class="fct2">Examens</div>
+  <span class="fl" onclick="openPO('cep')">CEP (CM2)</span>
+  <span class="fl" onclick="openPO('bepc')">BEPC (3ème)</span>
+  <span class="fl" onclick="openPO('bac')">Baccalauréat</span>
+  <span class="fl" onclick="openPO('ann')">Annales officielles</span>
+</div>
+
+<div>
+  <div class="fct2">Informations</div>
+  <span class="fl" onclick="openPO('ap')">À propos</span>
+  <span class="fl" onclick="openPO('ct')">Contact</span>
+  <span class="fl" onclick="openPO('ml')">Mentions légales</span>
+  <span class="fl" onclick="openPO('conf')">Confidentialité</span>
+</div>
+```
+
   </div>
-  <!-- CORRECTION : "Libreville, Gabon" retiré du copyright -->
+
   <div class="fbot">
     <div class="fcp">© 2026 EKOLO. Tous droits réservés.</div>
     <div class="fmade">L'intelligence au service de ta réussite</div>
   </div>
 </footer>
 
+<!-- ════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+
 <script>
-/* ═══ PERFORMANCE : tout dans window.load ═══ */
-window.addEventListener('load',()=>{
+/* Tout chargé après le rendu pour maximiser la performance */
+window.addEventListener('load', () => {
 
-/* CURSOR — desktop only */
-if(window.innerWidth>768){
-  const CUR=document.getElementById('CUR'),CURR=document.getElementById('CURR');
-  let mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;CUR.style.left=mx+'px';CUR.style.top=my+'px';},{passive:true});
-  (function animR(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;CURR.style.left=rx+'px';CURR.style.top=ry+'px';requestAnimationFrame(animR);})();
-  document.querySelectorAll('a,button,.excard,.trait,.edfeat,.cmet,.icard,.pay-method-card').forEach(el=>{
-    el.addEventListener('mouseenter',()=>{CUR.style.width='18px';CUR.style.height='18px';CURR.style.width='46px';CURR.style.height='46px';},{passive:true});
-    el.addEventListener('mouseleave',()=>{CUR.style.width='10px';CUR.style.height='10px';CURR.style.width='32px';CURR.style.height='32px';},{passive:true});
-  });
-}
-
-/* NAVBAR SCROLL */
-const NAV=document.getElementById('NAV');
-window.addEventListener('scroll',()=>NAV.classList.toggle('sc',scrollY>26),{passive:true});
-
-/* SCROLL ANIMATIONS */
-const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');obs.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.aos').forEach(el=>obs.observe(el));
-
-/* HERO CHAT */
-const heroMsgs=document.getElementById('heroMsgs');
-const conv=[{f:'u',t:'Maths, le BEPC...'},{f:'e',t:'Excellent ! C\'est quoi le chapitre qui te bloque ? 💪'},{f:'u',t:'Les équations du second degré'},{f:'e',t:'Top ! On commence par le discriminant — pas de panique 🎯'}];
-let hi=0;
-function addHMsg(){
-  if(hi>=conv.length)return;
-  const m=conv[hi++];
-  if(m.f==='e'){
-    const t=document.createElement('div');t.className='mtyping';t.innerHTML='<div class="td"></div><div class="td"></div><div class="td"></div>';
-    heroMsgs.appendChild(t);heroMsgs.scrollTop=9999;
-    setTimeout(()=>{t.remove();const b=document.createElement('div');b.className='mb me';b.innerHTML=m.t;heroMsgs.appendChild(b);heroMsgs.scrollTop=9999;setTimeout(addHMsg,2400);},1100);
-  }else{
-    const b=document.createElement('div');b.className='mb mu';b.textContent=m.t;
-    heroMsgs.appendChild(b);heroMsgs.scrollTop=9999;setTimeout(addHMsg,1300);
+  /* ── Cursor ───────────────────────────────────── */
+  if (window.innerWidth > 768) {
+    const C = document.getElementById('CUR'), R = document.getElementById('CURR');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      C.style.left = mx + 'px'; C.style.top = my + 'px';
+    }, { passive: true });
+    (function loop() {
+      rx += (mx - rx) * .1; ry += (my - ry) * .1;
+      R.style.left = rx + 'px'; R.style.top = ry + 'px';
+      requestAnimationFrame(loop);
+    })();
+    document.querySelectorAll('a, button, .excard, .trait, .edfeat, .cmet, .icard, .prem-card').forEach(el => {
+      el.addEventListener('mouseenter', () => { C.style.width = '18px'; C.style.height = '18px'; R.style.width = '46px'; R.style.height = '46px'; }, { passive: true });
+      el.addEventListener('mouseleave', () => { C.style.width = '10px'; C.style.height = '10px'; R.style.width = '32px'; R.style.height = '32px'; }, { passive: true });
+    });
   }
-}
-setTimeout(addHMsg,2000);
 
-/* DEMO TYPING */
-const dT=document.getElementById('demoT');
-if(dT)setInterval(()=>{dT.style.opacity=dT.style.opacity==='0'?'1':'0';},3000);
+  /* ── Navbar scroll ────────────────────────────── */
+  const NAV = document.getElementById('NAV');
+  window.addEventListener('scroll', () => NAV.classList.toggle('sc', scrollY > 26), { passive: true });
 
-}); // end load
+  /* ── Scroll animations ────────────────────────── */
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.aos').forEach(el => obs.observe(el));
 
-/* ═══ NAV SCROLL — mobile + desktop ═══ */
-function navScrollTo(id){
-  /* Ferme tous les overlays d'abord */
-  document.querySelectorAll('.po,.pay-subpage,.chat-full').forEach(p=>p.classList.remove('on'));
-  document.body.style.overflow='';
-  /* Scroll vers la section */
-  setTimeout(()=>{
-    const el=document.getElementById(id);
-    if(el){
-      const offset=70;
-      const top=el.getBoundingClientRect().top+window.scrollY-offset;
-      window.scrollTo({top,behavior:'smooth'});
+  /* ── Hero chat animation ──────────────────────── */
+  const hm = document.getElementById('heroMsgs');
+  const conv = [
+    { f: 'u', t: 'Maths, le BEPC...' },
+    { f: 'e', t: 'Excellent ! C\'est quoi le chapitre qui te bloque le plus ? 💪' },
+    { f: 'u', t: 'Les équations du second degré' },
+    { f: 'e', t: 'Top ! On commence par le discriminant — pas de panique 🎯' }
+  ];
+  let hi = 0;
+  function addMsg() {
+    if (hi >= conv.length) return;
+    const m = conv[hi++];
+    if (m.f === 'e') {
+      const t = document.createElement('div'); t.className = 'mtyping'; t.innerHTML = '<div class="td"></div><div class="td"></div><div class="td"></div>';
+      hm.appendChild(t); hm.scrollTop = 9999;
+      setTimeout(() => { t.remove(); const b = document.createElement('div'); b.className = 'mb me'; b.innerHTML = m.t; hm.appendChild(b); hm.scrollTop = 9999; setTimeout(addMsg, 2400); }, 1100);
+    } else {
+      const b = document.createElement('div'); b.className = 'mb mu'; b.textContent = m.t;
+      hm.appendChild(b); hm.scrollTop = 9999; setTimeout(addMsg, 1300);
     }
-  },80);
+  }
+  setTimeout(addMsg, 2000);
+
+  /* Demo typing blink */
+  const dT = document.getElementById('demoT');
+  if (dT) setInterval(() => { dT.style.opacity = dT.style.opacity === '0' ? '1' : '0'; }, 3000);
+
+}, { passive: true });
+
+/* ── Navigation vers section (mobile + desktop) ── */
+function navTo(id) {
+  /* Fermer tous les overlays */
+  document.querySelectorAll('.po, .pay-subpage, .chat-full, .pay-confirm-page').forEach(p => p.classList.remove('on'));
+  document.body.style.overflow = '';
+  closeMob();
+  /* Scroll fluide avec offset navbar */
+  setTimeout(() => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 68;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }, 80);
 }
 
-/* ═══ MOBILE NAV ═══ */
-let mobOpen=false;
-function toggleMobNav(){
-  mobOpen=!mobOpen;
-  document.getElementById('mobDrawer').classList.toggle('open',mobOpen);
-  const t1=document.getElementById('mnt1'),t2=document.getElementById('mnt2'),t3=document.getElementById('mnt3');
-  if(mobOpen){t1.style.cssText='transform:translateY(7px) rotate(45deg)';t2.style.opacity='0';t3.style.cssText='transform:translateY(-7px) rotate(-45deg)';}
-  else{t1.style.cssText='';t2.style.opacity='';t3.style.cssText='';}
+/* ── Mobile nav ─────────────────────────────────── */
+let mobOpen = false;
+function toggleMob() {
+  mobOpen = !mobOpen;
+  document.getElementById('mobDrawer').classList.toggle('open', mobOpen);
+  const s1 = document.getElementById('ms1'), s2 = document.getElementById('ms2'), s3 = document.getElementById('ms3');
+  if (mobOpen) { s1.style.cssText = 'transform:translateY(7px) rotate(45deg)'; s2.style.opacity = '0'; s3.style.cssText = 'transform:translateY(-7px) rotate(-45deg)'; }
+  else { s1.style.cssText = ''; s2.style.opacity = ''; s3.style.cssText = ''; }
 }
-function closeMobNav(){
-  mobOpen=false;
+function closeMob() {
+  mobOpen = false;
   document.getElementById('mobDrawer').classList.remove('open');
-  document.getElementById('mnt1').style.cssText='';
-  document.getElementById('mnt2').style.opacity='';
-  document.getElementById('mnt3').style.cssText='';
+  ['ms1', 'ms2', 'ms3'].forEach(id => { const el = document.getElementById(id); if (el) { el.style.cssText = ''; el.style.opacity = ''; } });
 }
 
-/* ═══ OVERLAYS ═══ */
-function openPO(id){
-  document.querySelectorAll('.po,.pay-subpage').forEach(p=>p.classList.remove('on'));
-  const p=document.getElementById('po-'+id);
-  if(p){p.classList.add('on');p.scrollTop=0;document.body.style.overflow='hidden';}
+/* ── Overlays ───────────────────────────────────── */
+function openPO(id) {
+  document.querySelectorAll('.po, .pay-subpage').forEach(p => p.classList.remove('on'));
+  const p = document.getElementById('po-' + id);
+  if (p) { p.classList.add('on'); p.scrollTop = 0; document.body.style.overflow = 'hidden'; }
 }
-function closePO(id){
-  const p=document.getElementById('po-'+id);
-  if(p){p.classList.remove('on');document.body.style.overflow='';}
+function closePO(id) {
+  const p = document.getElementById('po-' + id);
+  if (p) { p.classList.remove('on'); document.body.style.overflow = ''; }
 }
-document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'){
-    document.querySelectorAll('.po,.chat-full,.pay-subpage').forEach(p=>p.classList.remove('on'));
-    document.getElementById('premGate').classList.remove('on');
-    document.body.style.overflow='';
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.po, .chat-full, .pay-subpage, .pay-confirm-page').forEach(p => p.classList.remove('on'));
+    document.body.style.overflow = '';
   }
 });
 
-/* ═══ CHAT ═══ */
-function openChat(){
-  document.querySelectorAll('.po').forEach(p=>p.classList.remove('on'));
+/* ── Chat ───────────────────────────────────────── */
+function openChat() {
+  document.querySelectorAll('.po').forEach(p => p.classList.remove('on'));
   document.getElementById('chatFull').classList.add('on');
-  document.body.style.overflow='hidden';
+  document.body.style.overflow = 'hidden';
 }
-function closeChat(){
+function closeChat() {
   document.getElementById('chatFull').classList.remove('on');
-  document.body.style.overflow='';
+  document.body.style.overflow = '';
 }
-const eliR=[
-  "Bonne question ! Avant de répondre, dis-moi ce que tu comprends déjà — on part de là 🎯",
-  "Pas de panique ! 😊 Décomposons ensemble. Qu'est-ce que tu as compris de l'énoncé ?",
-  "Tu es sur la bonne voie 🌟 Si tu devais expliquer ça à un ami, comment tu commencerais ?",
-  "C'est une question que beaucoup se posent. Essaie de reformuler avec tes propres mots.",
-  "Super, tu as cerné le problème ! Quelle serait la première étape logique selon toi ?",
-  "Tu progresses bien ! 💪 Continue comme ça, tu vas y arriver !",
+const eliR = [
+  'Bonne question ! Dis-moi ce que tu comprends déjà — on construit à partir de là 🎯',
+  'Pas de panique 😊 Décomposons ensemble. Qu\'est-ce que tu as compris de l\'énoncé ?',
+  'Tu es sur la bonne voie 🌟 Si tu devais expliquer ça à un ami, comment tu commencerais ?',
+  'C\'est une question importante. Essaie de reformuler avec tes propres mots — ça aide vraiment.',
+  'Parfait, tu as bien cerné le problème ! Quelle serait la première étape selon toi ?',
+  'Tu progresses très bien 💪 Continue comme ça, tu vas y arriver !',
 ];
-let rIdx=0;
-function sendChat(){
-  const inp=document.getElementById('chatInput');
-  const msg=inp.value.trim();if(!msg)return;
-  const msgs=document.getElementById('chatMsgs');
-  const u=document.createElement('div');u.className='mb mu';u.textContent=msg;msgs.appendChild(u);
-  inp.value='';msgs.scrollTop=9999;
-  const t=document.createElement('div');t.className='mtyping';t.innerHTML='<div class="td"></div><div class="td"></div><div class="td"></div>';
-  msgs.appendChild(t);msgs.scrollTop=9999;
-  setTimeout(()=>{t.remove();const r=document.createElement('div');r.className='mb me';r.innerHTML=eliR[rIdx%eliR.length];rIdx++;msgs.appendChild(r);msgs.scrollTop=9999;},1300);
+let rIdx = 0;
+function sendChat() {
+  const inp = document.getElementById('chatInput');
+  const msg = inp.value.trim(); if (!msg) return;
+  const msgs = document.getElementById('chatMsgs');
+  const u = document.createElement('div'); u.className = 'mb mu'; u.textContent = msg; msgs.appendChild(u);
+  inp.value = ''; msgs.scrollTop = 9999;
+  const t = document.createElement('div'); t.className = 'mtyping'; t.innerHTML = '<div class="td"></div><div class="td"></div><div class="td"></div>';
+  msgs.appendChild(t); msgs.scrollTop = 9999;
+  setTimeout(() => { t.remove(); const r = document.createElement('div'); r.className = 'mb me'; r.innerHTML = eliR[rIdx % eliR.length]; rIdx++; msgs.appendChild(r); msgs.scrollTop = 9999; }, 1300);
 }
 
-/* ═══ PREMIUM GATE ═══ */
-function showPremGate(name,txt){
-  document.getElementById('premGateFeatName').textContent=name;
-  document.getElementById('premGateFeatTxt').textContent=txt;
-  document.getElementById('premGate').classList.add('on');
-}
-function closePremGate(){document.getElementById('premGate').classList.remove('on');}
-
-/* ═══ PREMIUM ÉTAPES ═══ */
-function showParentForm(){document.getElementById('ageGate').style.display='none';document.getElementById('parentForm').classList.add('on');}
-function showPremForm(){
-  document.getElementById('ageGate').style.display='none';
-  ['parentForm','codeStep'].forEach(id=>document.getElementById(id).classList.remove('on'));
+/* ── Premium étapes ─────────────────────────────── */
+function showParentForm() { document.getElementById('ageGate').style.display = 'none'; document.getElementById('parentForm').classList.add('on'); }
+function showPremForm() {
+  document.getElementById('ageGate').style.display = 'none';
+  ['parentForm', 'codeStep'].forEach(id => document.getElementById(id).classList.remove('on'));
   document.getElementById('premForm').classList.add('on');
 }
-function showCodeStep(){document.getElementById('parentForm').classList.remove('on');document.getElementById('codeStep').classList.add('on');}
-function resetPrem(){
-  setTimeout(()=>{
-    document.getElementById('ageGate').style.cssText='display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px 0';
-    ['parentForm','codeStep','premForm'].forEach(id=>document.getElementById(id).classList.remove('on'));
-  },200);
+function showCodeStep() { document.getElementById('parentForm').classList.remove('on'); document.getElementById('codeStep').classList.add('on'); }
+function resetPrem() {
+  setTimeout(() => {
+    const ag = document.getElementById('ageGate');
+    ag.style.cssText = 'display:flex;flex-direction:column;align-items:center;text-align:center;padding:10px 0';
+    ['parentForm', 'codeStep', 'premForm'].forEach(id => document.getElementById(id).classList.remove('on'));
+  }, 200);
 }
-let selOffer='Annuel Scolaire — 40 000 FCFA / 9 mois';
-function selectOffer(el,label){
-  selOffer=label;
-  document.querySelectorAll('.ptab').forEach(t=>t.classList.remove('active'));
+let currentOffer = 'Annuel Scolaire — 40 000 FCFA / 9 mois';
+function selOffer(el, label) {
+  currentOffer = label;
+  document.querySelectorAll('.ptab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
 }
 
-/* ═══ SOUS-PAGES PAIEMENT ═══ */
-function openPaySub(method){
-  document.querySelectorAll('.pay-subpage').forEach(p=>p.classList.remove('on'));
-  const p=document.getElementById('pay-'+method);
-  if(p){p.classList.add('on');p.scrollTop=0;}
+/* ── Sous-pages paiement ────────────────────────── */
+function openPaySub(method) {
+  document.querySelectorAll('.pay-subpage').forEach(p => p.classList.remove('on'));
+  const p = document.getElementById('pay-' + method);
+  if (p) { p.classList.add('on'); p.scrollTop = 0; }
 }
-function closePaySub(method){
-  document.getElementById('pay-'+method).classList.remove('on');
-}
-function selectPayOffer(prefix,el,label){
-  document.querySelectorAll('#'+prefix+'Offers .pot').forEach(t=>t.classList.remove('sel'));
+function closePaySub(method) { document.getElementById('pay-' + method).classList.remove('on'); }
+
+let payOffer = 'Annuel Scolaire — 40 000 FCFA';
+function selPot(prefix, el, label) {
+  payOffer = label;
+  document.querySelectorAll('#' + prefix + 'Offers .pot').forEach(t => t.classList.remove('sel'));
   el.classList.add('sel');
-  selOffer=label;
-}
-function confirmPaySub(method){
-  const methodNames={paypal:'PayPal',airtel:'Airtel Money',moov:'Moov Money',virement:'Virement bancaire'};
-  /* Ferme la sous-page */
-  closePaySub(method);
-  /* Ferme premium overlay */
-  document.querySelectorAll('.po').forEach(p=>p.classList.remove('on'));
-  /* Affiche confirmation */
-  document.getElementById('payConfirmOffer').textContent=selOffer+' · '+methodNames[method];
-  openPO('payconfirm');
 }
 
-/* ═══ CONFID TOGGLE ═══ */
-function toggleConfDetail(){
-  const cb=document.getElementById('confCb');
-  const d=document.getElementById('confDetail');
-  if(cb.checked)d.classList.add('on');else d.classList.remove('on');
+function confirmPay(method) {
+  closePaySub(method.replace(' ', '').toLowerCase().replace('money', '').replace('bancaire', 'virement'));
+  document.querySelectorAll('.po').forEach(p => p.classList.remove('on'));
+  const confirmTxt = document.getElementById('confirmOfferTxt');
+  if (confirmTxt) confirmTxt.textContent = payOffer + ' · ' + method;
+  const cp = document.getElementById('payConfirmPage');
+  if (cp) { cp.classList.add('on'); cp.scrollTop = 0; }
+}
+
+/* ── Confidentialité toggle ─────────────────────── */
+function toggleConf() {
+  const cb = document.getElementById('confCb');
+  const d = document.getElementById('confAccepted');
+  if (d) d.classList.toggle('on', cb.checked);
 }
 </script>
 
