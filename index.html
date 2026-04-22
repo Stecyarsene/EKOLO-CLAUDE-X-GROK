@@ -432,8 +432,21 @@ textarea.fi{resize:vertical;min-height:110px;}
 .pay-offer-tabs{flex-wrap:wrap;}
 .prem-grid{grid-template-columns:1fr;}
 }
-</style>
 
+/* PDF Cards Supabase */
+.pdf-grid{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
+.pdf-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(–r12);padding:13px 16px;display:flex;align-items:center;gap:13px;transition:all .2s;cursor:pointer;text-decoration:none;}
+.pdf-card:hover{background:rgba(255,255,255,.07);border-color:rgba(249,168,37,.28);transform:translateX(3px);}
+.pdf-icon{width:38px;height:38px;background:rgba(239,83,80,.12);border:1px solid rgba(239,83,80,.22);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.pdf-info{flex:1;}
+.pdf-name{font-family:var(–fd);font-size:13px;font-weight:700;color:var(–w);margin-bottom:2px;}
+.pdf-meta{font-size:11px;color:var(–t3);}
+.pdf-dl{background:rgba(249,168,37,.12);border:1px solid rgba(249,168,37,.24);border-radius:var(–r99);padding:4px 12px;font-size:11px;font-weight:700;color:var(–or2);white-space:nowrap;flex-shrink:0;}
+.pdf-loading{text-align:center;padding:22px;font-size:13px;color:var(–t3);}
+.pdf-empty{background:rgba(249,168,37,.055);border:1px solid rgba(249,168,37,.14);border-radius:var(–r12);padding:14px 18px;font-size:13px;color:var(–or2);text-align:center;margin-top:8px;}
+.pdf-err{background:rgba(239,83,80,.06);border:1px solid rgba(239,83,80,.16);border-radius:var(–r12);padding:12px 16px;font-size:12px;color:#EF9A9A;margin-top:8px;}
+
+</style>
 </head>
 <body style="background:#030C04 !important;color:rgba(255,255,255,.86);">
 
@@ -928,8 +941,7 @@ textarea.fi{resize:vertical;min-height:110px;}
   <div class="scard"><div class="sct">🔬 Sciences et Technologie</div><div class="scd">Sciences de la vie, physique, hygiène, environnement.</div></div>
   <div class="pdiv"></div>
   <div class="ps-title" style="margin-bottom:12px">Sujets disponibles</div>
-  <div class="ayrs"><span class="ayrbtn">2024</span><span class="ayrbtn">2023</span><span class="ayrbtn">2022</span><span class="ayrbtn">2021</span><span class="ayrbtn">2017</span><span class="ayrbtn">2016</span><span class="ayrbtn">2015</span></div>
-  <div class="csoon">📥 Les PDF des sujets sont en cours d'intégration. Professeur Éli t'explique déjà chaque chapitre.</div>
+  <div id="pdf-cep" class="pdf-grid"><div class="pdf-loading">⏳ Chargement des sujets...</div></div>
   <div style="margin-top:16px;text-align:center"><button class="btn btn-gold btn-md" onclick="openChat()">🧑‍🏫 Demander à Éli d'expliquer</button></div>
 </div>
 </div>
@@ -950,8 +962,7 @@ textarea.fi{resize:vertical;min-height:110px;}
   <div class="scard"><div class="sct">🌍 Histoire-Géographie-Civisme</div></div>
   <div class="scard"><div class="sct">🗣️ Anglais (LV1)</div></div>
   <div class="pdiv"></div>
-  <div class="ayrs"><span class="ayrbtn">2024</span><span class="ayrbtn">2023</span><span class="ayrbtn">2022</span><span class="ayrbtn">2021</span><span class="ayrbtn">2017</span><span class="ayrbtn">2015</span></div>
-  <div class="csoon">📥 PDF en cours d'intégration.</div>
+  <div id="pdf-bepc" class="pdf-grid"><div class="pdf-loading">⏳ Chargement des sujets...</div></div>
   <div style="margin-top:16px;text-align:center"><button class="btn btn-gold btn-md" onclick="openChat()">🧑‍🏫 Demander à Éli</button></div>
 </div>
 </div>
@@ -967,8 +978,7 @@ textarea.fi{resize:vertical;min-height:110px;}
   </div>
   <div class="scard"><div class="sct" style="color:var(--or2)">A1 · A2 · B · C · D · E · Séries Techniques</div><div class="scd">Maths, Philo, Physique, SVT, Français, Anglais selon série.</div></div>
   <div class="pdiv"></div>
-  <div class="ayrs"><span class="ayrbtn">2024</span><span class="ayrbtn">2023</span><span class="ayrbtn">2022</span><span class="ayrbtn">2021</span><span class="ayrbtn">2020</span><span class="ayrbtn">2017</span><span class="ayrbtn">2016</span><span class="ayrbtn">2015</span><span class="ayrbtn">2012</span></div>
-  <div class="csoon">📥 PDF en cours d'intégration.</div>
+  <div id="pdf-bac" class="pdf-grid"><div class="pdf-loading">⏳ Chargement des sujets...</div></div>
   <div style="margin-top:16px;text-align:center"><button class="btn btn-gold btn-md" onclick="openChat()">🧑‍🏫 Demander à Éli</button></div>
 </div>
 </div>
@@ -985,7 +995,7 @@ textarea.fi{resize:vertical;min-height:110px;}
     <div class="icard" style="cursor:pointer" onclick="closePO('ann');openPO('bepc')"><div class="ict" style="color:#81C784">BEPC</div><div class="icd">6 sessions · 2015→2024</div></div>
     <div class="icard" style="cursor:pointer" onclick="closePO('ann');openPO('bac')"><div class="ict" style="color:var(--or2)">BAC</div><div class="icd">9 sessions · 2012→2024</div></div>
   </div>
-  <div class="csoon" style="margin-top:20px">📥 Intégration complète des PDF en cours.</div>
+  <div id="pdf-ann-stats" style="margin-top:16px;font-size:13px;color:var(--t3);text-align:center">Chargement...</div>
 </div>
 </div>
 
@@ -1777,6 +1787,11 @@ function openPO(id) {
   document.querySelectorAll('.po, .pay-subpage').forEach(p => p.classList.remove('on'));
   const p = document.getElementById('po-' + id);
   if (p) { p.classList.add('on'); p.scrollTop = 0; document.body.style.overflow = 'hidden'; }
+  // Chargement dynamique PDFs depuis Supabase
+  if (id === 'cep')  loadExamsFromSupa('cep',  'pdf-cep');
+  if (id === 'bepc') loadExamsFromSupa('bepc', 'pdf-bepc');
+  if (id === 'bac')  loadExamsFromSupa('bac',  'pdf-bac');
+  if (id === 'ann')  loadAnnStats();
 }
 function closePO(id) {
   const p = document.getElementById('po-' + id);
@@ -1870,6 +1885,44 @@ function toggleConf() {
   const cb = document.getElementById('confCb');
   const d = document.getElementById('confAccepted');
   if (d) d.classList.toggle('on', cb.checked);
+}
+
+/* ─── EKOLO × SUPABASE ─── fetch() natif, aucun SDK ─── */
+const SUPA_URL = 'https://wbmeqhaopfdsqscalhga.supabase.co';
+const SUPA_KEY = 'EKOLO_ANON_KEY'; /* ← REMPLACE PAR TA CLÉ ANON SUPABASE */
+
+async function supaFetch(table, params) {
+  const res = await fetch(SUPA_URL+'/rest/v1/'+table+'?'+params, {
+    headers: {'apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY}
+  });
+  if (!res.ok) throw new Error('HTTP '+res.status);
+  return res.json();
+}
+
+function renderPdfCard(e) {
+  const s = e.serie ? ' · Série '+e.serie : '';
+  if (!e.pdf_url) return '<div class="pdf-card" style="opacity:.5;cursor:default"><div class="pdf-icon">📄</div><div class="pdf-info"><div class="pdf-name">'+e.display_name+'</div><div class="pdf-meta">'+e.year+s+'</div></div><span class="pdf-dl" style="opacity:.4">Bientôt</span></div>';
+  return '<a class="pdf-card" href="'+e.pdf_url+'" target="_blank" rel="noopener"><div class="pdf-icon">📕</div><div class="pdf-info"><div class="pdf-name">'+e.display_name+'</div><div class="pdf-meta">'+e.year+s+'</div></div><span class="pdf-dl">📥 Ouvrir</span></a>';
+}
+
+async function loadExamsFromSupa(type, cid) {
+  const el = document.getElementById(cid);
+  if (!el) return;
+  if (SUPA_KEY==='EKOLO_ANON_KEY') { el.innerHTML='<div class="pdf-empty">⚙️ Clé Supabase manquante.</div>'; return; }
+  el.innerHTML='<div class="pdf-loading">⏳ Chargement...</div>';
+  try {
+    const data = await supaFetch('exams','exam_type=eq.'+type+'&is_public=eq.true&order=year.desc,subject.asc');
+    el.innerHTML = (data&&data.length) ? data.map(renderPdfCard).join('') : '<div class="pdf-empty">📥 Sujets bientôt disponibles !</div>';
+  } catch(e) { el.innerHTML='<div class="pdf-err">⚠️ '+e.message+'</div>'; }
+}
+
+async function loadAnnStats() {
+  const el = document.getElementById('pdf-ann-stats');
+  if (!el||SUPA_KEY==='EKOLO_ANON_KEY') return;
+  try {
+    const [a,b,c] = await Promise.all([supaFetch('exams','exam_type=eq.cep&select=id'),supaFetch('exams','exam_type=eq.bepc&select=id'),supaFetch('exams','exam_type=eq.bac&select=id')]);
+    el.innerHTML = a.length+' sujets CEP · '+b.length+' sujets BEPC · '+c.length+' sujets BAC';
+  } catch(e) { el.innerHTML=''; }
 }
 </script>
 
