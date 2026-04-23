@@ -447,6 +447,14 @@ textarea.fi{resize:vertical;min-height:110px;}
 .pdf-err{background:rgba(239,83,80,.06);border:1px solid rgba(239,83,80,.16);border-radius:var(–r12);padding:12px 16px;font-size:12px;color:#EF9A9A;margin-top:8px;}
 
 </style>
+<script>
+/* Cache tous les overlays immédiatement au chargement */
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.po,.pay-subpage,.chat-full,.pay-confirm-page').forEach(function(el){
+    if(!el.classList.contains('on')) el.style.display='none';
+  });
+});
+</script>
 </head>
 <body style="background:#030C04 !important;color:rgba(255,255,255,.86);">
 
@@ -455,7 +463,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- ══════════ CHAT PLEIN ÉCRAN ══════════ -->
 
-<div class="chat-full" id="chatFull">
+<div class="chat-full" id="chatFull" style="display:none">
   <div class="chat-topbar">
     <button class="chat-back" onclick="closeChat()">← Retour</button>
     <div class="eav" style="width:36px;height:36px;font-size:16px;border-radius:10px;flex-shrink:0">🧑‍🏫</div>
@@ -477,7 +485,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- ══════════ PAGE PAIEMENT CONFIRMATION ══════════ -->
 
-<div class="pay-confirm-page" id="payConfirmPage">
+<div class="pay-confirm-page" id="payConfirmPage" style="display:none">
   <div style="max-width:520px;margin:0 auto;padding:60px 22px;text-align:center">
     <div style="font-size:64px;margin-bottom:20px">🎉</div>
     <h1 style="font-family:var(--fd);font-size:30px;font-weight:800;color:var(--w);margin-bottom:8px">Paiement confirmé !</h1>
@@ -495,7 +503,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- PAYPAL -->
 
-<div class="pay-subpage" id="pay-paypal">
+<div class="pay-subpage" id="pay-paypal" style="display:none">
   <div class="pay-sp-top">
     <button class="chat-back" onclick="closePaySub('paypal')">← Retour</button>
     <svg width="60" height="20" viewBox="0 0 100 32"><text x="0" y="24" font-family="Arial" font-weight="bold" font-size="22" fill="#003087">Pay</text><text x="38" y="24" font-family="Arial" font-weight="bold" font-size="22" fill="#009cde">Pal</text></svg>
@@ -535,7 +543,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- AIRTEL MONEY -->
 
-<div class="pay-subpage" id="pay-airtel">
+<div class="pay-subpage" id="pay-airtel" style="display:none">
   <div class="pay-sp-top">
     <button class="chat-back" onclick="closePaySub('airtel')">← Retour</button>
     <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w)">Airtel Money</div>
@@ -589,7 +597,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- MOOV MONEY -->
 
-<div class="pay-subpage" id="pay-moov">
+<div class="pay-subpage" id="pay-moov" style="display:none">
   <div class="pay-sp-top">
     <button class="chat-back" onclick="closePaySub('moov')">← Retour</button>
     <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w)">Moov Money</div>
@@ -642,7 +650,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- VIREMENT BANCAIRE -->
 
-<div class="pay-subpage" id="pay-virement">
+<div class="pay-subpage" id="pay-virement" style="display:none">
   <div class="pay-sp-top">
     <button class="chat-back" onclick="closePaySub('virement')">← Retour</button>
     <div style="font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w)">Virement bancaire</div>
@@ -686,7 +694,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- CONNEXION -->
 
-<div class="po" id="po-cnx">
+<div class="po" id="po-cnx" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('cnx')">← Retour</button>
   <h1 class="ptitle">Connexion</h1>
@@ -707,7 +715,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- INSCRIPTION -->
 
-<div class="po" id="po-ins">
+<div class="po" id="po-ins" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('ins')">← Retour</button>
   <h1 class="ptitle">Crée ton compte</h1>
@@ -736,7 +744,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- À PROPOS — sans mention porteur -->
 
-<div class="po" id="po-ap">
+<div class="po" id="po-ap" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('ap')">← Retour</button>
   <h1 class="ptitle">À propos</h1>
@@ -760,7 +768,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- CONTACT -->
 
-<div class="po" id="po-ct">
+<div class="po" id="po-ct" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('ct')">← Retour</button>
   <h1 class="ptitle">Contact</h1>
@@ -793,7 +801,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- MENTIONS LÉGALES -->
 
-<div class="po" id="po-ml">
+<div class="po" id="po-ml" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('ml')">← Retour</button>
   <h1 class="ptitle">Mentions légales</h1>
@@ -817,7 +825,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- CONFIDENTIALITÉ — version ultra-complète -->
 
-<div class="po" id="po-conf">
+<div class="po" id="po-conf" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('conf')">← Retour</button>
   <h1 class="ptitle">Politique de Confidentialité</h1>
@@ -925,7 +933,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- EXAMENS -->
 
-<div class="po" id="po-cep">
+<div class="po" id="po-cep" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('cep')">← Retour</button>
   <div class="ephdr" style="background:linear-gradient(135deg,#2D1A00,#5D2E00)">
@@ -946,7 +954,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 </div>
 </div>
 
-<div class="po" id="po-bepc">
+<div class="po" id="po-bepc" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('bepc')">← Retour</button>
   <div class="ephdr" style="background:linear-gradient(135deg,#0D2410,#0D3015)">
@@ -967,7 +975,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 </div>
 </div>
 
-<div class="po" id="po-bac">
+<div class="po" id="po-bac" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('bac')">← Retour</button>
   <div class="ephdr" style="background:linear-gradient(135deg,#0A1C0B,#1B3A1C)">
@@ -983,7 +991,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 </div>
 </div>
 
-<div class="po" id="po-ann">
+<div class="po" id="po-ann" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('ann')">← Retour</button>
   <h1 class="ptitle">Annales officielles</h1>
@@ -1001,7 +1009,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- NIVEAUX -->
 
-<div class="po" id="po-cm2">
+<div class="po" id="po-cm2" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('cm2')">← Retour</button>
   <h1 class="ptitle">CM2</h1><p class="psub">Préparation au CEP</p>
@@ -1016,7 +1024,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 </div>
 </div>
 
-<div class="po" id="po-3eme">
+<div class="po" id="po-3eme" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('3eme')">← Retour</button>
   <h1 class="ptitle">3ème</h1><p class="psub">Préparation au BEPC</p>
@@ -1031,7 +1039,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 </div>
 </div>
 
-<div class="po" id="po-term">
+<div class="po" id="po-term" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="closePO('term')">← Retour</button>
   <h1 class="ptitle">Terminale</h1><p class="psub">Préparation au BAC — Toutes séries</p>
@@ -1048,7 +1056,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- DASHBOARD ÉLI -->
 
-<div class="po" id="po-eli">
+<div class="po" id="po-eli" style="display:none">
 <div class="pi" style="max-width:880px">
   <button class="pbk" onclick="closePO('eli')">← Retour</button>
   <div class="edash-hero">
@@ -1108,28 +1116,24 @@ textarea.fi{resize:vertical;min-height:110px;}
       <div class="edfeat-icon">📚</div>
       <div class="edfeat-title">Explications de cours</div>
       <div class="edfeat-desc">Éli t'explique n'importe quelle notion à ton niveau, avec des exemples concrets.</div>
-      <div class="edfeat-prem">✦ Exclusif</div>
       <button class="btn btn-sm btn-prem" style="width:100%;justify-content:center" onclick="event.stopPropagation();openPO('prem')">✦ Premium →</button>
     </div>
     <div class="edfeat" onclick="openPO('prem')">
       <div class="edfeat-icon">🧩</div>
       <div class="edfeat-title">Mini Quiz</div>
       <div class="edfeat-desc">Quiz basés sur les anciens sujets. Éli analyse tes réponses et cible tes lacunes.</div>
-      <div class="edfeat-prem">✦ Exclusif</div>
       <button class="btn btn-sm btn-prem" style="width:100%;justify-content:center" onclick="event.stopPropagation();openPO('prem')">✦ Premium →</button>
     </div>
     <div class="edfeat" onclick="openPO('prem')">
       <div class="edfeat-icon">🗺️</div>
       <div class="edfeat-title">Plan de révision</div>
       <div class="edfeat-desc">Éli crée ton programme personnalisé selon tes lacunes et la date de l'examen.</div>
-      <div class="edfeat-prem">✦ Exclusif</div>
       <button class="btn btn-sm btn-prem" style="width:100%;justify-content:center" onclick="event.stopPropagation();openPO('prem')">✦ Premium →</button>
     </div>
     <div class="edfeat" onclick="openPO('prem')">
       <div class="edfeat-icon">📸</div>
       <div class="edfeat-title">Analyse photo par Éli</div>
       <div class="edfeat-desc">Prends une photo de ton devoir. Éli l'analyse et t'explique tout. CM2 · 3ème · Terminale.</div>
-      <div class="edfeat-prem">✦ Exclusif</div>
       <button class="btn btn-sm btn-prem" style="width:100%;justify-content:center" onclick="event.stopPropagation();openPO('prem')">✦ Premium →</button>
     </div>
   </div>
@@ -1138,7 +1142,7 @@ textarea.fi{resize:vertical;min-height:110px;}
 
 <!-- PREMIUM PAGE -->
 
-<div class="po" id="po-prem">
+<div class="po" id="po-prem" style="display:none">
 <div class="pi">
   <button class="pbk" onclick="resetPrem();closePO('prem')">← Retour</button>
 
@@ -1889,7 +1893,7 @@ function toggleConf() {
 
 /* ─── EKOLO × SUPABASE ─── fetch() natif, aucun SDK ─── */
 const SUPA_URL = 'https://wbmeqhaopfdsqscalhga.supabase.co';
-const SUPA_KEY = 'EKOLO_ANON_KEY'; /* ← REMPLACE PAR TA CLÉ ANON SUPABASE */
+const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndibWVxaGFvcGZkc3FzY2FsaGdhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4NTU4ODMsImV4cCI6MjA5MjQzMTg4M30.i-RMyViHX8g4P_nuf6tW1X8z-k4PMuzdhqi3iz5OuXI'; /* ← REMPLACE PAR TA CLÉ ANON SUPABASE */
 
 async function supaFetch(table, params) {
   const res = await fetch(SUPA_URL+'/rest/v1/'+table+'?'+params, {
@@ -1908,7 +1912,7 @@ function renderPdfCard(e) {
 async function loadExamsFromSupa(type, cid) {
   const el = document.getElementById(cid);
   if (!el) return;
-  if (SUPA_KEY==='EKOLO_ANON_KEY') { el.innerHTML='<div class="pdf-empty">⚙️ Clé Supabase manquante.</div>'; return; }
+  if (SUPA_KEY==='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndibWVxaGFvcGZkc3FzY2FsaGdhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4NTU4ODMsImV4cCI6MjA5MjQzMTg4M30.i-RMyViHX8g4P_nuf6tW1X8z-k4PMuzdhqi3iz5OuXI') { el.innerHTML='<div class="pdf-empty">⚙️ Clé Supabase manquante.</div>'; return; }
   el.innerHTML='<div class="pdf-loading">⏳ Chargement...</div>';
   try {
     const data = await supaFetch('exams','exam_type=eq.'+type+'&is_public=eq.true&order=year.desc,subject.asc');
@@ -1918,7 +1922,7 @@ async function loadExamsFromSupa(type, cid) {
 
 async function loadAnnStats() {
   const el = document.getElementById('pdf-ann-stats');
-  if (!el||SUPA_KEY==='EKOLO_ANON_KEY') return;
+  if (!el||SUPA_KEY==='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndibWVxaGFvcGZkc3FzY2FsaGdhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4NTU4ODMsImV4cCI6MjA5MjQzMTg4M30.i-RMyViHX8g4P_nuf6tW1X8z-k4PMuzdhqi3iz5OuXI') return;
   try {
     const [a,b,c] = await Promise.all([supaFetch('exams','exam_type=eq.cep&select=id'),supaFetch('exams','exam_type=eq.bepc&select=id'),supaFetch('exams','exam_type=eq.bac&select=id')]);
     el.innerHTML = a.length+' sujets CEP · '+b.length+' sujets BEPC · '+c.length+' sujets BAC';
